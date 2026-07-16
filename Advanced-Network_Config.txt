@@ -1,0 +1,2483 @@
+Wed Mar 4 16:09:28 2026   R3   Router>enable
+Wed Mar 4 16:09:28 2026   R3   Router#configure terminal
+Wed Mar 4 16:09:28 2026   R3   Router(config)#interface GigabitEthernet0/0
+Wed Mar 4 16:09:43 2026   R3   Router(config-if)#no shutdown
+Wed Mar 4 16:09:51 2026   R3   Router(config-if)#ip address 10.0.1.4 255.0.0.0
+Wed Mar 4 16:09:56 2026   R3   Router(config-if)#ip address 10.0.1.4 255.255.255.192
+Wed Mar 4 16:11:31 2026   R4   Router>enable
+Wed Mar 4 16:11:31 2026   R4   Router#configure terminal
+Wed Mar 4 16:11:31 2026   R4   Router(config)#interface GigabitEthernet0/0
+Wed Mar 4 16:11:39 2026   R4   Router(config-if)#ip address 10.0.0.132 255.0.0.0
+Wed Mar 4 16:11:47 2026   R4   Router(config-if)#ip address 10.0.0.132 255.255.255.192
+Wed Mar 4 16:11:48 2026   R4   Router(config-if)#no shutdown
+Wed Mar 4 16:13:35 2026   R3   Router(config-if)#exit
+Wed Mar 4 16:13:35 2026   R3   Router(config)#interface Serial0/0/0
+Wed Mar 4 16:13:47 2026   R3   Router(config-if)#ip address 198.51.100.5 255.255.255.0
+Wed Mar 4 16:13:51 2026   R3   Router(config-if)#ip address 198.51.100.5 255.255.255.252
+Wed Mar 4 16:14:25 2026   R3   Router(config-if)#ipv6 address 2001:db8:acad:6::1/64
+Wed Mar 4 16:14:27 2026   R3   Router(config-if)#exit
+Wed Mar 4 16:14:32 2026   R3   Router(config)#ipv6 unicast-routing
+Wed Mar 4 16:14:38 2026   R3   Router(config)#interface Serial0/0/0
+Wed Mar 4 16:14:41 2026   R3   Router(config-if)#exit
+Wed Mar 4 16:14:41 2026   R3   Router(config)#interface Serial0/0/1
+Wed Mar 4 16:14:42 2026   R3   Router(config-if)#exit
+Wed Mar 4 16:14:42 2026   R3   Router(config)#interface Serial0/0/0
+Wed Mar 4 16:14:48 2026   R3   Router(config-if)#exit
+Wed Mar 4 16:14:48 2026   R3   Router(config)#router rip
+Wed Mar 4 16:14:51 2026   R3   Router(config-router)#end
+Wed Mar 4 16:14:51 2026   R3   Router#configure terminal
+Wed Mar 4 16:14:53 2026   R3   Router(config)#interface Serial0/0/0
+Wed Mar 4 16:15:01 2026   R4   Router(config-if)#exit
+Wed Mar 4 16:15:01 2026   R4   Router(config)#interface GigabitEthernet0/0
+Wed Mar 4 16:15:02 2026   R4   Router(config-if)#exit
+Wed Mar 4 16:15:02 2026   R4   Router(config)#interface Serial0/0/0
+Wed Mar 4 16:15:10 2026   R4   Router(config-if)#ip address 198.51.100.1 255.255.255.0
+Wed Mar 4 16:15:14 2026   R4   Router(config-if)#ip address 198.51.100.1 255.255.255.252
+Wed Mar 4 16:15:17 2026   R4   Router(config-if)#no shutdown
+Wed Mar 4 16:15:21 2026   R3   Router(config-if)#exit
+Wed Mar 4 16:15:21 2026   R3   Router(config)#interface Serial0/0/0
+Wed Mar 4 16:15:22 2026   R3   Router(config-if)#no shutdown
+Wed Mar 4 16:15:34 2026   R4   Router(config-if)#int s0/0/0
+Wed Mar 4 16:15:49 2026   R4   Router(config-if)#ipv6 address 2001:db8:acad:5::1/64
+Wed Mar 4 16:15:54 2026   R4   Router(config-if)#ipv6 unicast-routing
+Wed Mar 4 16:16:04 2026   R4   Router(config)#interface Serial0/0/0
+Wed Mar 4 16:16:17 2026   R5   Router>enable
+Wed Mar 4 16:16:17 2026   R5   Router#configure terminal
+Wed Mar 4 16:16:17 2026   R5   Router(config)#interface Serial0/0/0
+Wed Mar 4 16:16:20 2026   R5   Router(config-if)#no shutdown
+Wed Mar 4 16:16:29 2026   R5   Router(config-if)#ip address 198.51.100.6 255.255.255.0
+Wed Mar 4 16:16:35 2026   R5   Router(config-if)#ip address 198.51.100.6 255.255.255.252
+Wed Mar 4 16:16:51 2026   R5   Router(config-if)#ipv6 address 2001:db8:acad:6::2/64
+Wed Mar 4 16:16:57 2026   R5   Router(config-if)#ipv6 unicast-routing
+Wed Mar 4 16:17:51 2026   R5   Router(config)#interface Serial0/0/1
+Wed Mar 4 16:17:53 2026   R5   Router(config-if)#no shutdown
+Wed Mar 4 16:18:03 2026   R5   Router(config-if)#ip address 198.51.100.2 255.255.255.252
+Wed Mar 4 16:18:05 2026   R5   Router(config-if)#ip address 198.51.100.2 255.255.255.252
+Wed Mar 4 16:18:17 2026   R5   Router(config-if)#ipv6 address 2001:DB8:ACAD:5::2/64
+Wed Mar 4 16:18:25 2026   R5   Router(config-if)#ipv6 unicast-routing
+Wed Mar 4 16:18:28 2026   R5   Router(config)#interface Serial0/0/1
+Wed Mar 4 16:18:30 2026   R5   Router(config-if)#exit
+Wed Mar 4 16:18:30 2026   R5   Router(config)#interface Serial0/1/0
+Wed Mar 4 16:18:33 2026   R5   Router(config-if)#no shutdown
+Wed Mar 4 16:18:34 2026   R5   Router(config-if)#shutdown
+Wed Mar 4 16:18:41 2026   R1   Router>enable
+Wed Mar 4 16:18:41 2026   R1   Router#configure terminal
+Wed Mar 4 16:18:41 2026   R1   Router(config)#interface Serial0/0/0
+Wed Mar 4 16:18:42 2026   R1   Router(config-if)#no shutdown
+Wed Mar 4 16:18:52 2026   R1   Router(config-if)#ip address 198.51.100.13 255.255.255.0
+Wed Mar 4 16:18:57 2026   R1   Router(config-if)#ip address 198.51.100.13 255.255.255.252
+Wed Mar 4 16:19:08 2026   R1   Router(config-if)#ipv6 address 2001:DB8:ACAD:8::1/64
+Wed Mar 4 16:19:13 2026   R1   Router(config-if)#ipv6 unicast-routing
+Wed Mar 4 16:19:19 2026   R2   Router>enable
+Wed Mar 4 16:19:19 2026   R2   Router#configure terminal
+Wed Mar 4 16:19:19 2026   R2   Router(config)#interface Serial0/0/0
+Wed Mar 4 16:19:22 2026   R2   Router(config-if)#no shutdown
+Wed Mar 4 16:19:29 2026   R2   Router(config-if)#ip address 198.51.100.9 255.255.255.0
+Wed Mar 4 16:19:34 2026   R2   Router(config-if)#ip address 198.51.100.9 255.255.255.252
+Wed Mar 4 16:19:44 2026   R2   Router(config-if)#ipv6 address 2001:DB8:ACAD:7::1/64
+Wed Mar 4 16:19:49 2026   R2   Router(config-if)#ipv6 unicast-routing
+Wed Mar 4 16:19:56 2026   R5   Router(config-if)#exit
+Wed Mar 4 16:19:56 2026   R5   Router(config)#interface Serial0/1/0
+Wed Mar 4 16:19:58 2026   R5   Router(config-if)#no shutdown
+Wed Mar 4 16:20:05 2026   R5   Router(config-if)#ip address 198.51.100.14 255.255.255.252
+Wed Mar 4 16:20:06 2026   R5   Router(config-if)#ip address 198.51.100.14 255.255.255.252
+Wed Mar 4 16:20:16 2026   R5   Router(config-if)#ipv6 address 2001:DB8:ACAD:8::2/64
+Wed Mar 4 16:20:20 2026   R5   Router(config-if)#ipv6 unicast-routing
+Wed Mar 4 16:20:24 2026   R5   Router(config)#interface Serial0/1/0
+Wed Mar 4 16:20:25 2026   R5   Router(config-if)#exit
+Wed Mar 4 16:20:25 2026   R5   Router(config)#interface Serial0/1/1
+Wed Mar 4 16:20:27 2026   R5   Router(config-if)#no shutdown
+Wed Mar 4 16:20:32 2026   R5   Router(config-if)#ip address 198.51.100.8 255.255.255.252
+Wed Mar 4 16:20:35 2026   R5   Router(config-if)#no ip address
+Wed Mar 4 16:20:36 2026   R5   Router(config-if)#exit
+Wed Mar 4 16:20:36 2026   R5   Router(config)#interface Serial0/1/1
+Wed Mar 4 16:20:43 2026   R5   Router(config-if)#ip address 198.51.100.10 255.255.255.252
+Wed Mar 4 16:20:44 2026   R5   Router(config-if)#ip address 198.51.100.10 255.255.255.252
+Wed Mar 4 16:20:54 2026   R5   Router(config-if)#ipv6 address 2001:DB8:ACAD:7::2/64
+Wed Mar 4 16:20:59 2026   R5   Router(config-if)#ipv6 unicast-routing
+Wed Mar 4 16:27:06 2026   R1   Router(config)#interface GigabitEthernet0/0
+Wed Mar 4 16:27:14 2026   R1   Router(config-if)#ip address 10.0.1.250 255.0.0.0
+Wed Mar 4 16:27:22 2026   R1   Router(config-if)#ip address 10.0.1.250 255.255.255.248
+Wed Mar 4 16:27:23 2026   R1   Router(config-if)#no shutdown
+Wed Mar 4 16:27:27 2026   R2   Router(config)#interface Serial0/0/0
+Wed Mar 4 16:27:28 2026   R2   Router(config-if)#exit
+Wed Mar 4 16:27:28 2026   R2   Router(config)#interface GigabitEthernet0/0
+Wed Mar 4 16:27:29 2026   R2   Router(config-if)#no shutdown
+Wed Mar 4 16:27:34 2026   R2   Router(config-if)#ip address 10.0.1.251 255.0.0.0
+Wed Mar 4 16:27:41 2026   R2   Router(config-if)#ip address 10.0.1.251 255.255.255.248
+Wed Mar 4 16:29:20 2026   R4   Router>enable
+Wed Mar 4 16:29:20 2026   R4   Router#configure terminal
+Wed Mar 4 16:29:20 2026   R4   Router(config)#interface GigabitEthernet0/0
+Wed Mar 4 16:29:25 2026   R4   Router(config-if)#ip address 10.0.0.132 
+Wed Mar 4 16:29:27 2026   R4   Router(config-if)#ip address  
+Wed Mar 4 16:29:37 2026   R4   Router(config-if)#no ipv6 address
+Wed Mar 4 16:29:46 2026   R3   Router>enable
+Wed Mar 4 16:29:46 2026   R3   Router#configure terminal
+Wed Mar 4 16:29:46 2026   R3   Router(config)#interface GigabitEthernet0/0
+Wed Mar 4 16:29:48 2026   R3   Router(config-if)#ip address  
+Wed Mar 4 16:29:50 2026   R3   Router(config-if)#ip address  
+Wed Mar 4 16:29:55 2026   R3   Router(config-if)#no ipv6 address
+Wed Mar 4 16:29:58 2026   R3   Router(config-if)#no ip address
+Wed Mar 4 16:31:00 2026   R3   Router(config-if)#exit
+Wed Mar 4 16:31:01 2026   R3   Router(config)#interface GigabitEthernet0/0
+Wed Mar 4 16:31:01 2026   R3   Router(config-if)#exit
+Wed Mar 4 16:31:01 2026   R3   Router(config)#interface GigabitEthernet0/1
+Wed Mar 4 16:31:02 2026   R3   Router(config-if)#no shutdown
+Wed Mar 4 16:31:03 2026   R3   Router(config-if)#exit
+Wed Mar 4 16:31:03 2026   R3   Router(config)#interface GigabitEthernet0/2
+Wed Mar 4 16:31:04 2026   R3   Router(config-if)#no shutdown
+Wed Mar 4 16:31:06 2026   R3   Router(config-if)#exit
+Wed Mar 4 16:31:06 2026   R3   Router(config)#interface Serial0/0/0
+Wed Mar 4 16:31:07 2026   R3   Router(config-if)#exit
+Wed Mar 4 16:31:07 2026   R3   Router(config)#interface Serial0/0/0
+Wed Mar 4 16:31:07 2026   R3   Router(config-if)#exit
+Wed Mar 4 16:31:07 2026   R3   Router(config)#interface Serial0/0/1
+Wed Mar 4 16:31:53 2026   R4   Router(config-if)#exit
+Wed Mar 4 16:31:53 2026   R4   Router(config)#interface GigabitEthernet0/1
+Wed Mar 4 16:31:54 2026   R4   Router(config-if)#no shutdown
+Wed Mar 4 16:31:55 2026   R4   Router(config-if)#exit
+Wed Mar 4 16:31:55 2026   R4   Router(config)#interface GigabitEthernet0/2
+Wed Mar 4 16:31:56 2026   R4   Router(config-if)#no shutdown
+Wed Mar 4 16:34:01 2026   S1   Switch>enable
+Wed Mar 4 16:34:01 2026   S1   Switch#configure terminal
+Wed Mar 4 16:34:44 2026   S1   Switch(config)#vlan 10
+Wed Mar 4 16:34:50 2026   S1   Switch(config-vlan)#name IT Department
+Wed Mar 4 16:34:58 2026   S1   Switch(config-vlan)#name IT_Department
+Wed Mar 4 16:35:02 2026   S1   Switch(config-vlan)#end
+Wed Mar 4 16:35:02 2026   S1   Switch#configure terminal
+Wed Mar 4 16:35:15 2026   S1   Switch(config)#vlan 20
+Wed Mar 4 16:35:15 2026   S1   Switch(config-vlan)#name Finance-Department
+Wed Mar 4 16:35:19 2026   S1   Switch(config-vlan)#vlan 10
+Wed Mar 4 16:35:19 2026   S1   Switch(config-vlan)#name IT-Department
+Wed Mar 4 16:35:33 2026   S1   Switch(config-vlan)#vlan 30
+Wed Mar 4 16:35:33 2026   S1   Switch(config-vlan)#name HR-Department
+Wed Mar 4 16:35:41 2026   S1   Switch(config-vlan)#vlan 40
+Wed Mar 4 16:35:41 2026   S1   Switch(config-vlan)#name Server-VLAN
+Wed Mar 4 16:35:57 2026   S1   Switch(config-vlan)#vlan 50
+Wed Mar 4 16:35:57 2026   S1   Switch(config-vlan)#name HQ-Management-VLAN
+Wed Mar 4 16:36:02 2026   S1   Switch(config-vlan)#vlan 60
+Wed Mar 4 16:36:02 2026   S1   Switch(config-vlan)#name Sales-Department
+Wed Mar 4 16:36:11 2026   S1   Switch(config-vlan)#vlan 70
+Wed Mar 4 16:36:11 2026   S1   Switch(config-vlan)#name Support-Department
+Wed Mar 4 16:36:17 2026   S1   Switch(config-vlan)#vlan 80
+Wed Mar 4 16:36:17 2026   S1   Switch(config-vlan)#name Logistics-Department
+Wed Mar 4 16:36:25 2026   S1   Switch(config-vlan)#vlan 90
+Wed Mar 4 16:36:25 2026   S1   Switch(config-vlan)#name Marketing-Department
+Wed Mar 4 16:36:31 2026   S1   Switch(config-vlan)#vlan 100
+Wed Mar 4 16:36:31 2026   S1   Switch(config-vlan)#name Research-Department
+Wed Mar 4 16:36:42 2026   S1   Switch(config-vlan)#vlan 110
+Wed Mar 4 16:36:42 2026   S1   Switch(config-vlan)#name Customer-Service-Department
+Wed Mar 4 16:36:52 2026   S1   Switch(config-vlan)#exit
+Wed Mar 4 16:36:57 2026   S1   Switch(config)#do show int br
+Wed Mar 4 16:37:01 2026   S1   Switch(config)#do show ip int br
+Wed Mar 4 16:37:16 2026   S1   Switch(config)#int range f0/2-f0/4
+Wed Mar 4 16:37:22 2026   S1   Switch(config-if-range)#switchport mode access 
+Wed Mar 4 16:37:31 2026   S1   Switch(config-if-range)#switchport access vlan 70
+Wed Mar 4 16:37:36 2026   S1   Switch(config-if-range)#no shut
+Wed Mar 4 16:37:37 2026   S1   Switch(config-if-range)#exit
+Wed Mar 4 16:37:48 2026   S1   Switch(config)#int f0/1
+Wed Mar 4 16:37:52 2026   S1   Switch(config-if)#switchport mode trunk 
+Wed Mar 4 16:38:08 2026   S1   Switch(config-if)#switchport trunk allowed vlan 10,20,30,40,50,60,70,80,90,100,110
+Wed Mar 4 16:38:12 2026   S1   Switch(config-if)#no shut
+Wed Mar 4 16:38:13 2026   S1   Switch(config-if)#exit
+Wed Mar 4 16:38:16 2026   S1   Switch(config)#do show int trunk
+Wed Mar 4 16:38:44 2026   R3   Router(config-if)#int g0/0.70
+Wed Mar 4 16:38:48 2026   R3   Router(config-subif)#encapsulation dot1Q 70
+Wed Mar 4 16:39:05 2026   R3   Router(config-subif)#ip address 10.0.1.4 255.255.255.192
+Wed Mar 4 16:39:06 2026   R3   Router(config-subif)#no shut
+Wed Mar 4 16:39:07 2026   R3   Router(config-subif)#exit
+Wed Mar 4 20:48:42 2026   S1   Switch>enable
+Wed Mar 4 20:48:42 2026   S1   Switch#configure terminal
+Wed Mar 4 20:48:58 2026   S2   Switch>enable
+Wed Mar 4 20:48:58 2026   S2   Switch#configure terminal
+Wed Mar 4 20:49:07 2026   S2   Switch(config)#vlan 10
+Wed Mar 4 20:49:07 2026   S2   Switch(config-vlan)#name IT-Department
+Wed Mar 4 20:49:13 2026   S2   Switch(config-vlan)#vlan 20
+Wed Mar 4 20:49:13 2026   S2   Switch(config-vlan)#name Finance-Department
+Wed Mar 4 20:49:22 2026   S2   Switch(config-vlan)#vlan 30
+Wed Mar 4 20:49:22 2026   S2   Switch(config-vlan)#name HR-Department
+Wed Mar 4 20:49:30 2026   S2   Switch(config-vlan)#vlan 40
+Wed Mar 4 20:49:30 2026   S2   Switch(config-vlan)#name Server-VLaN
+Wed Mar 4 20:49:38 2026   S2   Switch(config-vlan)#vlan 50
+Wed Mar 4 20:49:38 2026   S2   Switch(config-vlan)#name HQ-Management-VLAN
+Wed Mar 4 20:49:48 2026   S2   Switch(config-vlan)#vlan 60
+Wed Mar 4 20:49:48 2026   S2   Switch(config-vlan)#name Sales-Department
+Wed Mar 4 20:49:54 2026   S2   Switch(config-vlan)#vlan 70
+Wed Mar 4 20:49:54 2026   S2   Switch(config-vlan)#name Support-Department
+Wed Mar 4 20:50:01 2026   S2   Switch(config-vlan)#vlan 80
+Wed Mar 4 20:50:01 2026   S2   Switch(config-vlan)#name Logistics-Department
+Wed Mar 4 20:50:12 2026   S2   Switch(config-vlan)#vlan 90
+Wed Mar 4 20:50:12 2026   S2   Switch(config-vlan)#name Marketing-Department
+Wed Mar 4 20:50:20 2026   S2   Switch(config-vlan)#vlan 100
+Wed Mar 4 20:50:20 2026   S2   Switch(config-vlan)#name Research-Department
+Wed Mar 4 20:50:29 2026   S2   Switch(config-vlan)#vlan 110
+Wed Mar 4 20:50:29 2026   S2   Switch(config-vlan)#name Customer-Service-Department
+Wed Mar 4 20:50:39 2026   S2   Switch(config-vlan)#end
+Wed Mar 4 20:50:39 2026   S2   Switch#configure terminal
+Wed Mar 4 20:50:39 2026   S2   Switch(config)#interface FastEthernet0/2
+Wed Mar 4 20:50:48 2026   S2   Switch(config-if)#switchport access vlan 70
+Wed Mar 4 20:51:01 2026   S2   Switch(config-if)#no shut
+Wed Mar 4 20:51:01 2026   S2   Switch(config-if)#exit
+Wed Mar 4 20:51:09 2026   S2   Switch(config)#int f0/3,f0/4
+Wed Mar 4 20:51:13 2026   S2   Switch(config)#int f0/3 to f0/4
+Wed Mar 4 20:51:18 2026   S2   Switch(config)#int f0/3-4
+Wed Mar 4 20:51:22 2026   S2   Switch(config)#int f0/3 - f0/4
+Wed Mar 4 20:51:27 2026   S2   Switch(config)#int f0/3
+Wed Mar 4 20:51:32 2026   S2   Switch(config-if)#switchport mode access 
+Wed Mar 4 20:51:38 2026   S2   Switch(config-if)#switchport access vlan 70
+Wed Mar 4 20:51:39 2026   S2   Switch(config-if)#exit
+Wed Mar 4 20:51:42 2026   S2   Switch(config)#int f0/4
+Wed Mar 4 20:51:45 2026   S2   Switch(config-if)#switchport mode access 
+Wed Mar 4 20:51:47 2026   S2   Switch(config-if)#switchport access vlan 70
+Wed Mar 4 20:51:48 2026   S2   Switch(config-if)#exit
+Wed Mar 4 20:51:51 2026   S2   Switch(config)#int f0/1
+Wed Mar 4 20:51:56 2026   S2   Switch(config-if)#switchport mode trunk 
+Wed Mar 4 20:52:11 2026   S2   Switch(config-if)#switchport trunk allowed vlan 10,20,30,40,50,60,70,80,90,100,110
+Wed Mar 4 20:52:15 2026   S2   Switch(config-if)#exit
+Wed Mar 4 20:52:27 2026   R3   Router>enable
+Wed Mar 4 20:52:27 2026   R3   Router#configure terminal
+Wed Mar 4 20:52:27 2026   R3   Router(config)#interface GigabitEthernet0/1
+Wed Mar 4 20:52:30 2026   R3   Router(config-if)#exit
+Wed Mar 4 20:52:30 2026   R3   Router(config)#interface GigabitEthernet0/0
+Wed Mar 4 20:52:37 2026   R3   Router(config-if)#exit
+Wed Mar 4 20:52:47 2026   R3   Router(config)#int g0/1.70
+Wed Mar 4 20:52:52 2026   R3   Router(config-subif)#encapsulation dot1Q 70
+Wed Mar 4 20:53:06 2026   R3   Router(config-subif)#ip address 10.0.1.100 255.255.255.224
+Wed Mar 4 20:53:08 2026   R3   Router(config-subif)#no shut
+Wed Mar 4 20:53:09 2026   R3   Router(config-subif)#exit
+Wed Mar 4 20:56:06 2026   R3   Router(config)#do show run
+Wed Mar 4 20:56:40 2026   R3   Router(config)#int g0/0.70
+Wed Mar 4 20:56:45 2026   R3   Router(config-subif)#exit
+Wed Mar 4 20:56:49 2026   R3   Router(config)#no int g0/0.70
+Wed Mar 4 20:56:54 2026   R3   Router(config)#int g0/0.60
+Wed Mar 4 20:56:58 2026   R3   Router(config-subif)#encapsulation dot1Q 60
+Wed Mar 4 20:57:19 2026   R3   Router(config-subif)#ip address 10.0.1.4 255.255.255.192
+Wed Mar 4 20:57:21 2026   R3   Router(config-subif)#no shut
+Wed Mar 4 20:57:22 2026   R3   Router(config-subif)#exit
+Wed Mar 4 20:57:27 2026   R3   Router(config)#int g0/0.60
+Wed Mar 4 20:57:42 2026   R3   Router(config-subif)#ipv6 address 2001:db8:acad:1::4/64
+Wed Mar 4 20:57:49 2026   R3   Router(config-subif)#ipv6 unicast-routing
+Wed Mar 4 21:00:35 2026   S1   Switch(config)#do show vlan br
+Wed Mar 4 21:00:44 2026   S1   Switch(config)#int range f0/2-f0/4
+Wed Mar 4 21:00:51 2026   S1   Switch(config-if-range)#switchport mode access 
+Wed Mar 4 21:00:56 2026   S1   Switch(config-if-range)#switchport access vlan 60
+Wed Mar 4 21:00:58 2026   S1   Switch(config-if-range)#no shut
+Wed Mar 4 21:00:58 2026   S1   Switch(config-if-range)#exit
+Wed Mar 4 21:02:57 2026   S2   Switch(config)#interface FastEthernet0/2
+Wed Mar 4 21:02:59 2026   S2   Switch(config-if)#exit
+Wed Mar 4 21:02:59 2026   S2   Switch(config)#interface FastEthernet0/3
+Wed Mar 4 21:03:00 2026   S2   Switch(config-if)#exit
+Wed Mar 4 21:03:00 2026   S2   Switch(config)#interface FastEthernet0/4
+Wed Mar 4 21:03:01 2026   S2   Switch(config-if)#exit
+Wed Mar 4 21:03:01 2026   S2   Switch(config)#interface FastEthernet0/5
+Wed Mar 4 21:03:04 2026   S2   Switch(config-if)#exit
+Wed Mar 4 21:03:04 2026   S2   Switch(config)#interface FastEthernet0/4
+Thu Mar 5 09:12:40 2026   S2   Switch>enable
+Thu Mar 5 09:12:40 2026   S2   Switch#configure terminal
+Thu Mar 5 09:12:52 2026   S3   Switch>enable
+Thu Mar 5 09:12:52 2026   S3   Switch#configure terminal
+Thu Mar 5 09:12:59 2026   S3   Switch(config)#vlan 10
+Thu Mar 5 09:12:59 2026   S3   Switch(config-vlan)#name IT-Department
+Thu Mar 5 09:13:05 2026   S3   Switch(config-vlan)#vlan 20
+Thu Mar 5 09:13:05 2026   S3   Switch(config-vlan)#name Finance-Department
+Thu Mar 5 09:13:11 2026   S3   Switch(config-vlan)#vlan 30
+Thu Mar 5 09:13:11 2026   S3   Switch(config-vlan)#name HR-Department
+Thu Mar 5 09:13:17 2026   S3   Switch(config-vlan)#vlan 40
+Thu Mar 5 09:13:17 2026   S3   Switch(config-vlan)#name Server-VLAN
+Thu Mar 5 09:13:26 2026   S3   Switch(config-vlan)#vlan 50
+Thu Mar 5 09:13:26 2026   S3   Switch(config-vlan)#name HQ-Management-Department
+Thu Mar 5 09:13:32 2026   S3   Switch(config-vlan)#vlan 60
+Thu Mar 5 09:13:32 2026   S3   Switch(config-vlan)#name Sales-Department
+Thu Mar 5 09:13:39 2026   S3   Switch(config-vlan)#vlan 70
+Thu Mar 5 09:13:39 2026   S3   Switch(config-vlan)#name Support-Department
+Thu Mar 5 09:13:51 2026   S3   Switch(config-vlan)#vlan 80
+Thu Mar 5 09:13:51 2026   S3   Switch(config-vlan)#name Logistics-Department
+Thu Mar 5 09:14:00 2026   S3   Switch(config-vlan)#vlan 90
+Thu Mar 5 09:14:00 2026   S3   Switch(config-vlan)#name Marketing-Department
+Thu Mar 5 09:14:09 2026   S3   Switch(config-vlan)#vlan 100
+Thu Mar 5 09:14:09 2026   S3   Switch(config-vlan)#name Research-Department
+Thu Mar 5 09:14:19 2026   S3   Switch(config-vlan)#vlan 120
+Thu Mar 5 09:14:19 2026   S3   Switch(config-vlan)#name Customer-Service-Department
+Thu Mar 5 09:14:26 2026   S3   Switch(config-vlan)#vlan 110
+Thu Mar 5 09:14:26 2026   S3   Switch(config-vlan)#name Customer-Service-Department
+Thu Mar 5 09:14:28 2026   S3   Switch(config-vlan)#no vlan 120
+Thu Mar 5 09:14:36 2026   S3   Switch(config)#vlan 110
+Thu Mar 5 09:14:36 2026   S3   Switch(config-vlan)#name Customer-Service-Department
+Thu Mar 5 09:14:44 2026   S3   Switch(config-vlan)#exit
+Thu Mar 5 09:14:48 2026   S3   Switch(config)#do show vlan br
+Thu Mar 5 09:15:04 2026   S3   Switch(config)#int range f0/2-f0/4
+Thu Mar 5 09:15:08 2026   S3   Switch(config-if-range)#switchport mode access 
+Thu Mar 5 09:15:23 2026   S3   Switch(config-if-range)#switchport access vlan 80
+Thu Mar 5 09:15:27 2026   S3   Switch(config-if-range)#no shut
+Thu Mar 5 09:15:28 2026   S3   Switch(config-if-range)#exit
+Thu Mar 5 09:15:32 2026   S3   Switch(config)#int f0/1
+Thu Mar 5 09:15:35 2026   S3   Switch(config-if)#switchport mode trunk 
+Thu Mar 5 09:15:50 2026   S3   Switch(config-if)#switchport trunk allowed vlan 10,20,30,40,50,60,70,80,90,100,110
+Thu Mar 5 09:15:53 2026   S3   Switch(config-if)#no shut
+Thu Mar 5 09:15:54 2026   S3   Switch(config-if)#exit
+Thu Mar 5 09:16:00 2026   S3   Switch(config)#do show int trunk
+Thu Mar 5 09:16:09 2026   R3   Router>en
+Thu Mar 5 09:16:10 2026   R3   Router#conf t
+Thu Mar 5 09:16:21 2026   R3   Router(config)#hostname R3
+Thu Mar 5 09:16:55 2026   R3   R3(config)#int g0/2.80
+Thu Mar 5 09:16:59 2026   R3   R3(config-subif)#encapsulation dot1Q 80
+Thu Mar 5 09:17:10 2026   R3   R3(config-subif)#ip address 10.0.1.164 255.255.255.224
+Thu Mar 5 09:17:12 2026   R3   R3(config-subif)#no shut
+Thu Mar 5 09:17:13 2026   R3   R3(config-subif)#exit
+Thu Mar 5 09:17:16 2026   R3   R3(config)#int g0/2
+Thu Mar 5 09:17:18 2026   R3   R3(config-if)#no shut
+Thu Mar 5 09:17:19 2026   R3   R3(config-if)#exit
+Thu Mar 5 09:21:30 2026   SW1   Switch>enable
+Thu Mar 5 09:21:30 2026   SW1   Switch#configure terminal
+Thu Mar 5 09:21:30 2026   SW1   Switch(config)#hostname SW1
+Thu Mar 5 09:21:37 2026   SW2   Switch(config)#hostname SW2
+Thu Mar 5 09:21:47 2026   SW3   Switch(config)#hostname SW3
+Thu Mar 5 09:21:55 2026   SW4   Switch>enable
+Thu Mar 5 09:21:55 2026   SW4   Switch#configure terminal
+Thu Mar 5 09:21:55 2026   SW4   Switch(config)#hostname SW4
+Thu Mar 5 09:22:03 2026   SW5   Switch>enable
+Thu Mar 5 09:22:03 2026   SW5   Switch#configure terminal
+Thu Mar 5 09:22:03 2026   SW5   Switch(config)#hostname SW5
+Thu Mar 5 09:22:09 2026   SW6   Switch>enable
+Thu Mar 5 09:22:09 2026   SW6   Switch#configure terminal
+Thu Mar 5 09:22:09 2026   SW6   Switch(config)#hostname SW6
+Thu Mar 5 09:22:19 2026   SW7   Switch>enable
+Thu Mar 5 09:22:19 2026   SW7   Switch#configure terminal
+Thu Mar 5 09:22:23 2026   SW7   Switch(config)#hostname SW7
+Thu Mar 5 09:22:32 2026   SW8   Switch>enable
+Thu Mar 5 09:22:32 2026   SW8   Switch#configure terminal
+Thu Mar 5 09:22:32 2026   SW8   Switch(config)#hostname SW8
+Thu Mar 5 09:22:44 2026   SW9   Switch>enable
+Thu Mar 5 09:22:44 2026   SW9   Switch#configure terminal
+Thu Mar 5 09:22:44 2026   SW9   Switch(config)#hostname SW9
+Thu Mar 5 09:22:52 2026   SW10   Switch>enable
+Thu Mar 5 09:22:52 2026   SW10   Switch#configure terminal
+Thu Mar 5 09:22:52 2026   SW10   Switch(config)#hostname SW10
+Thu Mar 5 09:22:59 2026   SW11   Switch>enable
+Thu Mar 5 09:22:59 2026   SW11   Switch#configure terminal
+Thu Mar 5 09:22:59 2026   SW11   Switch(config)#hostname SW11
+Thu Mar 5 09:23:05 2026   SW12   Switch>enable
+Thu Mar 5 09:23:05 2026   SW12   Switch#configure terminal
+Thu Mar 5 09:23:05 2026   SW12   Switch(config)#hostname SW12
+Thu Mar 5 09:24:25 2026   SW4   SW4(config)#vlan 10
+Thu Mar 5 09:24:25 2026   SW4   SW4(config-vlan)#name IT-Department
+Thu Mar 5 09:24:30 2026   SW4   SW4(config-vlan)#vlan 20
+Thu Mar 5 09:24:30 2026   SW4   SW4(config-vlan)#name Finance-Department
+Thu Mar 5 09:24:36 2026   SW4   SW4(config-vlan)#vlan 30
+Thu Mar 5 09:24:36 2026   SW4   SW4(config-vlan)#name HR-Department
+Thu Mar 5 09:24:43 2026   SW4   SW4(config-vlan)#vlan 40
+Thu Mar 5 09:24:43 2026   SW4   SW4(config-vlan)#name Server-VLAN
+Thu Mar 5 09:24:55 2026   SW4   SW4(config-vlan)#vlan 50
+Thu Mar 5 09:24:55 2026   SW4   SW4(config-vlan)#name HQ-Management-VLAN
+Thu Mar 5 09:25:00 2026   SW4   SW4(config-vlan)#vlan 60
+Thu Mar 5 09:25:00 2026   SW4   SW4(config-vlan)#name Sales-Department
+Thu Mar 5 09:25:06 2026   SW4   SW4(config-vlan)#vlan 70
+Thu Mar 5 09:25:06 2026   SW4   SW4(config-vlan)#name Support-Department
+Thu Mar 5 09:25:14 2026   SW4   SW4(config-vlan)#vlan 80
+Thu Mar 5 09:25:14 2026   SW4   SW4(config-vlan)#name Logistics-Department
+Thu Mar 5 09:25:21 2026   SW4   SW4(config-vlan)#vlan 90
+Thu Mar 5 09:25:21 2026   SW4   SW4(config-vlan)#name Marketing-Department
+Thu Mar 5 09:25:28 2026   SW4   SW4(config-vlan)#vlan 100
+Thu Mar 5 09:25:28 2026   SW4   SW4(config-vlan)#name Research-Department
+Thu Mar 5 09:25:36 2026   SW4   SW4(config-vlan)#vlan 120
+Thu Mar 5 09:25:36 2026   SW4   SW4(config-vlan)#name Customer-Service-Department
+Thu Mar 5 09:25:43 2026   SW4   SW4(config-vlan)#exit
+Thu Mar 5 09:25:56 2026   SW4   SW4(config)#do show vlan br
+Thu Mar 5 09:26:04 2026   SW4   SW4(config)#int range f0/2-f0/4
+Thu Mar 5 09:26:08 2026   SW4   SW4(config-if-range)#switchport mode access 
+Thu Mar 5 09:26:14 2026   SW4   SW4(config-if-range)#switchport access vlan 90
+Thu Mar 5 09:26:16 2026   SW4   SW4(config-if-range)#exit
+Thu Mar 5 09:26:19 2026   SW4   SW4(config)#int f0/1
+Thu Mar 5 09:26:21 2026   SW4   SW4(config-if)#switchport mode trunk 
+Thu Mar 5 09:26:38 2026   SW4   SW4(config-if)#switchport trunk allowed vlan 10,20,30,40,50,60,70,80,90,100,110
+Thu Mar 5 09:26:41 2026   SW4   SW4(config-if)#exit
+Thu Mar 5 09:26:47 2026   SW4   SW4(config)#do show vlan br
+Thu Mar 5 09:27:02 2026   R4   Router>enable
+Thu Mar 5 09:27:02 2026   R4   Router#configure terminal
+Thu Mar 5 09:27:02 2026   R4   Router(config)#hostname R4
+Thu Mar 5 09:27:19 2026   R4   R4(config)#int g0/0.90
+Thu Mar 5 09:27:22 2026   R4   R4(config-subif)#encapsulation dot1Q 90
+Thu Mar 5 09:27:36 2026   R4   R4(config-subif)#ip address 10.0.0.131 255.255.255.192
+Thu Mar 5 09:27:49 2026   R4   R4(config-subif)#ipv6 address 2001:db8:acad:2::4/64
+Thu Mar 5 09:27:52 2026   R4   R4(config-subif)#no shut
+Thu Mar 5 09:27:53 2026   R4   R4(config-subif)#exit
+Thu Mar 5 09:29:36 2026   SW4(1)   SW4>enable
+Thu Mar 5 09:29:36 2026   SW4(1)   SW4#configure terminal
+Thu Mar 5 09:29:38 2026   SW4(1)   SW4(config)#interface FastEthernet0/1
+Thu Mar 5 09:29:41 2026   SW4(1)   SW4(config-if)#exit
+Thu Mar 5 09:29:41 2026   SW4(1)   SW4(config)#interface FastEthernet0/2
+Thu Mar 5 09:29:51 2026   SW4(1)   SW4(config-if)#switchport access vlan 100
+Thu Mar 5 09:29:53 2026   SW4(1)   SW4(config-if)#exit
+Thu Mar 5 09:29:53 2026   SW4(1)   SW4(config)#interface FastEthernet0/3
+Thu Mar 5 09:29:58 2026   SW4(1)   SW4(config-if)#switchport access vlan 100
+Thu Mar 5 09:29:59 2026   SW4(1)   SW4(config-if)#exit
+Thu Mar 5 09:29:59 2026   SW4(1)   SW4(config)#interface FastEthernet0/4
+Thu Mar 5 09:30:04 2026   SW4(1)   SW4(config-if)#switchport access vlan 100
+Thu Mar 5 09:30:23 2026   SW5   SW4(config-if)#end
+Thu Mar 5 09:30:23 2026   SW5   SW4#configure terminal
+Thu Mar 5 09:30:23 2026   SW5   SW4(config)#hostname SW5
+Thu Mar 5 09:31:56 2026   R4   R4(config)#int g0/0.90
+Thu Mar 5 09:32:05 2026   R4   R4(config-subif)#ip address 10.0.0.132 255.255.255.192
+Thu Mar 5 09:35:08 2026   R4   R4(config-subif)#exit
+Thu Mar 5 09:35:13 2026   R4   R4(config)#int g0/1.100
+Thu Mar 5 09:35:17 2026   R4   R4(config-subif)#encapsulation dot1Q 100
+Thu Mar 5 09:35:38 2026   R4   R4(config-subif)#ip address 10.0.1.196 255.255.255.224
+Thu Mar 5 09:35:40 2026   R4   R4(config-subif)#exit
+Thu Mar 5 09:36:50 2026   SW6   SW5>enable
+Thu Mar 5 09:36:50 2026   SW6   SW5#configure terminal
+Thu Mar 5 09:36:50 2026   SW6   SW5(config)#hostname SW6
+Thu Mar 5 09:37:18 2026   SW6   SW6(config)#do show vlan br
+Thu Mar 5 09:37:38 2026   SW4   SW4(config)#vlan 110
+Thu Mar 5 09:37:38 2026   SW4   SW4(config-vlan)#name Customer-Service-Department
+Thu Mar 5 09:37:42 2026   SW4   SW4(config-vlan)#no vlan 120
+Thu Mar 5 09:37:45 2026   SW4   SW4(config)#vlan 110
+Thu Mar 5 09:37:45 2026   SW4   SW4(config-vlan)#name Customer-Service-Department
+Thu Mar 5 09:37:55 2026   SW5   SW5(config)#vlan 110
+Thu Mar 5 09:37:55 2026   SW5   SW5(config-vlan)#name VLAN110
+Thu Mar 5 09:37:57 2026   SW5   SW5(config-vlan)#no vlan 120
+Thu Mar 5 09:38:01 2026   SW5   SW5(config)#vlan 110
+Thu Mar 5 09:38:01 2026   SW5   SW5(config-vlan)#name Customer-Service-Department
+Thu Mar 5 09:38:09 2026   SW6   SW6(config)#no vlan 120
+Thu Mar 5 09:38:12 2026   SW6   SW6(config)#vlan 110
+Thu Mar 5 09:38:12 2026   SW6   SW6(config-vlan)#name Customer-Service-Department
+Thu Mar 5 09:39:01 2026   SW6   SW6(config-vlan)#exit
+Thu Mar 5 09:39:06 2026   SW6   SW6(config)#int range f0/2-f0/4
+Thu Mar 5 09:39:15 2026   SW6   SW6(config-if-range)#switchport access vlan 110
+Thu Mar 5 09:39:16 2026   SW6   SW6(config-if-range)#exit
+Thu Mar 5 09:39:26 2026   R4   R4(config)#int g0/2.110
+Thu Mar 5 09:39:32 2026   R4   R4(config-subif)#encapsulation dot1Q 110
+Thu Mar 5 09:39:47 2026   R4   R4(config-subif)#ip address 10.0.1.132 255.255.255.224
+Thu Mar 5 09:39:48 2026   R4   R4(config-subif)#exit
+Fri Mar 6 19:07:28 2026   SW5(1)   SW5>enable
+Fri Mar 6 19:07:28 2026   SW5(1)   SW5#configure terminal
+Fri Mar 6 19:07:56 2026   SW7   SW5(config)#hostname SW7
+Fri Mar 6 19:08:27 2026   SW7   SW7(config)#do show vlan br
+Fri Mar 6 19:08:41 2026   SW7   SW7(config)#int range f0/2-f0/4
+Fri Mar 6 19:08:48 2026   SW7   SW7(config-if-range)#switchport access vlan 1
+Fri Mar 6 19:08:50 2026   SW7   SW7(config-if-range)#exit
+Fri Mar 6 19:08:57 2026   SW7   SW7(config)#int f0/2
+Fri Mar 6 19:09:01 2026   SW7   SW7(config-if)#switchport mode trunk 
+Fri Mar 6 19:09:16 2026   SW7   SW7(config-if)#switchport trunk allowed vlan 10,20,30,40,50,60,70,80,90,100,110
+Fri Mar 6 19:09:18 2026   SW7   SW7(config-if)#exit
+Fri Mar 6 19:09:21 2026   SW7   SW7(config)#do show int trunk
+Fri Mar 6 19:09:55 2026   SW12   SW12>enable
+Fri Mar 6 19:09:55 2026   SW12   SW12#configure terminal
+Fri Mar 6 19:10:04 2026   SW12   SW12(config)#vlan 10
+Fri Mar 6 19:10:04 2026   SW12   SW12(config-vlan)#name IT-Department
+Fri Mar 6 19:10:09 2026   SW12   SW12(config-vlan)#vlan 20
+Fri Mar 6 19:10:09 2026   SW12   SW12(config-vlan)#name Finance-Department
+Fri Mar 6 19:10:14 2026   SW12   SW12(config-vlan)#vlan 30
+Fri Mar 6 19:10:14 2026   SW12   SW12(config-vlan)#name HR-Department
+Fri Mar 6 19:10:21 2026   SW12   SW12(config-vlan)#vlan 40
+Fri Mar 6 19:10:21 2026   SW12   SW12(config-vlan)#name Server-VLAN
+Fri Mar 6 19:10:30 2026   SW12   SW12(config-vlan)#vlan 50
+Fri Mar 6 19:10:30 2026   SW12   SW12(config-vlan)#name HQ-Management-VLAN
+Fri Mar 6 19:10:35 2026   SW12   SW12(config-vlan)#vlan 60
+Fri Mar 6 19:10:35 2026   SW12   SW12(config-vlan)#name Sales-Department
+Fri Mar 6 19:10:40 2026   SW12   SW12(config-vlan)#vlan 70
+Fri Mar 6 19:10:40 2026   SW12   SW12(config-vlan)#name Support-Department
+Fri Mar 6 19:10:46 2026   SW12   SW12(config-vlan)#vlan 80
+Fri Mar 6 19:10:46 2026   SW12   SW12(config-vlan)#name Logistics-Department
+Fri Mar 6 19:10:53 2026   SW12   SW12(config-vlan)#vlan 90
+Fri Mar 6 19:10:53 2026   SW12   SW12(config-vlan)#name Marketing-Department
+Fri Mar 6 19:10:58 2026   SW12   SW12(config-vlan)#vlan 100
+Fri Mar 6 19:10:58 2026   SW12   SW12(config-vlan)#name Research-Department
+Fri Mar 6 19:11:06 2026   SW12   SW12(config-vlan)#vlan 110
+Fri Mar 6 19:11:06 2026   SW12   SW12(config-vlan)#name Customer-Service-Department
+Fri Mar 6 19:11:20 2026   SW12   SW12(config-vlan)#exit
+Fri Mar 6 19:11:22 2026   SW12   SW12(config)#do show vlan br
+Fri Mar 6 19:11:41 2026   SW12   SW12(config)#int range f0/2-f0/6
+Fri Mar 6 19:11:48 2026   SW12   SW12(config-if-range)#switchport access vlan 40
+Fri Mar 6 19:11:51 2026   SW12   SW12(config-if-range)#exit
+Fri Mar 6 19:12:16 2026   SW12   SW12(config)#int f0/1
+Fri Mar 6 19:12:19 2026   SW12   SW12(config-if)#switchport mode trunk 
+Fri Mar 6 19:12:27 2026   SW12   SW12(config-if)#switchport trunk allowed vlan 10 - 110
+Fri Mar 6 19:12:38 2026   SW12   SW12(config-if)#switchport trunk allowed vlan 10,20,30,40,50,60,70,80,90,100,110
+Fri Mar 6 19:12:40 2026   SW12   SW12(config-if)#exit
+Fri Mar 6 19:12:44 2026   SW12   SW12(config)#do show int trunkj
+Fri Mar 6 19:12:47 2026   SW12   SW12(config)#do show int trunk
+Fri Mar 6 19:13:03 2026   SW8   SW8>enable
+Fri Mar 6 19:13:03 2026   SW8   SW8#configure terminal
+Fri Mar 6 19:13:09 2026   SW8   SW8(config)#vlan 10
+Fri Mar 6 19:13:09 2026   SW8   SW8(config-vlan)#name IT-Department
+Fri Mar 6 19:13:14 2026   SW8   SW8(config-vlan)#vlan 20
+Fri Mar 6 19:13:14 2026   SW8   SW8(config-vlan)#name Finance-Department
+Fri Mar 6 19:13:18 2026   SW8   SW8(config-vlan)#vlan 30
+Fri Mar 6 19:13:18 2026   SW8   SW8(config-vlan)#name HR-Department
+Fri Mar 6 19:13:23 2026   SW8   SW8(config-vlan)#vlan 40
+Fri Mar 6 19:13:23 2026   SW8   SW8(config-vlan)#name Server-VLAN
+Fri Mar 6 19:13:31 2026   SW8   SW8(config-vlan)#vlan 50
+Fri Mar 6 19:13:31 2026   SW8   SW8(config-vlan)#name HQ-Management-VLAN
+Fri Mar 6 19:13:45 2026   SW8   SW8(config-vlan)#vlan 60
+Fri Mar 6 19:13:45 2026   SW8   SW8(config-vlan)#name Sales-Department
+Fri Mar 6 19:13:56 2026   SW8   SW8(config-vlan)#vlan 70
+Fri Mar 6 19:13:56 2026   SW8   SW8(config-vlan)#name Logistics-Department
+Fri Mar 6 19:14:04 2026   SW8   SW8(config-vlan)#vlan 80
+Fri Mar 6 19:14:04 2026   SW8   SW8(config-vlan)#name Logistics-Department
+Fri Mar 6 19:14:11 2026   SW8   SW8(config-vlan)#vlan 70
+Fri Mar 6 19:14:11 2026   SW8   SW8(config-vlan)#name Support-Department
+Fri Mar 6 19:14:16 2026   SW8   SW8(config-vlan)#vlan 80
+Fri Mar 6 19:14:16 2026   SW8   SW8(config-vlan)#name Logistics-Department
+Fri Mar 6 19:14:22 2026   SW8   SW8(config-vlan)#vlan 90
+Fri Mar 6 19:14:22 2026   SW8   SW8(config-vlan)#name Marketing-Department
+Fri Mar 6 19:14:29 2026   SW8   SW8(config-vlan)#vlan 100
+Fri Mar 6 19:14:29 2026   SW8   SW8(config-vlan)#name Research-Department
+Fri Mar 6 19:14:35 2026   SW8   SW8(config-vlan)#vlan 110
+Fri Mar 6 19:14:35 2026   SW8   SW8(config-vlan)#name Customer-Service-Department
+Fri Mar 6 19:14:43 2026   SW8   SW8(config-vlan)#exit
+Fri Mar 6 19:14:54 2026   SW8   SW8(config)#do show vlan br
+Fri Mar 6 19:15:02 2026   SW8   SW8(config)#int f0/2
+Fri Mar 6 19:15:11 2026   SW8   SW8(config-if)#switchport access vlan 30
+Fri Mar 6 19:15:12 2026   SW8   SW8(config-if)#exit
+Fri Mar 6 19:15:17 2026   SW8   SW8(config)#int f0/4
+Fri Mar 6 19:15:25 2026   SW8   SW8(config-if)#switchport access vlan 20
+Fri Mar 6 19:15:27 2026   SW8   SW8(config-if)#exit
+Fri Mar 6 19:15:30 2026   SW8   SW8(config)#int f0/3
+Fri Mar 6 19:15:39 2026   SW8   SW8(config-if)#switchport access
+Fri Mar 6 19:15:53 2026   SW8   SW8(config-if)#switchport access vlan 10
+Fri Mar 6 19:15:55 2026   SW8   SW8(config-if)#exit
+Fri Mar 6 19:16:08 2026   SW8   SW8(config)#int f0/1
+Fri Mar 6 19:16:11 2026   SW8   SW8(config-if)#switchport mode trunk 
+Fri Mar 6 19:16:24 2026   SW8   SW8(config-if)#switchport trunk allowed vlan 10,20,30,40,50,60,70,80,90,100,110
+Fri Mar 6 19:16:41 2026   SW9   SW9>enable
+Fri Mar 6 19:16:41 2026   SW9   SW9#configure terminal
+Fri Mar 6 19:16:46 2026   SW9   SW9(config)#vlan 10
+Fri Mar 6 19:16:46 2026   SW9   SW9(config-vlan)#name IT-Department
+Fri Mar 6 19:16:51 2026   SW9   SW9(config-vlan)#vlan 20
+Fri Mar 6 19:16:51 2026   SW9   SW9(config-vlan)#name Finance-Department
+Fri Mar 6 19:16:55 2026   SW9   SW9(config-vlan)#vlan 30
+Fri Mar 6 19:16:55 2026   SW9   SW9(config-vlan)#name HR-Department
+Fri Mar 6 19:17:01 2026   SW9   SW9(config-vlan)#vlan 40
+Fri Mar 6 19:17:01 2026   SW9   SW9(config-vlan)#name Server-VLAN
+Fri Mar 6 19:17:10 2026   SW9   SW9(config-vlan)#vlan 50
+Fri Mar 6 19:17:10 2026   SW9   SW9(config-vlan)#name HQ-Management-VLAN
+Fri Mar 6 19:17:15 2026   SW9   SW9(config-vlan)#vlan 60
+Fri Mar 6 19:17:15 2026   SW9   SW9(config-vlan)#name Sales-Department
+Fri Mar 6 19:17:20 2026   SW9   SW9(config-vlan)#vlan 70
+Fri Mar 6 19:17:20 2026   SW9   SW9(config-vlan)#name Support-Department
+Fri Mar 6 19:17:25 2026   SW9   SW9(config-vlan)#vlan 80
+Fri Mar 6 19:17:25 2026   SW9   SW9(config-vlan)#name Logistics-Department
+Fri Mar 6 19:17:39 2026   SW9   SW9(config-vlan)#vlan 90
+Fri Mar 6 19:17:39 2026   SW9   SW9(config-vlan)#name Marketing-Department
+Fri Mar 6 19:17:45 2026   SW9   SW9(config-vlan)#vlan 100
+Fri Mar 6 19:17:45 2026   SW9   SW9(config-vlan)#name Research-Department
+Fri Mar 6 19:17:53 2026   SW9   SW9(config-vlan)#vlan 110
+Fri Mar 6 19:17:53 2026   SW9   SW9(config-vlan)#name Customer-Service-Department
+Fri Mar 6 19:18:03 2026   SW9   SW9(config-vlan)#do show int br
+Fri Mar 6 19:18:07 2026   SW9   SW9(config-vlan)#do show ip int br
+Fri Mar 6 19:18:20 2026   SW9   SW9(config-vlan)#int range f0/2-f0/4
+Fri Mar 6 19:18:28 2026   SW9   SW9(config-if-range)#switchport access vlan 10
+Fri Mar 6 19:18:29 2026   SW9   SW9(config-if-range)#exit
+Fri Mar 6 19:18:52 2026   SW9   SW9(config)#int f0/1
+Fri Mar 6 19:19:01 2026   SW9   SW9(config-if)#switchport mode trunk 
+Fri Mar 6 19:19:14 2026   SW9   SW9(config-if)#switchport trunk allowed vlan 10,20,30,40,50,60,70,80,90,100,110
+Fri Mar 6 19:19:18 2026   SW9   SW9(config-if)#exit
+Fri Mar 6 19:19:20 2026   SW9   SW9(config)#do show vlan br
+Fri Mar 6 19:19:41 2026   SW10   SW10>enable
+Fri Mar 6 19:19:41 2026   SW10   SW10#configure terminal
+Fri Mar 6 19:19:46 2026   SW10   SW10(config)#vlan 10
+Fri Mar 6 19:19:46 2026   SW10   SW10(config-vlan)#name IT-Department
+Fri Mar 6 19:19:54 2026   SW10   SW10(config-vlan)#vlan 20
+Fri Mar 6 19:19:54 2026   SW10   SW10(config-vlan)#name Finance-Department
+Fri Mar 6 19:19:57 2026   SW10   SW10(config-vlan)#vlan 30
+Fri Mar 6 19:19:57 2026   SW10   SW10(config-vlan)#name VLAN30
+Fri Mar 6 19:20:02 2026   SW10   SW10(config-vlan)#vlan 40
+Fri Mar 6 19:20:02 2026   SW10   SW10(config-vlan)#name VLAN40
+Fri Mar 6 19:20:06 2026   SW10   SW10(config-vlan)#vlan 50
+Fri Mar 6 19:20:06 2026   SW10   SW10(config-vlan)#name VLAN50
+Fri Mar 6 19:20:09 2026   SW10   SW10(config-vlan)#vlan 60
+Fri Mar 6 19:20:09 2026   SW10   SW10(config-vlan)#name VLAN60
+Fri Mar 6 19:20:13 2026   SW10   SW10(config-vlan)#vlan 70
+Fri Mar 6 19:20:13 2026   SW10   SW10(config-vlan)#name VLAN70
+Fri Mar 6 19:20:16 2026   SW10   SW10(config-vlan)#vlan 80
+Fri Mar 6 19:20:16 2026   SW10   SW10(config-vlan)#name VLAN80
+Fri Mar 6 19:20:18 2026   SW10   SW10(config-vlan)#vlan 90
+Fri Mar 6 19:20:18 2026   SW10   SW10(config-vlan)#name VLAN90
+Fri Mar 6 19:20:22 2026   SW10   SW10(config-vlan)#vlan 100
+Fri Mar 6 19:20:22 2026   SW10   SW10(config-vlan)#name VLAN100
+Fri Mar 6 19:20:25 2026   SW10   SW10(config-vlan)#vlan 110
+Fri Mar 6 19:20:25 2026   SW10   SW10(config-vlan)#name VLAN110
+Fri Mar 6 19:20:33 2026   SW10   SW10(config-vlan)#vlan 30
+Fri Mar 6 19:20:33 2026   SW10   SW10(config-vlan)#name HR-Department
+Fri Mar 6 19:20:40 2026   SW10   SW10(config-vlan)#vlan 40
+Fri Mar 6 19:20:40 2026   SW10   SW10(config-vlan)#name Server-VLAN
+Fri Mar 6 19:20:48 2026   SW10   SW10(config-vlan)#vlan 50
+Fri Mar 6 19:20:48 2026   SW10   SW10(config-vlan)#name HQ-Management-VLAN
+Fri Mar 6 19:20:56 2026   SW10   SW10(config-vlan)#vlan 60
+Fri Mar 6 19:20:56 2026   SW10   SW10(config-vlan)#name Sales-Department
+Fri Mar 6 19:21:01 2026   SW10   SW10(config-vlan)#vlan 70
+Fri Mar 6 19:21:01 2026   SW10   SW10(config-vlan)#name Support-Department
+Fri Mar 6 19:21:08 2026   SW10   SW10(config-vlan)#vlan 80
+Fri Mar 6 19:21:08 2026   SW10   SW10(config-vlan)#name Logistics-Department
+Fri Mar 6 19:21:14 2026   SW10   SW10(config-vlan)#vlan 90
+Fri Mar 6 19:21:14 2026   SW10   SW10(config-vlan)#name Marketing-Department
+Fri Mar 6 19:21:25 2026   SW10   SW10(config-vlan)#vlan 100
+Fri Mar 6 19:21:25 2026   SW10   SW10(config-vlan)#name Research-Department
+Fri Mar 6 19:21:36 2026   SW10   SW10(config-vlan)#vlan 110
+Fri Mar 6 19:21:36 2026   SW10   SW10(config-vlan)#name Customer-Service-Department
+Fri Mar 6 19:21:40 2026   SW10   SW10(config-vlan)#exit
+Fri Mar 6 19:21:47 2026   SW10   SW10(config)#do show vlan br
+Fri Mar 6 19:22:02 2026   SW10   SW10(config)#int range f0/2-f0/4
+Fri Mar 6 19:22:08 2026   SW10   SW10(config-if-range)#switchport access vlan 20
+Fri Mar 6 19:22:09 2026   SW10   SW10(config-if-range)#exit
+Fri Mar 6 19:22:11 2026   SW10   SW10(config)#int f0/1
+Fri Mar 6 19:22:40 2026   SW10   SW10(config-if)#switchport mode trunk 
+Fri Mar 6 19:22:52 2026   SW10   SW10(config-if)#switchport trunk allowed vlan 10,20,30,40,50,60,70,80,90,100,110
+Fri Mar 6 19:22:53 2026   SW10   SW10(config-if)#exit
+Fri Mar 6 19:23:08 2026   SW8   SW8(config-if)#int range f0/2-f0/4
+Fri Mar 6 19:23:13 2026   SW8   SW8(config-if-range)#switchport mode trunk 
+Fri Mar 6 19:23:16 2026   SW8   SW8(config-if-range)#switchport trunk allowed vlan 10,20,30,40,50,60,70,80,90,100,110
+Fri Mar 6 19:23:17 2026   SW8   SW8(config-if-range)#exit
+Fri Mar 6 19:24:00 2026   R2   Router>enable
+Fri Mar 6 19:24:00 2026   R2   Router#configure terminal
+Fri Mar 6 19:24:00 2026   R2   Router(config)#hostname R2
+Fri Mar 6 19:24:07 2026   R1   Router>enable
+Fri Mar 6 19:24:07 2026   R1   Router#configure terminal
+Fri Mar 6 19:24:07 2026   R1   Router(config)#hostname R1
+Fri Mar 6 19:24:12 2026   R5   Router>enable
+Fri Mar 6 19:24:12 2026   R5   Router#configure terminal
+Fri Mar 6 19:24:12 2026   R5   Router(config)#hostname R5
+Fri Mar 6 19:24:19 2026   R1   R1(config)#interface GigabitEthernet0/0
+Fri Mar 6 19:24:28 2026   R1   R1(config-if)#standby
+Fri Mar 6 19:24:30 2026   R1   R1(config-if)#standby?
+Fri Mar 6 19:24:58 2026   R1   R1(config-if)#standby 1 ip address 10.0.1.249
+Fri Mar 6 19:24:58 2026   R1   R1(config-if)#exit
+Fri Mar 6 19:24:58 2026   R1   R1(config)#interface GigabitEthernet0/0
+Fri Mar 6 19:25:21 2026   R1   R1(config-if)#standby 1 ip address 10.0.1.249 255.255.255.248
+Fri Mar 6 19:25:39 2026   R1   R1(config-if)#standby 1 ip 10.0.1.249
+Fri Mar 6 19:25:47 2026   R1   R1(config-if)#standby 1 priority 120
+Fri Mar 6 19:25:51 2026   R1   R1(config-if)#standby preempt
+Fri Mar 6 19:25:52 2026   R1   R1(config-if)#exit
+Fri Mar 6 19:25:59 2026   R2   R2(config)#int g0/0
+Fri Mar 6 19:26:14 2026   R2   R2(config-if)#standby 1 ip 10.0.1.249
+Fri Mar 6 19:26:21 2026   R2   R2(config-if)#standby 1 priority 110
+Fri Mar 6 19:26:24 2026   R2   R2(config-if)#standby 1 preempt
+Fri Mar 6 19:26:25 2026   R2   R2(config-if)#exit
+Fri Mar 6 19:26:29 2026   R2   R2(config)#do show standby br
+Fri Mar 6 19:26:47 2026   R2   R2(config)#do show standby br
+Fri Mar 6 19:27:00 2026   R1   R1(config)#do show standby br
+Fri Mar 6 19:30:05 2026   R1   R1(config)#interface GigabitEthernet0/0
+Fri Mar 6 19:30:54 2026   R1   Router>enable
+Fri Mar 6 19:30:54 2026   R1   Router#configure terminal
+Fri Mar 6 19:30:54 2026   R1   Router(config)#interface GigabitEthernet0/0
+Fri Mar 6 19:30:55 2026   R1   Router(config-if)#no shutdown
+Fri Mar 6 19:30:56 2026   R1   Router(config-if)#exit
+Fri Mar 6 19:30:56 2026   R1   Router(config)#interface Serial0/0/0
+Fri Mar 6 19:30:57 2026   R1   Router(config-if)#no shutdown
+Fri Mar 6 19:31:27 2026   R1   Router>enable
+Fri Mar 6 19:31:27 2026   R1   Router#configure terminal
+Fri Mar 6 19:31:27 2026   R1   Router(config)#interface GigabitEthernet0/0
+Fri Mar 6 19:31:29 2026   R1   Router(config-if)#no shutdown
+Fri Mar 6 19:31:30 2026   R1   Router(config-if)#exit
+Fri Mar 6 19:31:30 2026   R1   Router(config)#interface Serial0/0/1
+Fri Mar 6 19:31:30 2026   R1   Router(config-if)#exit
+Fri Mar 6 19:31:30 2026   R1   Router(config)#interface Serial0/0/0
+Fri Mar 6 19:31:31 2026   R1   Router(config-if)#no shutdown
+Fri Mar 6 19:33:55 2026   R2   R2(config)#int g0/0.10
+Fri Mar 6 19:33:58 2026   R2   R2(config-subif)#encapsulation dot1Q 10
+Fri Mar 6 19:36:33 2026   R1   Router(config-if)#exit
+Fri Mar 6 19:36:33 2026   R1   Router(config)#interface GigabitEthernet0/0
+Fri Mar 6 19:36:46 2026   R1   Router(config-if)#int g0/0.10
+Fri Mar 6 19:36:50 2026   R1   Router(config-subif)#encapsulation dot1Q 10
+Fri Mar 6 19:36:58 2026   R1   Router(config-subif)#ip address 192.168.1.1
+Fri Mar 6 19:37:02 2026   R1   Router(config-subif)#ip address 192.168.1.1 255.255.255.0
+Fri Mar 6 19:37:19 2026   R1   Router(config-subif)#ip address 192.168.1.2 255.255.255.0
+Fri Mar 6 19:37:32 2026   R1   Router(config-subif)#standby 1 ip 192.168.1.1
+Fri Mar 6 19:37:40 2026   R1   Router(config-subif)#standby priority 120
+Fri Mar 6 19:37:46 2026   R1   Router(config-subif)#standby preempt 
+Fri Mar 6 19:37:48 2026   R1   Router(config-subif)#exit
+Fri Mar 6 19:37:53 2026   R1   Router(config)#int g0/0.20
+Fri Mar 6 19:38:01 2026   R1   Router(config-subif)#encapsulation dot1Q 10
+Fri Mar 6 19:38:04 2026   R1   Router(config-subif)#encapsulation dot1Q 20
+Fri Mar 6 19:38:12 2026   R1   Router(config-subif)#ip address 192.168.1.3 255.255.255.0
+Fri Mar 6 19:38:46 2026   R1   Router(config-subif)#exit
+Fri Mar 6 19:39:02 2026   R1   Router(config)#int g0/0.10
+Fri Mar 6 19:39:06 2026   R1   Router(config-subif)#encapsulation dot1Q 10
+Fri Mar 6 19:39:19 2026   R1   Router(config-subif)#ip address 10.0.0.127
+Fri Mar 6 19:39:24 2026   R1   Router(config-subif)#ip address 10.0.0.127 255.255.255.128
+Fri Mar 6 19:39:30 2026   R1   Router(config-subif)#ip address 10.0.0.126 255.255.255.128
+Fri Mar 6 19:39:44 2026   R1   Router(config-subif)#standby 1 ip 192.168.1.1
+Fri Mar 6 19:50:51 2026   R1   Router(config-subif)#int g0/0.10
+Fri Mar 6 19:51:00 2026   R1   Router(config-subif)#encapsulation dot1Q 10
+Fri Mar 6 19:51:19 2026   R1   Router(config-subif)#ip address 10.0.0.125
+Fri Mar 6 19:51:23 2026   R1   Router(config-subif)#ip address 10.0.0.125 255.255.255.128
+Fri Mar 6 19:51:33 2026   R1   Router(config-subif)#standby 1 ip 10.0.0.126
+Fri Mar 6 19:51:39 2026   R1   Router(config-subif)#standby 1 priority 120
+Fri Mar 6 19:51:43 2026   R1   Router(config-subif)#standby 1 preempt 
+Fri Mar 6 19:51:45 2026   R1   Router(config-subif)#exit
+Fri Mar 6 19:51:52 2026   R1   Router(config)#int g0/0.20
+Fri Mar 6 19:51:56 2026   R1   Router(config-subif)#encapsulation dot1Q 20
+Fri Mar 6 19:52:35 2026   R1   Router(config-subif)#ip address 10.0.0.?
+Fri Mar 6 19:52:45 2026   R1   Router(config-subif)#ip address 10.0.0.253 255.255.255.192
+Fri Mar 6 19:52:53 2026   R1   Router(config-subif)#standby 1 ip 10.0.0.254
+Fri Mar 6 19:53:01 2026   R1   Router(config-subif)#standby 1 priority 120
+Fri Mar 6 19:53:06 2026   R1   Router(config-subif)#standby 1 preempt
+Fri Mar 6 19:53:23 2026   SW8   SW8>enable
+Fri Mar 6 19:53:23 2026   SW8   SW8#configure terminal
+Fri Mar 6 19:53:36 2026   R1   Router(config-subif)#int g0/0.30
+Fri Mar 6 19:53:41 2026   R1   Router(config-subif)#encapsulation dot1Q 30
+Fri Mar 6 19:54:14 2026   R1   Router(config-subif)#ip address 10.0.1.93 255.255.255.224
+Fri Mar 6 19:54:22 2026   R1   Router(config-subif)#standby 1 ip 10.0.1.94
+Fri Mar 6 19:54:31 2026   R1   Router(config-subif)#standby 1 priority 120
+Fri Mar 6 19:54:33 2026   R1   Router(config-subif)#standby 1 preempt 
+Fri Mar 6 19:54:34 2026   R1   Router(config-subif)#exit
+Fri Mar 6 19:54:38 2026   R1   Router(config)#int g0/0.40
+Fri Mar 6 19:54:42 2026   R1   Router(config-subif)#encapsulation dot1Q 40
+Fri Mar 6 19:55:07 2026   R1   Router(config-subif)#ip address
+Fri Mar 6 19:55:20 2026   R1   Router(config-subif)#ip address 10.0.1.237 255.255.255.240
+Fri Mar 6 19:55:28 2026   R1   Router(config-subif)#standby 1 ip 10.0.1.238
+Fri Mar 6 19:55:33 2026   R1   Router(config-subif)#standby 1 priority 120
+Fri Mar 6 19:55:37 2026   R1   Router(config-subif)#standby 1 preempt
+Fri Mar 6 19:55:38 2026   R1   Router(config-subif)#exit
+Fri Mar 6 19:56:00 2026   R1   Router(config)#do show standby br
+Fri Mar 6 19:56:11 2026   R2   R2>en
+Fri Mar 6 19:56:12 2026   R2   R2#conf t
+Fri Mar 6 19:56:17 2026   R2   R2(config)#int g0/0.10
+Fri Mar 6 19:56:19 2026   R2   R2(config-subif)#encapsulation dot1Q 10
+Fri Mar 6 19:56:33 2026   R2   R2(config-subif)#ip address 10.0.0.125 255.255.255.128
+Fri Mar 6 19:56:44 2026   R2   R2(config-subif)#standby 1 ip 10.0.0.127
+Fri Mar 6 19:56:48 2026   R2   R2(config-subif)#standby 1 priority 110
+Fri Mar 6 19:56:51 2026   R2   R2(config-subif)#standby preempt
+Fri Mar 6 19:56:53 2026   R2   R2(config-subif)#exit
+Fri Mar 6 19:56:56 2026   R2   R2(config)#int g0/0.20
+Fri Mar 6 19:56:59 2026   R2   R2(config-subif)#encapsulation dot1Q 20
+Fri Mar 6 19:57:33 2026   R2   R2(config-subif)#ip address 
+Fri Mar 6 19:57:38 2026   R2   R2(config-subif)#do show standby br
+Fri Mar 6 19:57:52 2026   R2   R2(config-subif)#int g0/0
+Fri Mar 6 19:57:55 2026   R2   R2(config-if)#no standby
+Fri Mar 6 19:58:03 2026   R2   R2(config-if)#standby 1 no ip
+Fri Mar 6 19:58:56 2026   R2   R2(config-if)#exit
+Fri Mar 6 19:58:58 2026   R2   R2(config)#int g0/0.10
+Fri Mar 6 19:59:32 2026   R2   R2(config-subif)#standby 1 ip 10.0.0.126
+Fri Mar 6 19:59:45 2026   R2   R2(config-subif)#standby 1 priority 110
+Fri Mar 6 19:59:48 2026   R2   R2(config-subif)#standby preempt
+Fri Mar 6 19:59:50 2026   R2   R2(config-subif)#exit
+Fri Mar 6 19:59:53 2026   R2   R2(config)#int g0/0.20
+Fri Mar 6 19:59:55 2026   R2   R2(config-subif)#encapsulation dot1Q 20
+Fri Mar 6 20:00:23 2026   R2   R2(config-subif)#ip address 10.0.0.252
+Fri Mar 6 20:00:28 2026   R2   R2(config-subif)#ip address 10.0.0.252 255.255.255.192
+Fri Mar 6 20:00:35 2026   R2   R2(config-subif)#standby 1 ip 10.0.0.254
+Fri Mar 6 20:00:41 2026   R2   R2(config-subif)#standby 1 priority 110
+Fri Mar 6 20:00:44 2026   R2   R2(config-subif)#standby 1 preempt
+Fri Mar 6 20:00:45 2026   R2   R2(config-subif)#exit
+Fri Mar 6 20:00:58 2026   R2   R2(config)#int g0/0.30
+Fri Mar 6 20:01:01 2026   R2   R2(config-subif)#encapsulation dot1Q 30
+Fri Mar 6 20:01:29 2026   R2   R2(config-subif)#ip address 10.0.1.92 255.255.255.224
+Fri Mar 6 20:01:36 2026   R2   R2(config-subif)#standby 1 ip 10.0.1.94
+Fri Mar 6 20:01:41 2026   R2   R2(config-subif)#standby 1 priority 110
+Fri Mar 6 20:01:43 2026   R2   R2(config-subif)#standby 1 preempt
+Fri Mar 6 20:01:44 2026   R2   R2(config-subif)#exit
+Fri Mar 6 20:01:47 2026   R2   R2(config)#int g0/0.40
+Fri Mar 6 20:01:50 2026   R2   R2(config-subif)#encapsulation dot1Q 40
+Fri Mar 6 20:02:06 2026   R2   R2(config-subif)#ip address ?
+Fri Mar 6 20:02:20 2026   R2   R2(config-subif)#ip address 10.0.1.223 255.255.255.240
+Fri Mar 6 20:02:49 2026   R2   R2(config-subif)#ip address 10.0.1.236 255.255.255.240
+Fri Mar 6 20:02:57 2026   R2   R2(config-subif)#standby 1 ip 10.0.1.238
+Fri Mar 6 20:03:01 2026   R2   R2(config-subif)#standby 1 priority 110
+Fri Mar 6 20:03:04 2026   R2   R2(config-subif)#standby 1 preempt
+Fri Mar 6 20:03:05 2026   R2   R2(config-subif)#exit
+Fri Mar 6 20:03:12 2026   R2   R2(config)#do show standby br
+Fri Mar 6 20:03:48 2026   R2   R2(config)#int g0/0
+Fri Mar 6 20:03:56 2026   R2   R2(config-if)#no standby 1 ip 10.0.1.249
+Fri Mar 6 20:03:58 2026   R2   R2(config-if)#exit
+Fri Mar 6 20:04:01 2026   R2   R2(config)#do show standby br
+Fri Mar 6 20:04:19 2026   R1   Router(config)#do show standby br
+Fri Mar 6 20:05:23 2026   SW7   SW7>enable
+Fri Mar 6 20:05:23 2026   SW7   SW7#configure terminal
+Fri Mar 6 20:05:23 2026   SW7   SW7(config)#interface FastEthernet0/1
+Fri Mar 6 20:05:33 2026   SW7   SW7(config-if)#int range f0/1-f0/2
+Fri Mar 6 20:05:39 2026   SW7   SW7(config-if-range)#switchport mode trunk 
+Fri Mar 6 20:05:50 2026   SW7   SW7(config-if-range)#switchport trunk allowed vlan 10,20,30,40,50,60,70,80,90,100,110
+Fri Mar 6 20:05:50 2026   SW7   SW7(config-if-range)#exit
+Fri Mar 6 20:05:59 2026   SW7   SW7(config)#do show int trunk
+Fri Mar 6 20:06:09 2026   SW7   SW7(config)#int range f0/1-f0/4
+Fri Mar 6 20:06:12 2026   SW7   SW7(config-if-range)#switchport mode trunk 
+Fri Mar 6 20:06:15 2026   SW7   SW7(config-if-range)#switchport trunk allowed vlan 10,20,30,40,50,60,70,80,90,100,110
+Fri Mar 6 20:06:17 2026   SW7   SW7(config-if-range)#exit
+Fri Mar 6 21:20:20 2026   R5   R5>en
+Fri Mar 6 21:20:21 2026   R5   R5#conf t
+Fri Mar 6 21:20:25 2026   R5   R5(config)#do show ip int br
+Fri Mar 6 21:20:30 2026   R5   R5(config)#int s0/0/0
+Fri Mar 6 21:20:33 2026   R5   R5(config-if)#router ospf 1
+Fri Mar 6 21:21:14 2026   R5   R5(config-router)#network 198.51.100.4 0.0.0.4 area 0
+Fri Mar 6 21:21:41 2026   R5   R5(config-router)#network 198.51.100.4 0.0.0.3 area 0
+Fri Mar 6 21:22:04 2026   R5   R5(config-router)#network 198.51.100.0 0.0.0.3 area 0
+Fri Mar 6 21:22:08 2026   R5   R5(config-router)#network 198.51.100.12 0.0.0.3 area 0
+Fri Mar 6 21:22:12 2026   R5   R5(config-router)#network 198.51.100.8 0.0.0.3 area 0
+Fri Mar 6 21:22:17 2026   R5   R5(config-router)#exit
+Fri Mar 6 21:22:27 2026   R3   R3>en
+Fri Mar 6 21:22:28 2026   R3   R3#conf t
+Fri Mar 6 21:22:32 2026   R3   R3(config)#router ospf 1
+Fri Mar 6 21:22:46 2026   R3   R3(config-router)#network 198.51.100 4 0.0.0.3 area 0
+Fri Mar 6 21:22:55 2026   R3   R3(config-router)#network 198.51.100.4 0.0.0.3 area 0
+Fri Mar 6 21:23:17 2026   R3   R3(config-router)#passive-int g0/0
+Fri Mar 6 21:23:19 2026   R3   R3(config-router)#passive-int g0/1
+Fri Mar 6 21:23:21 2026   R3   R3(config-router)#passive-int g0/2
+Fri Mar 6 21:23:46 2026   R4   R4>en
+Fri Mar 6 21:23:47 2026   R4   R4#conf t
+Fri Mar 6 21:23:51 2026   R4   R4(config)#router ospf 1
+Fri Mar 6 21:24:06 2026   R4   R4(config-router)#network 198.51.100.0 0.0.0.3 area 0
+Fri Mar 6 21:24:11 2026   R4   R4(config-router)#passive-int g0/0
+Fri Mar 6 21:24:12 2026   R4   R4(config-router)#passive-int g0/1
+Fri Mar 6 21:24:13 2026   R4   R4(config-router)#passive-int g0/2
+Fri Mar 6 21:24:25 2026   R1   Router>en
+Fri Mar 6 21:24:26 2026   R1   Router#conf t
+Fri Mar 6 21:24:28 2026   R1   Router(config)#Hostname R1
+Fri Mar 6 21:24:33 2026   R1   R1(config)#router ospf 1
+Fri Mar 6 21:24:47 2026   R1   R1(config-router)#network 198.51.100.12 0.0.0.3 area 0
+Fri Mar 6 21:24:54 2026   R1   R1(config-router)#passive-int g0/0
+Fri Mar 6 21:24:59 2026   R2   R2>en
+Fri Mar 6 21:25:00 2026   R2   R2#conf t
+Fri Mar 6 21:25:04 2026   R2   R2(config)#router ospf 1
+Fri Mar 6 21:25:17 2026   R2   R2(config-router)#network 198.51.100.8 0.0.0.3 area 0
+Fri Mar 6 21:26:18 2026   R1   R1(config-router)#do show standby br
+Fri Mar 6 21:26:38 2026   R2   R2(config-router)#do show ip int br
+Fri Mar 6 21:26:49 2026   R2   R2(config-router)#do show standby br
+Fri Mar 6 21:27:55 2026   R2   R2(config-router)#int g0/0.10
+Fri Mar 6 21:27:59 2026   R2   R2(config-subif)#encapsulation dot1Q 10
+Fri Mar 6 21:28:09 2026   R2   R2(config-subif)#ip address 10.0.0.124 255.255.255.128
+Fri Mar 6 21:28:11 2026   R2   R2(config-subif)#exit
+Fri Mar 6 21:28:16 2026   R2   R2(config)#do show standby br
+Fri Mar 6 21:28:27 2026   R2   R2(config)#int g0/0.10
+Fri Mar 6 21:28:29 2026   R2   R2(config-subif)#encapsulation dot1Q 10
+Fri Mar 6 21:28:40 2026   R2   R2(config-subif)#ip address 10.0.0.124 255.255.255.128
+Fri Mar 6 21:28:56 2026   R2   R2(config-subif)#standby 1 ip 10.0.0.126
+Fri Mar 6 21:29:03 2026   R2   R2(config-subif)#standby 1 priority 110
+Fri Mar 6 21:29:07 2026   R2   R2(config-subif)#standby 1 preempt
+Fri Mar 6 21:29:10 2026   R2   R2(config-subif)#exit
+Fri Mar 6 21:29:14 2026   R2   R2(config)#do show standby br
+Fri Mar 6 21:29:19 2026   R2   R2(config)#do show standby br
+Fri Mar 6 21:29:26 2026   R1   R1(config-router)#do show standby br
+Fri Mar 6 21:31:01 2026   R1   R1(config-router)#do show ip route
+Fri Mar 6 21:31:21 2026   R1   R1(config-router)#ip route 0.0.0.0 0.0.0.0 s0/0/0
+Fri Mar 6 21:31:43 2026   R1   R1(config)#do show run
+Fri Mar 6 21:31:46 2026   R1   R1(config)#do show run
+Fri Mar 6 21:32:42 2026   R5   R5(config)#do show ip route
+Fri Mar 6 21:33:30 2026   R5   R5(config)#do show ip ospf neighbor
+Fri Mar 6 21:33:57 2026   R1   R1(config)#do show ip ospf neighbor
+Fri Mar 6 21:34:36 2026   R3   R3(config-router)#do show ip ospf neighbor
+Fri Mar 6 21:34:46 2026   R4   R4(config-router)#do show ip ospf neighbor
+Fri Mar 6 21:34:52 2026   R2   R2(config)#do show ip ospf neighbor
+Fri Mar 6 21:34:58 2026   R1   R1(config)#do show ip ospf neighbor
+Fri Mar 6 21:35:20 2026   R1   R1(config)#do show ip int br
+Fri Mar 6 21:35:25 2026   R1   R1(config)#int s0/0/0
+Fri Mar 6 21:35:45 2026   R1   R1(config-if)#ip address 198.51.10.13 255.255.255.252
+Fri Mar 6 21:35:46 2026   R1   R1(config-if)#no shut
+Fri Mar 6 21:35:47 2026   R1   R1(config-if)#exit
+Fri Mar 6 21:35:52 2026   R1   R1(config)#do show ip ospf neighbor
+Fri Mar 6 21:35:58 2026   R1   R1(config)#router ospf 1
+Fri Mar 6 21:36:10 2026   R1   R1(config-router)#network 198.51.100.12 0.0.0.3 area 0
+Fri Mar 6 21:36:14 2026   R1   R1(config-router)#passive-int g0/0
+Fri Mar 6 21:36:15 2026   R1   R1(config-router)#exit
+Fri Mar 6 21:36:19 2026   R1   R1(config)#do show ip ospf neighbor
+Fri Mar 6 21:37:00 2026   R1   R1(config)#interface GigabitEthernet0/0
+Fri Mar 6 21:37:02 2026   R1   R1(config-if)#exit
+Fri Mar 6 21:37:02 2026   R1   R1(config)#interface GigabitEthernet0/2
+Fri Mar 6 21:37:02 2026   R1   R1(config-if)#exit
+Fri Mar 6 21:37:02 2026   R1   R1(config)#interface Serial0/0/0
+Fri Mar 6 21:37:03 2026   R1   R1(config-if)#exit
+Fri Mar 6 21:37:03 2026   R1   R1(config)#interface Serial0/0/1
+Fri Mar 6 21:37:04 2026   R1   R1(config-if)#exit
+Fri Mar 6 21:37:04 2026   R1   R1(config)#interface Serial0/0/0
+Fri Mar 6 21:37:31 2026   R1   R1(config-if)#ipv6 address 2001:db8:acad:8::1/64
+Fri Mar 6 21:37:36 2026   R1   R1(config-if)#ipv6 unicast-routing
+Fri Mar 6 21:38:29 2026   R5   R5(config)#do show ip ospf neighbor
+Fri Mar 6 21:39:52 2026   R5   R5(config)#do show ip route
+Fri Mar 6 21:41:53 2026   R5   R5(config)#router ospf 
+Fri Mar 6 21:41:55 2026   R5   R5(config)#router ospf 1
+Fri Mar 6 21:41:56 2026   R5   R5(config-router)#router ospf 1
+Fri Mar 6 21:41:57 2026   R5   R5(config-router)#network 198.51.100.0 0.0.0.255 area 0
+Fri Mar 6 21:42:03 2026   R5   R5(config-router)#do show ip route
+Fri Mar 6 21:42:28 2026   R5   R5(config-router)#do show ip ospf neighbor
+Fri Mar 6 21:43:54 2026   R5   R5(config-router)#network 20.0.1.128 0.0.0.127 area 0
+Fri Mar 6 21:44:04 2026   R5   R5(config-router)#no network 20.0.1.128 0.0.0.127 area 0
+Fri Mar 6 21:44:08 2026   R5   R5(config-router)#network 10.0.1.128 0.0.0.127 area 0
+Fri Mar 6 21:44:24 2026   R5   R5(config-router)#no network 10.0.1.128 0.0.0.127 area 0
+Fri Mar 6 21:44:29 2026   R5   R5(config-router)#network 10.0.1.128 0.0.0.63 area 0
+Fri Mar 6 21:44:34 2026   R5   R5(config-router)#network 10.0.1.0 0.0.0.63 area 0
+Fri Mar 6 21:44:55 2026   R5   R5(config-router)#exit
+Fri Mar 6 21:44:57 2026   R5   R5(config)#do show run
+Fri Mar 6 21:47:28 2026   R5   R5(config)#do show run | section ospf
+Fri Mar 6 21:47:40 2026   R5   R5(config)#router ospf 1
+Fri Mar 6 21:47:51 2026   R5   R5(config-router)#no network 198.51.100.0 0.0.0.255 area 0
+Fri Mar 6 21:48:21 2026   R5   R5(config-router)#do show ospf neighbor
+Fri Mar 6 21:48:38 2026   R5   R5(config-router)#do show ip ospf neighbor
+Fri Mar 6 21:48:59 2026   R5   R5(config-router)#do show run | section ospf
+Fri Mar 6 21:49:12 2026   R5   R5(config-router)#no network 10.0.1.128 0.0.0.63 area 0
+Fri Mar 6 21:49:17 2026   R5   R5(config-router)#no network 10.0.1.0 0.0.0.63 area 0
+Fri Mar 6 21:49:20 2026   R5   R5(config-router)#do show run | section ospf
+Fri Mar 6 21:49:59 2026   R5   R5(config-router)#show ip route ospf
+Fri Mar 6 21:50:02 2026   R5   R5(config-router)#do show ip route ospf
+Fri Mar 6 21:51:08 2026   R5   R5(config-router)#network 10.0.0.0 0.0.255.255 area 0
+Fri Mar 6 21:51:24 2026   R5   R5(config-router)#do show ip protocols
+Fri Mar 6 21:51:29 2026   R5   R5(config-router)#end
+Fri Mar 6 21:51:29 2026   R5   R5#configure terminal
+Fri Mar 6 21:51:29 2026   R5   R5(config)#router rip
+Fri Mar 6 21:51:50 2026   R5   R5(config-router)#do show ip ospf neighbor
+Fri Mar 6 21:52:24 2026   R3   R3>en
+Fri Mar 6 21:52:25 2026   R3   R3#conf t
+Fri Mar 6 21:52:34 2026   R3   R3(config)#do show run | router ospf
+Fri Mar 6 21:52:40 2026   R3   R3(config)#do show run | section ospf
+Fri Mar 6 21:52:58 2026   R4   R4>en
+Fri Mar 6 21:52:59 2026   R4   R4#conf t
+Fri Mar 6 21:53:00 2026   R4   R4(config)#do show run | section ospf
+Fri Mar 6 21:53:09 2026   R2   R2>en
+Fri Mar 6 21:53:09 2026   R2   R2#conf t
+Fri Mar 6 21:53:11 2026   R2   R2(config)#do show run | section ospf
+Fri Mar 6 21:53:21 2026   R1   R1>en
+Fri Mar 6 21:53:22 2026   R1   R1#conf t
+Fri Mar 6 21:53:24 2026   R1   R1(config)#do show run | section ospf
+Fri Mar 6 21:53:55 2026   R5   R5(config-router)#do show ip int br
+Fri Mar 6 21:54:47 2026   R5   R5(config-router)#no network 198.51.100.4 0.0.0.3 area 0
+Fri Mar 6 21:54:52 2026   R5   R5(config-router)#no network 198.51.100.0 0.0.0.3 area 0
+Fri Mar 6 21:54:55 2026   R5   R5(config-router)#no network 198.51.100.12 0.0.0.3 area 0
+Fri Mar 6 21:54:58 2026   R5   R5(config-router)#no network 198.51.100.8 0.0.0.3 area 0
+Fri Mar 6 21:55:14 2026   R5   R5(config-router)#network 198.51.100.0 0.0.0.255 area 0
+Fri Mar 6 21:55:36 2026   R5   R5(config-router)#network 198.51.100.0 0.0.0.3 area 0
+Fri Mar 6 21:55:56 2026   R5   R5(config-router)#exit
+Fri Mar 6 21:55:58 2026   R5   R5(config)#router ospf 1
+Fri Mar 6 21:56:01 2026   R5   R5(config-router)#network 198.51.100.0 0.0.0.3 area 0
+Fri Mar 6 21:56:07 2026   R5   R5(config-router)#no network 198.51.100.0 0.0.0.3 area 0
+Fri Mar 6 21:56:11 2026   R5   R5(config-router)#network 198.51.100.0 0.0.0.0 area 0
+Fri Mar 6 21:56:13 2026   R5   R5(config-router)#exit
+Fri Mar 6 21:56:36 2026   R1   R1(config)#router ospf 1
+Fri Mar 6 21:56:38 2026   R1   R1(config-router)#network 198.51.100.0 0.0.0.0 area 0
+Fri Mar 6 21:56:58 2026   R1   R1(config-router)#no network 198.51.100.12 0.0.0.3 area 0
+Fri Mar 6 21:57:05 2026   R2   R2(config)#router ospf 1
+Fri Mar 6 21:57:08 2026   R2   R2(config-router)#network 198.51.100.0 0.0.0.0 area 0
+Fri Mar 6 21:57:16 2026   R2   R2(config-router)#no network 198.51.100.8 0.0.0.3 area 0
+Fri Mar 6 21:57:26 2026   R3   R3(config)#router ospf 1
+Fri Mar 6 21:57:29 2026   R3   R3(config-router)#network 198.51.100.0 0.0.0.0 area 0
+Fri Mar 6 21:57:36 2026   R3   R3(config-router)#no network 198.51.100.4 0.0.0.3 area 0
+Fri Mar 6 21:57:47 2026   R4   R4(config)#router ospf 1
+Fri Mar 6 21:57:51 2026   R4   R4(config-router)#network 198.51.100.0 0.0.0.0 area 0
+Fri Mar 6 21:57:58 2026   R4   R4(config-router)#no network 198.51.100.0 0.0.0.3 area 0
+Fri Mar 6 21:58:37 2026   R5   R5#conf t
+Fri Mar 6 21:58:41 2026   R5   R5(config)#do show run | section ospf
+Fri Mar 6 21:59:11 2026   R3   R3(config-router)#end
+Fri Mar 6 21:59:11 2026   R3   R3#configure terminal
+Fri Mar 6 21:59:11 2026   R3   R3(config)#interface Serial0/0/0
+Fri Mar 6 21:59:21 2026   R5   R5(config)#interface Serial0/0/0
+Fri Mar 6 21:59:25 2026   R5   R5(config-if)#exit
+Fri Mar 6 21:59:25 2026   R5   R5(config)#interface Serial0/0/1
+Fri Mar 6 21:59:27 2026   R5   R5(config-if)#exit
+Fri Mar 6 21:59:27 2026   R5   R5(config)#interface Serial0/0/0
+Fri Mar 6 22:01:03 2026   R3   R3(config-if)#do show controllers serial
+Fri Mar 6 22:01:07 2026   R3   R3(config-if)#show controllers serial
+Fri Mar 6 22:01:18 2026   R3   R3(config-if)#do show controllers s0/0/0
+Fri Mar 6 22:02:29 2026   R5   R5(config-if)#exit
+Fri Mar 6 22:02:29 2026   R5   R5(config)#interface Serial0/0/0
+Fri Mar 6 22:02:34 2026   R5   R5(config-if)#exit
+Fri Mar 6 22:02:34 2026   R5   R5(config)#interface Serial0/0/1
+Fri Mar 6 22:03:15 2026   R5   R5(config-if)#exit
+Fri Mar 6 22:03:15 2026   R5   R5(config)#interface Serial0/1/0
+Fri Mar 6 22:03:48 2026   R5   R5(config-if)#do show run
+Fri Mar 6 22:04:47 2026   R5   R5(config-if)#exit
+Fri Mar 6 22:04:47 2026   R5   R5(config)#interface Serial0/0/0
+Fri Mar 6 22:06:04 2026   R5   R5(config-if)#exit
+Fri Mar 6 22:06:04 2026   R5   R5(config)#router rip
+Fri Mar 6 22:06:26 2026   R5   R5(config-router)#network 198.51.100.0
+Fri Mar 6 22:06:31 2026   R5   R5(config-router)#no network 198.51.100.0
+Fri Mar 6 22:06:39 2026   R5   R5(config-router)#exit
+Fri Mar 6 22:06:41 2026   R5   R5(config)#no router rip
+Fri Mar 6 22:07:03 2026   R5   R5(config)#router ospf 1
+Fri Mar 6 22:07:11 2026   R5   R5(config-router)#network 0.0.0.0 255.255.255.255 area 0
+Fri Mar 6 22:07:14 2026   R5   R5(config-router)#exit
+Fri Mar 6 22:07:44 2026   R3   R3(config-if)#network 0.0.0.0 255.255.255.255 area 0
+Fri Mar 6 22:07:47 2026   R3   R3(config-if)#router ospf 1
+Fri Mar 6 22:07:48 2026   R3   R3(config-router)#network 0.0.0.0 255.255.255.255 area 0
+Fri Mar 6 22:07:56 2026   R4   R4(config-router)#network 0.0.0.0 255.255.255.255 area 0
+Fri Mar 6 22:08:03 2026   R2   R2(config-router)#network 0.0.0.0 255.255.255.255 area 0
+Fri Mar 6 22:08:10 2026   R1   R1(config-router)#network 0.0.0.0 255.255.255.255 area 0
+Fri Mar 6 22:08:24 2026   R5   R5(config)#do show ip ospf neighbor
+Fri Mar 6 22:08:51 2026   R1   R1(config-router)#do show ip ospf neighbor
+Fri Mar 6 22:11:38 2026   R3   R3(config-router)#do show run
+Fri Mar 6 22:11:53 2026   R4   R4(config-router)#do show run
+Fri Mar 6 22:13:39 2026   R4   R4(config-router)#ip route 0.0.0.0 0.0.0.0 s0/0/1
+Fri Mar 6 22:15:00 2026   R4   R4(config)#no ip route 0.0.0.0 0.0.0.0 s0/0/1
+Fri Mar 6 22:16:13 2026   R3   R3(config-router)#end
+Fri Mar 6 22:16:13 2026   R3   R3#configure terminal
+Fri Mar 6 22:16:13 2026   R3   R3(config)#interface GigabitEthernet0/0
+Fri Mar 6 22:18:47 2026   R4   R4(config)#router ospf 1
+Fri Mar 6 22:19:15 2026   R4   R4(config-router)#network 10.0.1.0 0.0.0.63 area 0
+Sat Mar 7 16:04:43 2026   R1   R1>enable
+Sat Mar 7 16:04:43 2026   R1   R1#configure terminal
+Sat Mar 7 16:04:43 2026   R1   R1(config)#interface GigabitEthernet0/0
+Sat Mar 7 16:04:44 2026   R1   R1(config-if)#shutdown
+Sat Mar 7 16:05:01 2026   R1   R1(config-if)#exit
+Sat Mar 7 16:05:01 2026   R1   R1(config)#interface GigabitEthernet0/0
+Sat Mar 7 16:05:02 2026   R1   R1(config-if)#no shutdown
+Sat Mar 7 16:12:39 2026   R3   R3>en
+Sat Mar 7 16:12:40 2026   R3   R3#conf t
+Sat Mar 7 16:12:42 2026   R3   R3(config)#do show ip route
+Sat Mar 7 16:13:01 2026   R1   R1(config-if)#do show ip route
+Sat Mar 7 16:13:03 2026   R1   R1(config-if)#exit
+Sat Mar 7 16:13:05 2026   R1   R1(config)#do show ip route
+Sat Mar 7 16:16:49 2026   SW7   SW7>enable
+Sat Mar 7 16:16:49 2026   SW7   SW7#configure terminal
+Sat Mar 7 16:17:35 2026   R1   R1(config)#do show run
+Sat Mar 7 16:20:53 2026   SW1   SW1>enable
+Sat Mar 7 16:20:53 2026   SW1   SW1#configure terminal
+Sat Mar 7 16:21:46 2026   R3   R3(config)#do show run
+Sat Mar 7 16:22:58 2026   R4   R4>en
+Sat Mar 7 16:23:01 2026   R4   R4#show run
+Sat Mar 7 16:23:58 2026   R4   R4#conf t
+Sat Mar 7 16:24:03 2026   R4   R4(config)#int g0/1.100
+Sat Mar 7 16:24:16 2026   R4   R4(config-subif)#ip helper-address 10.0.1.238
+Sat Mar 7 16:24:23 2026   R4   R4(config-subif)#exit
+Sat Mar 7 16:35:35 2026   R4   R4(config)#int g0/1.100
+Sat Mar 7 16:35:39 2026   R4   R4(config-subif)#no ip helper-address 10.0.1.238
+Sat Mar 7 16:35:44 2026   R4   R4(config-subif)#ip helper-address 10.0.1.225
+Sat Mar 7 16:41:48 2026   R1   R1>en
+Sat Mar 7 16:41:49 2026   R1   R1#conf t
+Sat Mar 7 16:41:52 2026   R1   R1(config)#do show run
+Sat Mar 7 16:42:08 2026   R1   R1(config)#do show ip route
+Sat Mar 7 16:42:21 2026   R1   R1(config)#int g0/0.30
+Sat Mar 7 16:42:56 2026   R1   R1(config-subif)#ip helper-address 10.0.1.225
+Sat Mar 7 16:42:57 2026   R1   R1(config-subif)#exit
+Sat Mar 7 16:43:11 2026   R2   R2>en
+Sat Mar 7 16:43:12 2026   R2   R2#conf t
+Sat Mar 7 16:43:15 2026   R2   R2(config)#int g0/0.30
+Sat Mar 7 16:43:17 2026   R2   R2(config-subif)#ip helper-address 10.0.1.225
+Sat Mar 7 16:45:06 2026   SW8   SW8>en
+Sat Mar 7 16:45:10 2026   SW8   SW8#show vlan br
+Sat Mar 7 16:45:27 2026   SW8   SW8#show int trunk
+Sat Mar 7 16:50:21 2026   SW5   SW5>enable
+Sat Mar 7 16:50:21 2026   SW5   SW5#configure terminal
+Sat Mar 7 16:50:21 2026   SW5   SW5(config)#interface FastEthernet0/1
+Sat Mar 7 16:50:23 2026   SW5   SW5(config-if)#exit
+Sat Mar 7 16:50:23 2026   SW5   SW5(config)#interface FastEthernet0/2
+Sat Mar 7 16:50:25 2026   SW5   SW5(config-if)#exit
+Sat Mar 7 16:50:25 2026   SW5   SW5(config)#interface FastEthernet0/3
+Sat Mar 7 16:50:25 2026   SW5   SW5(config-if)#exit
+Sat Mar 7 16:50:25 2026   SW5   SW5(config)#interface FastEthernet0/4
+Sat Mar 7 16:52:59 2026   SW12   SW12>enable
+Sat Mar 7 16:52:59 2026   SW12   SW12#configure terminal
+Sat Mar 7 16:53:07 2026   SW12   SW12(config)#do show vlan br
+Sat Mar 7 16:53:20 2026   SW12   SW12(config)#do show int trunk
+Sat Mar 7 16:56:32 2026   SW12   SW12(config)#do show vlan br
+Sat Mar 7 17:03:28 2026   R1   R1>en
+Sat Mar 7 17:03:31 2026   R1   R1#show run
+Sat Mar 7 17:09:47 2026   SW12   SW12>enable
+Sat Mar 7 17:09:47 2026   SW12   SW12#configure terminal
+Sat Mar 7 17:09:49 2026   SW12   SW12(config)#interface FastEthernet0/2
+Sat Mar 7 17:09:53 2026   SW12   SW12(config-if)#exit
+Sat Mar 7 17:16:04 2026   SW12   SW12(config)#int f0/7
+Sat Mar 7 17:16:17 2026   SW12   SW12(config-if)#switchport access vlan 70
+Sat Mar 7 17:16:17 2026   SW12   SW12(config-if)#exit
+Sat Mar 7 17:16:24 2026   SW12   SW12(config)#int f0/7
+Sat Mar 7 17:16:27 2026   SW12   SW12(config-if)#switchport access vlan 40
+Sat Mar 7 17:16:28 2026   SW12   SW12(config-if)#exit
+Sat Mar 7 17:21:12 2026   R1   R1>en
+Sat Mar 7 17:21:13 2026   R1   R1#conf t
+Sat Mar 7 17:21:15 2026   R1   R1(config)#do show run
+Sat Mar 7 17:21:34 2026   R1   R1(config)#router ospf 1
+Sat Mar 7 17:21:45 2026   R1   R1(config-router)#no network 0.0.0.0 255.255.255.255 area 0
+Sat Mar 7 17:21:56 2026   R5   R5>en
+Sat Mar 7 17:21:58 2026   R5   R5#conf t
+Sat Mar 7 17:22:01 2026   R5   R5(config)#router ospf 1
+Sat Mar 7 17:22:03 2026   R5   R5(config-router)#do show run
+Sat Mar 7 17:22:15 2026   R5   R5(config-router)#no network 0.0.0.0 255.255.255.255 area 0
+Sat Mar 7 17:22:21 2026   R2   R2>en
+Sat Mar 7 17:22:22 2026   R2   R2#conf t
+Sat Mar 7 17:22:24 2026   R2   R2(config)#router ospf 1
+Sat Mar 7 17:22:27 2026   R2   R2(config-router)#do show run
+Sat Mar 7 17:22:47 2026   R2   R2(config-router)#no network 0.0.0.0 255.255.255.255 area 0
+Sat Mar 7 17:22:58 2026   R3   R3>en
+Sat Mar 7 17:22:59 2026   R3   R3#conf t
+Sat Mar 7 17:23:04 2026   R3   R3(config)#router ospf 1
+Sat Mar 7 17:23:06 2026   R3   R3(config-router)#do show run
+Sat Mar 7 17:23:27 2026   R3   R3(config-router)#no network 0.0.0.0 255.255.255.255 area 0
+Sat Mar 7 17:23:34 2026   R4   R4>en
+Sat Mar 7 17:23:35 2026   R4   R4#conf t
+Sat Mar 7 17:23:39 2026   R4   R4(config)#router ospf 1
+Sat Mar 7 17:23:41 2026   R4   R4(config-router)#network 0.0.0.0 255.255.255.255 area 0
+Sat Mar 7 17:23:45 2026   R4   R4(config-router)#no network 0.0.0.0 255.255.255.255 area 0
+Sat Mar 7 17:24:27 2026   R4   R4(config-router)#do show ip ospf neighbor
+Sat Mar 7 17:25:01 2026   R4   R4(config-router)#no router ospf 1
+Sat Mar 7 17:25:09 2026   R3   R3(config-router)#no router ospf 1
+Sat Mar 7 17:25:14 2026   R5   R5(config-router)#no router ospf 1
+Sat Mar 7 17:25:20 2026   R2   R2(config-router)#no router ospf 1
+Sat Mar 7 17:25:25 2026   R1   R1(config-router)#no router ospf 1
+Sat Mar 7 17:25:28 2026   R1   R1(config-router)#exit
+Sat Mar 7 17:25:30 2026   R1   R1(config)#no router ospf 1
+Sat Mar 7 17:25:32 2026   R1   R1(config)#do show run
+Sat Mar 7 17:25:52 2026   R1   R1(config)#router ospf 1
+Sat Mar 7 17:29:08 2026   R1   R1(config-router)#network 198.51.100.12
+Sat Mar 7 17:29:15 2026   R1   R1(config-router)#network 198.51.100.12 0.0.0.3 area 0
+Sat Mar 7 17:29:31 2026   R1   R1(config-router)#network 10.0.0.0 0.0.0.127 area 0
+Sat Mar 7 17:29:44 2026   R1   R1(config-router)#network 10.0.0.192 0.0.0.63 area 0
+Sat Mar 7 17:29:57 2026   R1   R1(config-router)#network 10.0.1.64 0.0.0.31 area 0
+Sat Mar 7 17:30:11 2026   R1   R1(config-router)#network 10.0.1.224 0.0.0.15 area 0
+Sat Mar 7 17:30:29 2026   R2   R2(config-router)#exit
+Sat Mar 7 17:30:31 2026   R2   R2(config)#router ospf 1
+Sat Mar 7 17:30:44 2026   R2   R2(config-router)#network 198.51.100.12 0.0.0.3 area 0
+Sat Mar 7 17:30:46 2026   R2   R2(config-router)#network 10.0.0.0 0.0.0.127 area 0
+Sat Mar 7 17:30:55 2026   R2   R2(config-router)#network 10.0.0.192 0.0.0.63 area 0
+Sat Mar 7 17:31:00 2026   R2   R2(config-router)#network 10.0.1.64 0.0.0.31 area 0
+Sat Mar 7 17:31:09 2026   R2   R2(config-router)#network 10.0.1.224 0.0.0.15 area 0
+Sat Mar 7 17:31:20 2026   R2   R2(config-router)#do show ip ospf neighbor
+Sat Mar 7 17:31:33 2026   R5   R5(config-router)#exit
+Sat Mar 7 17:31:35 2026   R5   R5(config)#router ospf 1
+Sat Mar 7 17:31:57 2026   R5   R5(config-router)#network 198.51.100.12 0.0.0.3 area 0
+Sat Mar 7 17:32:02 2026   R5   R5(config-router)#network 198.51.100.8 0.0.0.3 area 0
+Sat Mar 7 17:32:15 2026   R2   R2(config-router)#no network 198.51.100.12 0.0.0.3 area 0
+Sat Mar 7 17:32:21 2026   R2   R2(config-router)#network 198.51.100.8 0.0.0.3 area 0
+Sat Mar 7 17:32:31 2026   R5   R5(config-router)#network 198.51.100.4 0.0.0.3 area 0
+Sat Mar 7 17:32:34 2026   R5   R5(config-router)#network 198.51.100.0 0.0.0.3 area 0
+Sat Mar 7 17:32:57 2026   R5   R5(config-router)#do show ip ospf neighbor
+Sat Mar 7 17:33:14 2026   R1   R1(config-router)#do show ip ospf neighbor
+Sat Mar 7 17:33:51 2026   R3   R3(config-router)#exit
+Sat Mar 7 17:33:52 2026   R3   R3(config)#no router ospf 1
+Sat Mar 7 17:33:55 2026   R3   R3(config)#router ospf 1
+Sat Mar 7 17:34:08 2026   R3   R3(config-router)#network 198.51.100.4 0.0.0.3 area 0
+Sat Mar 7 17:34:18 2026   R3   R3(config-router)#network 10.0.1.0 0.0.0.63 area 0
+Sat Mar 7 17:34:38 2026   R3   R3(config-router)#network 10.0.1.96 0.0.0.31 area 0
+Sat Mar 7 17:34:45 2026   R3   R3(config-router)#network 10.0.1.160 0.0.0.31 area 0
+Sat Mar 7 17:34:53 2026   R3   R3(config-router)#do show ip ospf neighbor
+Sat Mar 7 17:35:11 2026   R4   R4(config-router)#exit
+Sat Mar 7 17:35:12 2026   R4   R4(config)#no router ospf 1
+Sat Mar 7 17:35:15 2026   R4   R4(config)#router ospf 1
+Sat Mar 7 17:35:27 2026   R4   R4(config-router)#network 198.51.100.0 0.0.0.3 area 0
+Sat Mar 7 17:35:40 2026   R4   R4(config-router)#network 10.0.0.128 0.0.0.63 area 0
+Sat Mar 7 17:35:54 2026   R4   R4(config-router)#network 10.0.1.192 0.0.0.31 area 0
+Sat Mar 7 17:36:02 2026   R4   R4(config-router)#network 10.0.1.128 0.0.0.31 area 0
+Sat Mar 7 17:36:08 2026   R4   R4(config-router)#do show ip ospf neighbor
+Sun Mar 8 18:11:45 2026   R1   R1>en
+Sun Mar 8 18:11:47 2026   R1   R1#show run
+Sun Mar 8 18:12:27 2026   R1   R1#conf t
+Sun Mar 8 18:12:30 2026   R1   R1(config)#int g0/0.20
+Sun Mar 8 18:12:41 2026   R1   R1(config-subif)#ip helper-address 10.0.1.225
+Sun Mar 8 18:12:43 2026   R1   R1(config-subif)#exit
+Sun Mar 8 18:12:54 2026   R2   R2>en
+Sun Mar 8 18:12:55 2026   R2   R2#conf t
+Sun Mar 8 18:12:59 2026   R2   R2(config)#int g0/0.20
+Sun Mar 8 18:13:01 2026   R2   R2(config-subif)#ip helper-address 10.0.1.225
+Sun Mar 8 18:15:09 2026   R1   R1(config)#int g0/0.30
+Sun Mar 8 18:15:11 2026   R1   R1(config-subif)#ip helper-address 10.0.1.225
+Sun Mar 8 18:15:13 2026   R1   R1(config-subif)#exit
+Sun Mar 8 18:15:33 2026   R2   R2(config-subif)#exit
+Sun Mar 8 18:15:38 2026   R2   R2(config)#int g0/0.30
+Sun Mar 8 18:15:39 2026   R2   R2(config-subif)#ip helper-address 10.0.1.225
+Sun Mar 8 18:18:00 2026   SW8   SW8>en
+Sun Mar 8 18:18:06 2026   SW8   SW8#show ip int br
+Sun Mar 8 18:18:11 2026   SW8   SW8#show int trunk
+Sun Mar 8 18:19:19 2026   SW8   SW8#configure terminal
+Sun Mar 8 18:22:59 2026   SW8   SW8(config)#do show vlan br
+Sun Mar 8 18:24:21 2026   SW8   SW8(config)#int f0/2
+Sun Mar 8 18:24:24 2026   SW8   SW8(config-if)#switchport mode trunk 
+Sun Mar 8 18:24:36 2026   SW8   SW8(config-if)#switchport trunk allowed vlan 10,20,30,40,50,60,70,80,90,100,110
+Sun Mar 8 18:24:37 2026   SW8   SW8(config-if)#exit
+Sun Mar 8 18:25:18 2026   SW8   SW8(config)#int f0/2
+Sun Mar 8 18:25:21 2026   SW8   SW8(config-if)#switchport mode access 
+Sun Mar 8 18:25:27 2026   SW8   SW8(config-if)#switchport access vlan 30
+Sun Mar 8 18:25:31 2026   SW8   SW8(config-if)#exit
+Sun Mar 8 18:26:06 2026   SW8   SW8(config)#int f0/3
+Sun Mar 8 18:26:09 2026   SW8   SW8(config-if)#switchport mode access 
+Sun Mar 8 18:26:13 2026   SW8   SW8(config-if)#switchport access vlan 10
+Sun Mar 8 18:26:14 2026   SW8   SW8(config-if)#exit
+Sun Mar 8 18:26:17 2026   SW8   SW8(config)#int f0/4
+Sun Mar 8 18:26:21 2026   SW8   SW8(config-if)#switchport mode access 
+Sun Mar 8 18:26:28 2026   SW8   SW8(config-if)#switchport access vlan 20
+Sun Mar 8 18:26:29 2026   SW8   SW8(config-if)#exit
+Sun Mar 8 18:27:09 2026   SW11   SW11>en
+Sun Mar 8 18:27:12 2026   SW11   SW11#show vlan br
+Sun Mar 8 18:27:25 2026   SW10   SW10>en
+Sun Mar 8 18:27:27 2026   SW10   SW10#show vlan br
+Sun Mar 8 18:27:38 2026   SW8   SW8(config)#int range f0/2-f0/4
+Sun Mar 8 18:27:42 2026   SW8   SW8(config-if-range)#switchport mode trunk 
+Sun Mar 8 18:27:52 2026   SW8   SW8(config-if-range)#switchport trunk allowed vlan 10,20,30,40,50,60,70,80,90,100,110
+Sun Mar 8 18:27:54 2026   SW8   SW8(config-if-range)#exit
+Sun Mar 8 18:28:02 2026   SW8   SW8(config)#do show int trunk
+Sun Mar 8 18:28:07 2026   SW11   SW11#configure terminal
+Sun Mar 8 18:28:12 2026   SW10   SW10#configure terminal
+Sun Mar 8 18:28:24 2026   SW11   SW11(config)#vlan 10
+Sun Mar 8 18:28:24 2026   SW11   SW11(config-vlan)#name IT-Department
+Sun Mar 8 18:28:28 2026   SW11   SW11(config-vlan)#vlan 20
+Sun Mar 8 18:28:28 2026   SW11   SW11(config-vlan)#name Finance-Department
+Sun Mar 8 18:28:33 2026   SW11   SW11(config-vlan)#vlan 30
+Sun Mar 8 18:28:33 2026   SW11   SW11(config-vlan)#name HR-Department
+Sun Mar 8 18:28:37 2026   SW11   SW11(config-vlan)#vlan 40
+Sun Mar 8 18:28:37 2026   SW11   SW11(config-vlan)#name Server-VLAN
+Sun Mar 8 18:28:45 2026   SW11   SW11(config-vlan)#vlan 50
+Sun Mar 8 18:28:45 2026   SW11   SW11(config-vlan)#name HQ-Management-VLAN
+Sun Mar 8 18:28:51 2026   SW11   SW11(config-vlan)#vlan 60
+Sun Mar 8 18:28:51 2026   SW11   SW11(config-vlan)#name Sales-Department
+Sun Mar 8 18:28:59 2026   SW11   SW11(config-vlan)#vlan 70
+Sun Mar 8 18:28:59 2026   SW11   SW11(config-vlan)#name Support-Department
+Sun Mar 8 18:29:04 2026   SW11   SW11(config-vlan)#vlan 80
+Sun Mar 8 18:29:04 2026   SW11   SW11(config-vlan)#name Logistics-Department
+Sun Mar 8 18:29:10 2026   SW11   SW11(config-vlan)#vlan 90
+Sun Mar 8 18:29:10 2026   SW11   SW11(config-vlan)#name Research-Department
+Sun Mar 8 18:29:20 2026   SW11   SW11(config-vlan)#vlan 90
+Sun Mar 8 18:29:20 2026   SW11   SW11(config-vlan)#name Marketing-Department
+Sun Mar 8 18:29:26 2026   SW11   SW11(config-vlan)#vlan 100
+Sun Mar 8 18:29:26 2026   SW11   SW11(config-vlan)#name Research-Department
+Sun Mar 8 18:29:33 2026   SW11   SW11(config-vlan)#vlan 110
+Sun Mar 8 18:29:33 2026   SW11   SW11(config-vlan)#name Customer-Service-Department
+Sun Mar 8 18:29:36 2026   SW10   SW10(config)#interface FastEthernet0/1
+Sun Mar 8 18:29:37 2026   SW10   SW10(config-if)#exit
+Sun Mar 8 18:29:37 2026   SW10   SW10(config)#interface FastEthernet0/2
+Sun Mar 8 18:29:42 2026   SW11   SW11(config-vlan)#end
+Sun Mar 8 18:29:42 2026   SW11   SW11#configure terminal
+Sun Mar 8 18:29:42 2026   SW11   SW11(config)#interface FastEthernet0/2
+Sun Mar 8 18:29:47 2026   SW11   SW11(config-if)#switchport access vlan 30
+Sun Mar 8 18:29:50 2026   SW11   SW11(config-if)#exit
+Sun Mar 8 18:29:50 2026   SW11   SW11(config)#interface FastEthernet0/3
+Sun Mar 8 18:29:54 2026   SW11   SW11(config-if)#switchport access vlan 30
+Sun Mar 8 18:29:55 2026   SW11   SW11(config-if)#exit
+Sun Mar 8 18:29:55 2026   SW11   SW11(config)#interface FastEthernet0/4
+Sun Mar 8 18:29:59 2026   SW11   SW11(config-if)#switchport access vlan 30
+Sun Mar 8 18:30:01 2026   SW11   SW11(config-if)#exit
+Sun Mar 8 18:30:01 2026   SW11   SW11(config)#interface FastEthernet0/3
+Sun Mar 8 18:30:01 2026   SW11   SW11(config-if)#exit
+Sun Mar 8 18:30:01 2026   SW11   SW11(config)#interface FastEthernet0/2
+Sun Mar 8 18:30:02 2026   SW11   SW11(config-if)#exit
+Sun Mar 8 18:30:02 2026   SW11   SW11(config)#interface FastEthernet0/1
+Sun Mar 8 18:30:06 2026   SW11   SW11(config-if)#switchport trunk allowed vlan remove 1
+Sun Mar 8 18:30:08 2026   SW11   SW11(config-if)#switchport trunk allowed vlan remove 1005
+Sun Mar 8 18:30:08 2026   SW11   SW11(config-if)#switchport trunk allowed vlan remove 1004
+Sun Mar 8 18:30:09 2026   SW11   SW11(config-if)#switchport trunk allowed vlan remove 1003
+Sun Mar 8 18:30:10 2026   SW11   SW11(config-if)#switchport trunk allowed vlan remove 1002
+Sun Mar 8 18:30:21 2026   SW11   SW11(config-if)#exit
+Sun Mar 8 18:30:25 2026   SW11   SW11(config)#int f0/1
+Sun Mar 8 18:30:28 2026   SW11   SW11(config-if)#switchport mode trunk 
+Sun Mar 8 18:30:39 2026   SW11   SW11(config-if)#switchport trunk allowed vlan 10,20,30,40,50,60,70,80,90,100,110
+Sun Mar 8 18:30:40 2026   SW11   SW11(config-if)#exit
+Sun Mar 8 18:31:33 2026   SW11   SW11(config)#do show vlan br
+Sun Mar 8 18:31:47 2026   R4   R4>en
+Sun Mar 8 18:31:50 2026   R4   R4#show run
+Sun Mar 8 18:32:08 2026   R4   R4#int g0/2.110
+Sun Mar 8 18:32:13 2026   R4   R4#conf to
+Sun Mar 8 18:32:15 2026   R4   R4#conf t
+Sun Mar 8 18:32:18 2026   R4   R4(config)#int g0/2.110
+Sun Mar 8 18:32:21 2026   R4   R4(config-subif)#ip helper-address 10.0.1.225
+Sun Mar 8 18:33:18 2026   SW6   SW6>enable
+Sun Mar 8 18:33:18 2026   SW6   SW6#configure terminal
+Sun Mar 8 18:33:24 2026   SW4   SW4>enable
+Sun Mar 8 18:33:24 2026   SW4   SW4#configure terminal
+Sun Mar 8 18:35:01 2026   SW5   SW5>enable
+Sun Mar 8 18:35:01 2026   SW5   SW5#configure terminal
+Sun Mar 8 18:35:03 2026   SW5   SW5(config)#interface FastEthernet0/1
+Sun Mar 8 18:44:37 2026   R2   R2>en
+Sun Mar 8 18:44:39 2026   R2   R2#show run
+Sun Mar 8 18:45:54 2026   R2   R2#conf t
+Sun Mar 8 18:45:56 2026   R2   R2(config)#router ospf 1
+Sun Mar 8 18:46:09 2026   R2   R2(config-router)#network 10.0.1.192 0.0.0.31 area 0
+Sun Mar 8 18:47:40 2026   R4   R4>en
+Sun Mar 8 18:47:41 2026   R4   R4#conf t
+Sun Mar 8 18:47:45 2026   R4   R4(config)#router ospf 1
+Sun Mar 8 18:47:55 2026   R4   R4(config-router)#network 10.0.1.224 0.0.0.15 area 0
+Sun Mar 8 18:48:34 2026   R4   R4(config-router)#exit
+Sun Mar 8 18:48:38 2026   R4   R4(config)#router ospf 1
+Sun Mar 8 18:48:42 2026   R4   R4(config-router)#no network 10.0.1.224 0.0.0.15 area 0
+Sun Mar 8 18:48:49 2026   R2   R2(config-router)#nonetwork 10.0.1.192 0.0.0.31 area 0
+Sun Mar 8 18:48:54 2026   R2   R2(config-router)#no network 10.0.1.192 0.0.0.31 area 0
+Sun Mar 8 18:48:56 2026   R2   R2(config-router)#exit
+Sun Mar 8 18:50:25 2026   R4   R4(config-router)#network 10.0.1.128 0.0.0.63 area 0
+Sun Mar 8 18:50:37 2026   R4   R4(config-router)#network 10.0.1.192 0.0.0.31 area 0
+Sun Mar 8 18:50:48 2026   R4   R4(config-router)#no network 10.0.1.128 0.0.0.63 area 0
+Sun Mar 8 18:50:57 2026   R4   R4(config-router)#network 10.0.0.128 0.0.0.63 area 0
+Sun Mar 8 18:51:05 2026   R4   R4(config-router)#network 10.0.1.128 0.0.0.31 area 0
+Sun Mar 8 18:51:12 2026   R4   R4(config-router)#exit
+Sun Mar 8 18:51:15 2026   R4   R4(config)#do show ip route
+Sun Mar 8 18:51:26 2026   R3   R3>en
+Sun Mar 8 18:51:27 2026   R3   R3#conf t
+Sun Mar 8 18:51:30 2026   R3   R3(config)#router ospf 1
+Sun Mar 8 18:51:43 2026   R3   R3(config-router)#network 10.0.1.0 0.0.0.63 area 0
+Sun Mar 8 18:51:57 2026   R3   R3(config-router)#network 10.0.1.96 0.0.0.31 area 0
+Sun Mar 8 18:52:05 2026   R3   R3(config-router)#network 10.0.1.160 0.0.0.31 area 0
+Sun Mar 8 18:52:07 2026   R3   R3(config-router)#exit
+Sun Mar 8 18:52:27 2026   R5   R5>en
+Sun Mar 8 18:52:28 2026   R5   R5#conf t
+Sun Mar 8 18:52:31 2026   R5   R5(config)#do show run
+Sun Mar 8 18:52:46 2026   R5   R5(config)#router ospf 1
+Sun Mar 8 18:52:52 2026   R5   R5(config-router)#no network 198.51.100.8 0.0.0.3 area 0
+Sun Mar 8 18:53:06 2026   R5   R5(config-router)#network 10.0.1.0 0.0.0.63 area 0
+Sun Mar 8 18:53:40 2026   R5   R5(config-router)#no network 10.0.1.0 0.0.0.63 area 0
+Sun Mar 8 18:54:05 2026   R5   R5(config-router)#network 10.0.0.0 0.0.0.127 area 0
+Sun Mar 8 18:54:16 2026   R5   R5(config-router)#network 10.0.0.192 0.0.0.63 area 0
+Sun Mar 8 18:54:30 2026   R5   R5(config-router)#network 10.0.1.64 0.0.0.31 area 0
+Sun Mar 8 18:54:48 2026   R5   R5(config-router)#no network 10.0.0.0 0.0.0.127 area 0
+Sun Mar 8 18:54:54 2026   R5   R5(config-router)#no network 10.0.0.192 0.0.0.63 area 0
+Sun Mar 8 18:55:04 2026   R5   R5(config-router)#no network 10.0.1.64 0.0.0.31 area 0
+Sun Mar 8 18:55:14 2026   R5   R5(config-router)#network 10.0.0.0 255.255.255.255 area 0
+Sun Mar 8 18:55:15 2026   R5   R5(config-router)#exit
+Sun Mar 8 18:56:10 2026   R4   R4(config)#router ospf 1
+Sun Mar 8 18:56:16 2026   R4   R4(config-router)#network 10.0.1.192 0.0.0.31 area 0
+Sun Mar 8 18:56:33 2026   R4   R4(config-router)#no network 10.0.1.192 0.0.0.31 area 0
+Sun Mar 8 18:56:40 2026   R4   R4(config-router)#network 10.0.0.0 255.255.255.255 area 0
+Sun Mar 8 18:56:42 2026   R4   R4(config-router)#exit
+Sun Mar 8 18:56:45 2026   R4   R4(config)#do show run
+Sun Mar 8 18:57:00 2026   R4   R4(config)#router ospf 1
+Sun Mar 8 18:57:02 2026   R4   R4(config-router)#no network 0.0.0.0 255.255.255.255 area 0
+Sun Mar 8 18:57:15 2026   R4   R4(config-router)#do show int ospf neighbor
+Sun Mar 8 18:57:21 2026   R4   R4(config-router)#do show ip ospf neighbor
+Sun Mar 8 18:57:56 2026   R5   R5(config)#do show ip ospf neighbor
+Sun Mar 8 18:58:18 2026   R4   R4(config-router)#network 0.0.0.0 255.255.255.255 area 0
+Sun Mar 8 18:58:47 2026   R4   R4(config-router)#do show ip route
+Sun Mar 8 18:58:53 2026   R4   R4(config-router)#do show ip ospf neighbor
+Sun Mar 8 18:59:46 2026   SW7   SW7>enable
+Sun Mar 8 18:59:46 2026   SW7   SW7#configure terminal
+Sun Mar 8 18:59:50 2026   SW7   SW7(config)#interface FastEthernet0/1
+Sun Mar 8 18:59:52 2026   SW7   SW7(config-if)#exit
+Sun Mar 8 18:59:52 2026   SW7   SW7(config)#interface FastEthernet0/2
+Sun Mar 8 18:59:54 2026   SW7   SW7(config-if)#exit
+Sun Mar 8 18:59:54 2026   SW7   SW7(config)#interface FastEthernet0/3
+Sun Mar 8 18:59:55 2026   SW7   SW7(config-if)#exit
+Sun Mar 8 18:59:55 2026   SW7   SW7(config)#interface FastEthernet0/4
+Sun Mar 8 19:00:38 2026   SW12   SW12>enable
+Sun Mar 8 19:00:38 2026   SW12   SW12#configure terminal
+Sun Mar 8 19:00:45 2026   SW12   SW12(config)#en
+Sun Mar 8 19:00:49 2026   SW12   SW12(config)#do show vlan br
+Sun Mar 8 19:01:36 2026   SW5   SW5>enable
+Sun Mar 8 19:01:36 2026   SW5   SW5#configure terminal
+Sun Mar 8 19:01:42 2026   SW5   SW5(config)#do show vlan br
+Sun Mar 8 19:01:53 2026   SW5   SW5(config)#do show int trunk
+Sun Mar 8 19:02:48 2026   SW5   SW5(config)#do show run int f0/1
+Sun Mar 8 19:02:52 2026   SW5   SW5(config)#do show run | int f0/1
+Sun Mar 8 19:03:05 2026   SW5   SW5(config)#do show run | interface f0/1
+Sun Mar 8 19:03:16 2026   SW5   SW5(config)#do show run interface f0/1
+Sun Mar 8 19:03:29 2026   SW5   SW5(config)#do show run
+Sun Mar 8 19:04:13 2026   R2   R2>en
+Sun Mar 8 19:04:15 2026   R2   R2#show ip route 10.0.1.192
+Sun Mar 8 19:05:30 2026   R4   R4(config-router)#do ping 10.0.1.225 source g0/1.100
+Sun Mar 8 19:05:36 2026   R4   R4(config-router)#do ping 10.0.1.225
+Sun Mar 8 19:06:09 2026   R4   R4(config-router)#do show run
+Sun Mar 8 19:07:12 2026   SW5   SW5(config)#do show vlan br
+Sun Mar 8 19:08:38 2026   R4   R4(config-router)#int g0/1.100
+Sun Mar 8 19:08:42 2026   R4   R4(config-subif)#encapsulation dot1Q 100
+Sun Mar 8 19:08:52 2026   R4   R4(config-subif)#ip address 10.0.1.193 255.255.255.224
+Sun Mar 8 19:09:02 2026   R4   R4(config-subif)#ip helper-address 10.0.1.225
+Sun Mar 8 19:09:03 2026   R4   R4(config-subif)#exit
+Sun Mar 8 19:10:02 2026   SW5   SW5(config)#exit
+Sun Mar 8 19:10:04 2026   SW5   SW5#show interfaces fa0/1 switchport
+Sun Mar 8 19:11:00 2026   SW7   SW7(config-if)#exit
+Sun Mar 8 19:11:02 2026   SW7   SW7(config)#interface FastEthernet0/4
+Sun Mar 8 19:11:29 2026   SW7   SW7(config-if)#do show  vlan br
+Sun Mar 8 19:11:39 2026   SW7   SW7(config-if)#do show int tr
+Sun Mar 8 19:12:13 2026   R4   R4(config)#ip route 10.0.1.225 255.255.255.248 198.51.100.2
+Sun Mar 8 19:12:22 2026   R4   R4(config)#ip route 10.0.1.224 255.255.255.248 198.51.100.2
+Sun Mar 8 19:13:08 2026   R4   R4(config)#no ip route 10.0.1.224 255.255.255.248 198.51.100.2
+Sun Mar 8 19:15:12 2026   R5   R5>en
+Sun Mar 8 19:15:14 2026   R5   R5#conf t
+Sun Mar 8 19:15:15 2026   R5   R5(config)#do show run
+Sun Mar 8 19:15:30 2026   R5   R5(config)#int s0/1/1
+Sun Mar 8 19:15:31 2026   R5   R5(config-if)#shut
+Sun Mar 8 19:15:53 2026   R3   R3>en
+Sun Mar 8 19:15:55 2026   R3   R3#do show run
+Sun Mar 8 19:15:59 2026   R3   R3#show run
+Sun Mar 8 19:16:12 2026   R3   R3#show ip ospf neighbor
+Sun Mar 8 19:16:30 2026   R5   R5(config-if)#do show ip ospf neighbor
+Sun Mar 8 19:16:40 2026   R1   R1>en
+Sun Mar 8 19:16:45 2026   R1   R1#show ip ospf neighbior
+Sun Mar 8 19:16:47 2026   R1   R1#show ip ospf neighbor
+Sun Mar 8 19:16:55 2026   R1   R1#conf t
+Sun Mar 8 19:16:58 2026   R1   R1(config)#router ospf 1
+Sun Mar 8 19:17:11 2026   R1   R1(config-router)#network 198.51.100.12 0.0.0.3 area 0
+Sun Mar 8 19:17:14 2026   R1   R1(config-router)#exit
+Sun Mar 8 19:17:35 2026   R1   R1(config)#do show ip ospf neighbor
+Sun Mar 8 19:17:46 2026   R5   R5(config-if)#int s0/1/1
+Sun Mar 8 19:17:47 2026   R5   R5(config-if)#no shut
+Sun Mar 8 19:17:48 2026   R5   R5(config-if)#exit
+Sun Mar 8 19:17:59 2026   R1   R1(config)#en
+Sun Mar 8 19:18:04 2026   R1   R1(config)#do show run
+Sun Mar 8 19:18:15 2026   R1   R1(config)#int g0/1.10
+Sun Mar 8 19:18:24 2026   R1   R1(config-subif)#standby 1 priority 105
+Sun Mar 8 19:18:29 2026   R1   R1(config-subif)#exit
+Sun Mar 8 19:18:46 2026   R1   R1(config)#no int g0/1.10
+Sun Mar 8 19:18:49 2026   R1   R1(config)#int g0/0.10]
+Sun Mar 8 19:18:51 2026   R1   R1(config)#int g0/0.10
+Sun Mar 8 19:18:53 2026   R1   R1(config-subif)#standby 1 priority 105
+Sun Mar 8 19:18:56 2026   R1   R1(config-subif)#exit
+Sun Mar 8 19:18:59 2026   R1   R1(config)#int g0/0.20
+Sun Mar 8 19:19:00 2026   R1   R1(config-subif)#standby 1 priority 105
+Sun Mar 8 19:19:01 2026   R1   R1(config-subif)#exit
+Sun Mar 8 19:19:06 2026   R1   R1(config)#int g0/0.30
+Sun Mar 8 19:19:07 2026   R1   R1(config-subif)#standby 1 priority 105
+Sun Mar 8 19:19:09 2026   R1   R1(config-subif)#exit
+Sun Mar 8 19:19:11 2026   R1   R1(config)#int g0/0.40
+Sun Mar 8 19:19:14 2026   R1   R1(config-subif)#standby 1 priority 105
+Sun Mar 8 19:19:15 2026   R1   R1(config-subif)#exit
+Sun Mar 8 19:19:19 2026   R1   R1(config)#do show standby br
+Sun Mar 8 19:19:35 2026   R2   R2>en
+Sun Mar 8 19:19:38 2026   R2   R2#show standby br
+Sun Mar 8 19:22:17 2026   R2   R2#ping 10.0.1.193
+Sun Mar 8 19:22:35 2026   R2   R2#ping 10.0.1.194
+Sun Mar 8 19:31:13 2026   R5   R5(config)#do show ip access-lists
+Sun Mar 8 19:31:20 2026   SW7   SW7>en
+Sun Mar 8 19:31:23 2026   SW7   SW7#show ip access-lists
+Sun Mar 8 19:31:29 2026   R4   R4>en
+Sun Mar 8 19:31:31 2026   R4   R4#show ip access-lists
+Sun Mar 8 19:33:00 2026   R3   R3>en
+Sun Mar 8 19:33:03 2026   R3   R3#do show run
+Sun Mar 8 19:33:05 2026   R3   R3#show run
+Sun Mar 8 19:33:16 2026   R4   R4#show run
+Sun Mar 8 19:33:41 2026   R4   R4#show ip route ospf
+Sun Mar 8 19:34:50 2026   SW12   SW7>enable
+Sun Mar 8 19:34:50 2026   SW12   SW7#configure terminal
+Sun Mar 8 19:34:50 2026   SW12   SW7(config)#hostname SW12
+Sun Mar 8 19:35:55 2026   SW12   SW12(config)#interface FastEthernet0/1
+Sun Mar 8 19:35:58 2026   SW12   SW12(config-if)#exit
+Sun Mar 8 19:36:07 2026   SW12   SW12(config)#do show vlan br
+Sun Mar 8 19:36:15 2026   SW12   SW12(config)#int range f0/2-f0/7
+Sun Mar 8 19:36:19 2026   SW12   SW12(config-if-range)#switchport mode access 
+Sun Mar 8 19:36:22 2026   SW12   SW12(config-if-range)#switchport access vlan 100
+Sun Mar 8 19:36:23 2026   SW12   SW12(config-if-range)#exit
+Sun Mar 8 19:36:26 2026   SW12   SW12(config)#do show vlan br
+Sun Mar 8 19:38:12 2026   SW12   SW12(config)#interface FastEthernet0/1
+Sun Mar 8 19:38:13 2026   SW12   SW12(config-if)#exit
+Sun Mar 8 19:38:13 2026   SW12   SW12(config)#interface FastEthernet0/1
+Sun Mar 8 19:38:14 2026   SW12   SW12(config-if)#exit
+Sun Mar 8 19:38:14 2026   SW12   SW12(config)#interface FastEthernet0/2
+Sun Mar 8 19:39:03 2026   SW12   Switch>enable
+Sun Mar 8 19:39:03 2026   SW12   Switch#configure terminal
+Sun Mar 8 19:39:03 2026   SW12   Switch(config)#hostname SW12
+Sun Mar 8 19:39:05 2026   SW12   SW12(config)#vlan 10
+Sun Mar 8 19:39:05 2026   SW12   SW12(config-vlan)#name VLAN10
+Sun Mar 8 19:39:07 2026   SW12   SW12(config-vlan)#vlan 20
+Sun Mar 8 19:39:07 2026   SW12   SW12(config-vlan)#name VLAN10
+Sun Mar 8 19:39:10 2026   SW12   SW12(config-vlan)#vlan 30
+Sun Mar 8 19:39:10 2026   SW12   SW12(config-vlan)#name VLAN10
+Sun Mar 8 19:39:12 2026   SW12   SW12(config-vlan)#vlan 40
+Sun Mar 8 19:39:12 2026   SW12   SW12(config-vlan)#name VLAN10
+Sun Mar 8 19:39:16 2026   SW12   SW12(config-vlan)#vlan 50
+Sun Mar 8 19:39:16 2026   SW12   SW12(config-vlan)#name VLAN10
+Sun Mar 8 19:39:19 2026   SW12   SW12(config-vlan)#vlan 60
+Sun Mar 8 19:39:19 2026   SW12   SW12(config-vlan)#name VLAN10
+Sun Mar 8 19:39:21 2026   SW12   SW12(config-vlan)#vlan 70
+Sun Mar 8 19:39:21 2026   SW12   SW12(config-vlan)#name VLAN10
+Sun Mar 8 19:39:24 2026   SW12   SW12(config-vlan)#vlan 80
+Sun Mar 8 19:39:24 2026   SW12   SW12(config-vlan)#name VLAN10
+Sun Mar 8 19:39:26 2026   SW12   SW12(config-vlan)#vlan 90
+Sun Mar 8 19:39:26 2026   SW12   SW12(config-vlan)#name VLAN10
+Sun Mar 8 19:39:29 2026   SW12   SW12(config-vlan)#vlan 100
+Sun Mar 8 19:39:29 2026   SW12   SW12(config-vlan)#name VLAN10
+Sun Mar 8 19:39:33 2026   SW12   SW12(config-vlan)#vlan 110
+Sun Mar 8 19:39:33 2026   SW12   SW12(config-vlan)#name VLAN10
+Sun Mar 8 19:39:42 2026   SW12   SW12(config-vlan)#vlan 10
+Sun Mar 8 19:39:42 2026   SW12   SW12(config-vlan)#name IT-Department
+Sun Mar 8 19:39:46 2026   SW12   SW12(config-vlan)#vlan 20
+Sun Mar 8 19:39:46 2026   SW12   SW12(config-vlan)#name Finance-Department
+Sun Mar 8 19:39:50 2026   SW12   SW12(config-vlan)#vlan 30
+Sun Mar 8 19:39:50 2026   SW12   SW12(config-vlan)#name HR-Department
+Sun Mar 8 19:39:55 2026   SW12   SW12(config-vlan)#vlan 40
+Sun Mar 8 19:39:55 2026   SW12   SW12(config-vlan)#name Server-VLAN
+Sun Mar 8 19:40:03 2026   SW12   SW12(config-vlan)#vlan 50
+Sun Mar 8 19:40:03 2026   SW12   SW12(config-vlan)#name HQ-Management-VLAN
+Sun Mar 8 19:40:09 2026   SW12   SW12(config-vlan)#vlan 60
+Sun Mar 8 19:40:09 2026   SW12   SW12(config-vlan)#name Sales-Department
+Sun Mar 8 19:40:16 2026   SW12   SW12(config-vlan)#vlan 70
+Sun Mar 8 19:40:16 2026   SW12   SW12(config-vlan)#name Support-Department
+Sun Mar 8 19:40:21 2026   SW12   SW12(config-vlan)#vlan 80
+Sun Mar 8 19:40:21 2026   SW12   SW12(config-vlan)#name Logistics-Department
+Sun Mar 8 19:40:30 2026   SW12   SW12(config-vlan)#vlan 90
+Sun Mar 8 19:40:30 2026   SW12   SW12(config-vlan)#name Marketing-Department
+Sun Mar 8 19:40:36 2026   SW12   SW12(config-vlan)#vlan 100
+Sun Mar 8 19:40:36 2026   SW12   SW12(config-vlan)#name Research-Department
+Sun Mar 8 19:40:44 2026   SW12   SW12(config-vlan)#vlan 110
+Sun Mar 8 19:40:44 2026   SW12   SW12(config-vlan)#name Customer-Service-Department
+Sun Mar 8 19:40:47 2026   SW12   SW12(config-vlan)#exit
+Sun Mar 8 19:40:53 2026   SW12   SW12(config)#int f0/1
+Sun Mar 8 19:40:57 2026   SW12   SW12(config-if)#switchport mode trunk 
+Sun Mar 8 19:41:08 2026   SW12   SW12(config-if)#switchport trunk allowed vlan 10,20,30,40,50,60,70,80,90,100,110
+Sun Mar 8 19:41:10 2026   SW12   SW12(config-if)#exit
+Sun Mar 8 19:41:41 2026   SW12   SW12(config)#do show vlan br
+Sun Mar 8 19:41:49 2026   SW12   SW12(config)#nt range f0/2-f0/7
+Sun Mar 8 19:41:52 2026   SW12   SW12(config)#int range f0/2-f0/7
+Sun Mar 8 19:41:58 2026   SW12   SW12(config-if-range)#switchport access vlan 40
+Sun Mar 8 19:42:12 2026   SW12   SW12(config-if-range)#do show ip int br
+Sun Mar 8 19:43:28 2026   R3   R3#conf t
+Sun Mar 8 19:43:36 2026   R3   R3(config)#int g0/1.70
+Sun Mar 8 19:43:43 2026   R3   R3(config-subif)#ip helper-address 10.0.1.225
+Sun Mar 8 19:43:47 2026   R3   R3(config-subif)#exit
+Sun Mar 8 19:43:52 2026   R3   R3(config)#int g0/2.80
+Sun Mar 8 19:43:54 2026   R3   R3(config-subif)#ip helper-address 10.0.1.225
+Sun Mar 8 19:43:55 2026   R3   R3(config-subif)#exit
+Sun Mar 8 19:46:08 2026   R4   R4#ipv6 route 2001:db8:acad:1::/64 2001:db8:acad:5::2
+Sun Mar 8 19:46:15 2026   R4   R4#ip route 2001:db8:acad:1::/64 2001:db8:acad:5::2
+Sun Mar 8 19:46:31 2026   R4   R4#conf t
+Sun Mar 8 19:46:34 2026   R4   R4(config)#ipv6 route 2001:db8:acad:1::/64 2001:db8:acad:5::2
+Sun Mar 8 19:47:05 2026   R4   R4(config)#ipv6 route 2001:db8:acad:3::/64 2001:db8:acad:5::2
+Sun Mar 8 19:47:33 2026   R3   R3(config)#ipv6 route 2001:db8:acad:2::/64 2001:db8:acad:4::2
+Sun Mar 8 19:47:40 2026   R3   R3(config)#ipv6 route 2001:db8:acad:3::/64 2001:db8:acad:4::2
+Sun Mar 8 19:49:58 2026   R4   R4(config)#do show run
+Sun Mar 8 19:50:49 2026   R5   R5>en
+Sun Mar 8 19:50:50 2026   R5   R5#conf t
+Sun Mar 8 19:51:13 2026   R5   R5(config)#ipv6 route 2001:db8:acad:1::/64 2001:db8:acad:6::1
+Sun Mar 8 19:51:21 2026   R5   R5(config)#ipv6 route 2001:db8:acad:2::/64 2001:db8:acad:5::1
+Sun Mar 8 19:57:23 2026   R4   R4(config)#do show ip route
+Sun Mar 8 19:57:33 2026   R3   R3(config)#do show ip route
+Sun Mar 8 19:58:22 2026   R3   R3(config)#ipv6 route 2001:db8:acad:2::/64 2001:db8:acad:6::2
+Sun Mar 8 19:58:27 2026   R3   R3(config)#ipv6 route 2001:db8:acad:3::/64 2001:db8:acad:6::2
+Sun Mar 8 19:58:33 2026   R3   R3(config)#no ipv6 route 2001:db8:acad:3::/64 2001:db8:acad:4::2
+Sun Mar 8 19:58:42 2026   R3   R3(config)#no ipv6 route 2001:db8:acad:2::/64 2001:db8:acad:4::2
+Sun Mar 8 20:00:00 2026   R5   R5(config)#ipv6 route 2001Ldb8:acad:3::/64 2001:db8:acad:8::1
+Sun Mar 8 20:00:06 2026   R5   R5(config)#ipv6 route 2001:db8:acad:3::/64 2001:db8:acad:8::1
+Sun Mar 8 20:00:20 2026   R1   R1>en
+Sun Mar 8 20:00:21 2026   R1   R1#conf 
+Sun Mar 8 20:00:26 2026   R1   R1#conf t
+Sun Mar 8 20:00:49 2026   R5   R5(config)#ipv6 route 2001:db8:acad:3::/64 2001:db8:acad:7::1
+Sun Mar 8 20:00:54 2026   R2   R2>en
+Sun Mar 8 20:00:55 2026   R2   R2#conf t
+Sun Mar 8 20:00:59 2026   R2   R2(config)#ipv6 route
+Sun Mar 8 20:01:17 2026   R2   R2(config)#ipv6 route 2001:db8:acad:2::/64 2001:db8:acad:7::2
+Sun Mar 8 20:01:22 2026   R2   R2(config)#ipv6 route 2001:db8:acad:1::/64 2001:db8:acad:7::2
+Sun Mar 8 20:01:39 2026   R1   R1(config)#ipv6 route 2001:db8:acad:1::/64 2001:db8:acad:8::2
+Sun Mar 8 20:01:43 2026   R1   R1(config)#ipv6 route 2001:db8:acad:2::/64 2001:db8:acad:8::2
+Sun Mar 8 20:02:10 2026   R1   R1(config)#int g0/0.30
+Sun Mar 8 20:02:26 2026   R1   R1(config-subif)#ipv6
+Sun Mar 8 20:02:52 2026   R1   R1(config-subif)#ipv6 address 2001:db8:acad:3::4
+Sun Mar 8 20:02:55 2026   R1   R1(config-subif)#ipv6 address 2001:db8:acad:3::4/64
+Sun Mar 8 20:03:09 2026   R1   R1(config-subif)#standby 1 ipv6 2001:db8:acad:3::3
+Sun Mar 8 20:03:13 2026   R1   R1(config-subif)#standby 1 ipv6 2001:db8:acad:3::3/64
+Sun Mar 8 20:04:07 2026   R2   R2(config)#int g0/0.30
+Sun Mar 8 20:04:20 2026   R2   R2(config-subif)#ipv6 address 2001:db8:acad:3::4/64
+Sun Mar 8 20:04:22 2026   R2   R2(config-subif)#exit
+Sun Mar 8 20:06:08 2026   R2   R2(config)#int g0/0.30
+Sun Mar 8 20:06:18 2026   R1   R1(config-subif)#ipv6 address 2001:db8:acad:3::3/64
+Sun Mar 8 20:07:55 2026   R2   R2(config-subif)#exit
+Sun Mar 8 20:07:58 2026   R2   R2(config)#int g0/0.40
+Sun Mar 8 20:08:08 2026   R2   R2(config-subif)#ipv6 address 2001:DB8:ACAD:4::7
+Sun Mar 8 20:08:11 2026   R2   R2(config-subif)#ipv6 address 2001:DB8:ACAD:4::7/64
+Sun Mar 8 20:11:09 2026   R4   R4(config)#ipv6 route 2001:DB8:ACAD:4::/64 2001:db8:acad:5::2
+Sun Mar 8 20:12:06 2026   R5   R5(config)#ipv6 route 2001:db8:acad:4::/64 2001:db8:acad:7::1
+Sun Mar 8 20:12:27 2026   R3   R3>en
+Sun Mar 8 20:12:28 2026   R3   R3#conf t
+Sun Mar 8 20:12:51 2026   R3   R3(config)#ipv6 route 2001:db8:acad:4::/64 2001:db8:acad:6::2
+Mon Mar 9 09:25:51 2026   SW12   SW12>enable
+Mon Mar 9 09:25:51 2026   SW12   SW12#configure terminal
+Mon Mar 9 09:25:54 2026   SW12   SW12(config)#interface FastEthernet0/1
+Mon Mar 9 09:25:55 2026   SW12   SW12(config-if)#exit
+Mon Mar 9 09:25:55 2026   SW12   SW12(config)#interface FastEthernet0/2
+Mon Mar 9 09:25:56 2026   SW12   SW12(config-if)#exit
+Mon Mar 9 09:25:56 2026   SW12   SW12(config)#interface FastEthernet0/3
+Mon Mar 9 09:25:57 2026   SW12   SW12(config-if)#exit
+Mon Mar 9 09:25:57 2026   SW12   SW12(config)#interface FastEthernet0/5
+Mon Mar 9 09:25:58 2026   SW12   SW12(config-if)#exit
+Mon Mar 9 09:25:58 2026   SW12   SW12(config)#interface FastEthernet0/4
+Mon Mar 9 09:27:31 2026   Router0   Router>en
+Mon Mar 9 09:27:32 2026   Router0   Router#conf t
+Mon Mar 9 09:27:37 2026   Router0   Router(config)#hostname DHCPTest
+Mon Mar 9 09:27:59 2026   Router0   DHCPTest(config)#int g0/0
+Mon Mar 9 09:30:03 2026   Router6   Router>en
+Mon Mar 9 09:30:04 2026   Router6   Router#conf t
+Mon Mar 9 09:30:08 2026   Router6   Router(config)#hostname DHCPtest
+Mon Mar 9 09:30:17 2026   Router6   DHCPtest(config)#ip address 10.0.1.225
+Mon Mar 9 09:30:22 2026   Router6   DHCPtest(config)#int g0/0
+Mon Mar 9 09:30:24 2026   Router6   DHCPtest(config-if)#ip address 10.0.1.225
+Mon Mar 9 09:30:30 2026   Router6   DHCPtest(config-if)#ip address 10.0.1.225 255.255.255.248
+Mon Mar 9 09:30:34 2026   Router6   DHCPtest(config-if)#no shut
+Mon Mar 9 09:30:35 2026   Router6   DHCPtest(config-if)#exit
+Mon Mar 9 09:30:51 2026   Router6   DHCPtest(config)#ip default-gateway 10.0.1.238
+Mon Mar 9 09:32:26 2026   SW12   SW12(config-if)#int f0/2
+Mon Mar 9 09:32:29 2026   SW12   SW12(config-if)#switchport mode trunk 
+Mon Mar 9 09:32:41 2026   SW12   SW12(config-if)#switchport trunk allowed vlan 10,20,30,40,50,60,70,80,90,100,110
+Mon Mar 9 09:32:42 2026   SW12   SW12(config-if)#exit
+Mon Mar 9 09:33:25 2026   SW12   SW12(config)#int f0/2
+Mon Mar 9 09:33:29 2026   SW12   SW12(config-if)#switchport mode access 
+Mon Mar 9 09:33:33 2026   SW12   SW12(config-if)#switchport access vlan 40
+Mon Mar 9 09:33:34 2026   SW12   SW12(config-if)#exit
+Mon Mar 9 09:33:37 2026   SW12   SW12(config)#do show vlan br
+Mon Mar 9 09:35:04 2026   SW12   SW12(config)#int f0/8
+Mon Mar 9 09:35:08 2026   SW12   SW12(config-if)#switchport access vlan 40
+Mon Mar 9 09:36:36 2026   SW12   Switch>enable
+Mon Mar 9 09:36:36 2026   SW12   Switch#configure terminal
+Mon Mar 9 09:36:36 2026   SW12   Switch(config)#hostname SW12
+Mon Mar 9 09:36:45 2026   SW12   SW12(config)#vlan 10
+Mon Mar 9 09:36:45 2026   SW12   SW12(config-vlan)#name IT-Department
+Mon Mar 9 09:36:50 2026   SW12   SW12(config-vlan)#vlan 20
+Mon Mar 9 09:36:50 2026   SW12   SW12(config-vlan)#name Finance-Department
+Mon Mar 9 09:36:55 2026   SW12   SW12(config-vlan)#vlan 30
+Mon Mar 9 09:36:55 2026   SW12   SW12(config-vlan)#name HR-Department
+Mon Mar 9 09:37:00 2026   SW12   SW12(config-vlan)#vlan 40
+Mon Mar 9 09:37:00 2026   SW12   SW12(config-vlan)#name Server-VLAN
+Mon Mar 9 09:37:07 2026   SW12   SW12(config-vlan)#vlan 50
+Mon Mar 9 09:37:07 2026   SW12   SW12(config-vlan)#name HQ-Management-VLAN
+Mon Mar 9 09:37:11 2026   SW12   SW12(config-vlan)#vlan 60
+Mon Mar 9 09:37:11 2026   SW12   SW12(config-vlan)#name Sales-Department
+Mon Mar 9 09:37:17 2026   SW12   SW12(config-vlan)#vlan 70
+Mon Mar 9 09:37:17 2026   SW12   SW12(config-vlan)#name Support-Department
+Mon Mar 9 09:37:23 2026   SW12   SW12(config-vlan)#vlan 80
+Mon Mar 9 09:37:23 2026   SW12   SW12(config-vlan)#name Logistics-Department
+Mon Mar 9 09:37:42 2026   SW12   SW12(config-vlan)#vlan 90
+Mon Mar 9 09:37:42 2026   SW12   SW12(config-vlan)#name Marketing-Department
+Mon Mar 9 09:37:47 2026   SW12   SW12(config-vlan)#vlan 100
+Mon Mar 9 09:37:47 2026   SW12   SW12(config-vlan)#name Research-Department
+Mon Mar 9 09:37:55 2026   SW12   SW12(config-vlan)#vlan 110
+Mon Mar 9 09:37:55 2026   SW12   SW12(config-vlan)#name Customer-Service-Department
+Mon Mar 9 09:38:34 2026   SW12   SW12(config-vlan)#do show vlan br
+Mon Mar 9 09:38:35 2026   SW12   SW12(config-vlan)#xit
+Mon Mar 9 09:38:38 2026   SW12   SW12(config-vlan)#exit
+Mon Mar 9 09:38:45 2026   SW12   SW12(config)#int range f0/2-f0/7
+Mon Mar 9 09:38:49 2026   SW12   SW12(config-if-range)#switchport access vlan 40
+Mon Mar 9 09:38:51 2026   SW12   SW12(config-if-range)#exit
+Mon Mar 9 09:38:53 2026   SW12   SW12(config)#f0/1
+Mon Mar 9 09:38:55 2026   SW12   SW12(config)#int f0/1
+Mon Mar 9 09:38:58 2026   SW12   SW12(config-if)#switchport mode trunk 
+Mon Mar 9 09:39:11 2026   SW12   SW12(config-if)#switchport trunk allowed vlan 10,20,30,40,50,60,70,80,90,100,110
+Mon Mar 9 09:39:12 2026   SW12   SW12(config-if)#exit
+Mon Mar 9 09:43:19 2026   SW12   SW12(config)#do show vlan br
+Mon Mar 9 09:43:26 2026   SW12   SW12(config)#do show ip int br
+Mon Mar 9 09:43:42 2026   SW12   SW12(config)#vlan 40
+Mon Mar 9 09:43:43 2026   SW12   SW12(config-vlan)#shut
+Mon Mar 9 09:43:45 2026   SW12   SW12(config-vlan)#exit
+Mon Mar 9 09:44:11 2026   R2   R2>en
+Mon Mar 9 09:44:12 2026   R2   R2#conf t
+Mon Mar 9 09:44:16 2026   R2   R2(config)#do show run
+Mon Mar 9 09:45:26 2026   R2   R2(config)#int g0/0.40
+Mon Mar 9 09:45:46 2026   R2   R2(config-subif)#ip address 10.0.1.236 255.255.255.248
+Mon Mar 9 09:45:58 2026   R2   R2(config-subif)#ip address 10.0.1.236 255.255.255.240
+Mon Mar 9 09:46:00 2026   R2   R2(config-subif)#exit
+Mon Mar 9 09:46:30 2026   R2   R2(config)#int g0/0.40
+Mon Mar 9 09:46:34 2026   R2   R2(config-subif)#ip address 10.0.1.236 255.255.255.248
+Mon Mar 9 09:46:54 2026   R2   R2(config-subif)#ip address 10.0.1.236 255.255.255.240
+Mon Mar 9 09:47:06 2026   R1   R1>en
+Mon Mar 9 09:47:07 2026   R1   R1#conf t
+Mon Mar 9 09:47:09 2026   R1   R1(config)#do show run
+Mon Mar 9 12:36:12 2026   SW12   SW12>en
+Mon Mar 9 12:36:15 2026   SW12   SW12#restart
+Mon Mar 9 12:37:56 2026   SW12   SW12#re?
+Mon Mar 9 12:38:02 2026   SW12   SW12#erase startup-config
+Mon Mar 9 12:38:06 2026   SW12   SW12#reload
+Mon Mar 9 12:38:12 2026   SW12   Switch>en
+Mon Mar 9 12:38:13 2026   SW12   Switch#conf t
+Mon Mar 9 12:38:18 2026   SW12   Switch(config)#hostname SW12
+Mon Mar 9 12:38:29 2026   SW12   SW12(config)#do show vlan br
+Mon Mar 9 12:38:36 2026   SW12   SW12(config)#do show int trunk
+Mon Mar 9 12:38:46 2026   SW12   SW12(config)#int f0/1
+Mon Mar 9 12:38:53 2026   SW12   SW12(config-if)#switchport trunk allowed vlan 10-110
+Mon Mar 9 12:38:55 2026   SW12   SW12(config-if)#exit
+Mon Mar 9 12:39:00 2026   SW12   SW12(config)#int range f0/2-f0/7
+Mon Mar 9 12:39:05 2026   SW12   SW12(config-if-range)#switchport access vlan 40
+Mon Mar 9 12:39:06 2026   SW12   SW12(config-if-range)#exit
+Mon Mar 9 12:39:57 2026   SW12   SW12(config)#do erase startup-config
+Mon Mar 9 12:40:01 2026   SW12   SW12(config)#delete vlan.dat
+Mon Mar 9 12:40:04 2026   SW12   SW12(config)#do delete vlan.dat
+Mon Mar 9 12:40:08 2026   SW12   SW12(config)#reload
+Mon Mar 9 12:40:10 2026   SW12   SW12(config)#do reload
+Mon Mar 9 12:40:20 2026   SW12   SW12>en
+Mon Mar 9 12:40:22 2026   SW12   SW12#conf t
+Mon Mar 9 12:40:31 2026   SW12   SW12(config)#interface FastEthernet0/1
+Mon Mar 9 12:40:33 2026   SW12   SW12(config-if)#exit
+Mon Mar 9 12:40:33 2026   SW12   SW12(config)#interface FastEthernet0/2
+Mon Mar 9 12:40:33 2026   SW12   SW12(config-if)#exit
+Mon Mar 9 12:40:33 2026   SW12   SW12(config)#interface FastEthernet0/3
+Mon Mar 9 12:41:17 2026   SW12   Switch>enable
+Mon Mar 9 12:41:17 2026   SW12   Switch#configure terminal
+Mon Mar 9 12:41:17 2026   SW12   Switch(config)#hostname SW12
+Mon Mar 9 12:41:27 2026   SW12   SW12(config)#vlan 10
+Mon Mar 9 12:41:27 2026   SW12   SW12(config-vlan)#name IT-Department
+Mon Mar 9 12:41:32 2026   SW12   SW12(config-vlan)#vlan 20
+Mon Mar 9 12:41:32 2026   SW12   SW12(config-vlan)#name Finance-Department
+Mon Mar 9 12:41:36 2026   SW12   SW12(config-vlan)#vlan 30
+Mon Mar 9 12:41:36 2026   SW12   SW12(config-vlan)#name HR-Department
+Mon Mar 9 12:41:40 2026   SW12   SW12(config-vlan)#vlan 40
+Mon Mar 9 12:41:40 2026   SW12   SW12(config-vlan)#name Server-VLAN
+Mon Mar 9 12:41:47 2026   SW12   SW12(config-vlan)#vlan 50
+Mon Mar 9 12:41:47 2026   SW12   SW12(config-vlan)#name HQ-Management-VLAN
+Mon Mar 9 12:41:52 2026   SW12   SW12(config-vlan)#vlan 60
+Mon Mar 9 12:41:52 2026   SW12   SW12(config-vlan)#name Sales-Department
+Mon Mar 9 12:41:58 2026   SW12   SW12(config-vlan)#vlan 70
+Mon Mar 9 12:41:58 2026   SW12   SW12(config-vlan)#name Support-Department
+Mon Mar 9 12:42:06 2026   SW12   SW12(config-vlan)#vlan 80
+Mon Mar 9 12:42:06 2026   SW12   SW12(config-vlan)#name Logistics-Department
+Mon Mar 9 12:42:11 2026   SW12   SW12(config-vlan)#vlan 90
+Mon Mar 9 12:42:11 2026   SW12   SW12(config-vlan)#name Marketing-Department
+Mon Mar 9 12:42:17 2026   SW12   SW12(config-vlan)#vlan 100
+Mon Mar 9 12:42:17 2026   SW12   SW12(config-vlan)#name Research-Department
+Mon Mar 9 12:42:24 2026   SW12   SW12(config-vlan)#vlan 110
+Mon Mar 9 12:42:24 2026   SW12   SW12(config-vlan)#name Customer-Service-Department
+Mon Mar 9 12:42:34 2026   SW12   SW12(config-vlan)#eixt
+Mon Mar 9 12:42:35 2026   SW12   SW12(config-vlan)#exit
+Mon Mar 9 12:42:39 2026   SW12   SW12(config)#int range f0/2
+Mon Mar 9 12:42:43 2026   SW12   SW12(config-if-range)#switchport access vlan 40
+Mon Mar 9 12:42:46 2026   SW12   SW12(config-if-range)#exit
+Mon Mar 9 12:42:49 2026   SW12   SW12(config)#int f0/1
+Mon Mar 9 12:43:02 2026   SW12   SW12(config-if)#switchport trunk allowed vlan 10,20,30,40,50,60,70,80,90,100,110
+Mon Mar 9 12:43:03 2026   SW12   SW12(config-if)#exit
+Mon Mar 9 12:43:06 2026   SW12   SW12(config)#do show vlan br
+Mon Mar 9 12:43:18 2026   SW12   SW12(config)#int range f0/2-f0/7
+Mon Mar 9 12:43:22 2026   SW12   SW12(config-if-range)#switchport access vlan 40
+Mon Mar 9 12:43:30 2026   SW12   SW12(config-if-range)#do show vlan br
+Mon Mar 9 12:45:41 2026   SW12   SW12(config-if-range)#exit
+Mon Mar 9 12:46:42 2026   R1   R1>en
+Mon Mar 9 12:46:47 2026   R1   R1#show standby br
+Mon Mar 9 12:46:53 2026   R1   R1#show run
+Mon Mar 9 13:08:33 2026   SW11   SW11>en
+Mon Mar 9 13:08:34 2026   SW11   SW11#conf t
+Mon Mar 9 13:08:37 2026   SW11   SW11(config)#access-list?
+Mon Mar 9 13:09:18 2026   SW11   SW11(config)#access-list 10 deny ?
+Mon Mar 9 13:09:35 2026   SW11   SW11(config)#access-list 10 deny 10.0.1.229 ?
+Mon Mar 9 13:09:45 2026   SW11   SW11(config)#access-list 10 deny 10.0.1.229 0.0.0.15 ?
+Mon Mar 9 13:09:54 2026   SW11   SW11(config)#access-list 10 deny 10.0.1.229 0.0.0.15
+Mon Mar 9 13:10:52 2026   SW11   SW11(config)#do show access-list
+Mon Mar 9 13:11:37 2026   SW5   SW5>en
+Mon Mar 9 13:11:39 2026   SW5   SW5#conf t
+Mon Mar 9 13:11:44 2026   SW5   SW5(config)#access-list deny ?
+Mon Mar 9 13:11:47 2026   SW5   SW5(config)#access-list?
+Mon Mar 9 13:11:49 2026   SW5   SW5(config)#access-list ?
+Mon Mar 9 13:11:52 2026   SW5   SW5(config)#access-list 10 ?
+Mon Mar 9 13:11:56 2026   SW5   SW5(config)#access-list 10 deny ?
+Mon Mar 9 13:12:10 2026   SW5   SW5(config)#access-list 10 deny 10.0.1.224 0.0.0.15
+Mon Mar 9 13:12:26 2026   SW5   SW5(config)#exit
+Thu Mar 12 09:06:02 2026   SW12   Switch>enable
+Thu Mar 12 09:06:02 2026   SW12   Switch#configure terminal
+Thu Mar 12 09:06:02 2026   SW12   Switch(config)#hostname SW12
+Thu Mar 12 09:06:11 2026   SW12   SW12(config)#vlan 10
+Thu Mar 12 09:06:11 2026   SW12   SW12(config-vlan)#name IT-Department
+Thu Mar 12 09:06:15 2026   SW12   SW12(config-vlan)#vlan 10
+Thu Mar 12 09:06:15 2026   SW12   SW12(config-vlan)#name Finance-Department
+Thu Mar 12 09:06:19 2026   SW12   SW12(config-vlan)#vlan 10
+Thu Mar 12 09:06:19 2026   SW12   SW12(config-vlan)#name IT-Department
+Thu Mar 12 09:06:24 2026   SW12   SW12(config-vlan)#vlan 20
+Thu Mar 12 09:06:24 2026   SW12   SW12(config-vlan)#name Finance-Department
+Thu Mar 12 09:06:28 2026   SW12   SW12(config-vlan)#vlan 30
+Thu Mar 12 09:06:28 2026   SW12   SW12(config-vlan)#name HR-Department
+Thu Mar 12 09:06:33 2026   SW12   SW12(config-vlan)#vlan 40
+Thu Mar 12 09:06:33 2026   SW12   SW12(config-vlan)#name Server-VLAN
+Thu Mar 12 09:06:41 2026   SW12   SW12(config-vlan)#vlan 50
+Thu Mar 12 09:06:41 2026   SW12   SW12(config-vlan)#name HQ-Management-VLAN
+Thu Mar 12 09:06:45 2026   SW12   SW12(config-vlan)#vlan 60
+Thu Mar 12 09:06:45 2026   SW12   SW12(config-vlan)#name Sales-Department
+Thu Mar 12 09:06:50 2026   SW12   SW12(config-vlan)#vlan 70
+Thu Mar 12 09:06:50 2026   SW12   SW12(config-vlan)#name Support-Department
+Thu Mar 12 09:06:55 2026   SW12   SW12(config-vlan)#vlan 80
+Thu Mar 12 09:06:55 2026   SW12   SW12(config-vlan)#name Logistics-Department
+Thu Mar 12 09:07:00 2026   SW12   SW12(config-vlan)#vlan 90
+Thu Mar 12 09:07:00 2026   SW12   SW12(config-vlan)#name Marketing-Department
+Thu Mar 12 09:07:06 2026   SW12   SW12(config-vlan)#vlan 100
+Thu Mar 12 09:07:06 2026   SW12   SW12(config-vlan)#name Research-Department
+Thu Mar 12 09:07:14 2026   SW12   SW12(config-vlan)#vlan 110
+Thu Mar 12 09:07:14 2026   SW12   SW12(config-vlan)#name Customer-Service-Department
+Thu Mar 12 09:07:17 2026   SW12   SW12(config-vlan)#exit
+Thu Mar 12 09:07:20 2026   SW12   SW12(config)#do show ip int br
+Thu Mar 12 09:07:25 2026   SW12   SW12(config)#do show vlan br
+Thu Mar 12 09:07:32 2026   SW12   SW12(config)#do show int trunk
+Thu Mar 12 09:07:43 2026   SW12   SW12(config)#int f0/1
+Thu Mar 12 09:07:56 2026   SW12   SW12(config-if)#switchport trunk allowed vlan 10,20,30,40,50,60,70,80,90,100,110
+Thu Mar 12 09:07:57 2026   SW12   SW12(config-if)#exit
+Thu Mar 12 09:08:05 2026   SW12   SW12(config)#int range f0/2-6
+Thu Mar 12 09:08:12 2026   SW12   SW12(config-if-range)#exit
+Thu Mar 12 09:08:14 2026   SW12   SW12(config)#int range f0/2-7
+Thu Mar 12 09:08:23 2026   SW12   SW12(config-if-range)#switchport access vlan 40
+Thu Mar 12 09:08:25 2026   SW12   SW12(config-if-range)#exit
+Thu Mar 12 09:14:04 2026   SW7   SW7>en
+Thu Mar 12 09:14:05 2026   SW7   SW7#conf t
+Thu Mar 12 09:14:11 2026   SW7   SW7(config)#do show run
+Thu Mar 12 09:14:35 2026   SW7   SW7(config)#int f0/4
+Thu Mar 12 09:14:37 2026   SW7   SW7(config-if)#shut
+Thu Mar 12 09:14:41 2026   SW7   SW7(config-if)#no shut
+Thu Mar 12 09:14:45 2026   SW7   SW7(config-if)#switchport mode trunk 
+Thu Mar 12 09:14:57 2026   SW7   SW7(config-if)#switchport trunk allowed vlan 10,20,30,40,50,60,70,80,90,100,110
+Thu Mar 12 09:14:58 2026   SW7   SW7(config-if)#exit
+Thu Mar 12 09:15:28 2026   SW7   SW7(config)#int f0/4
+Thu Mar 12 09:17:58 2026   R2   R2>en
+Thu Mar 12 09:18:01 2026   R2   R2#do show run
+Thu Mar 12 09:18:04 2026   R2   R2#show run
+Thu Mar 12 09:19:55 2026   R1   R1>en
+Thu Mar 12 09:19:57 2026   R1   R1#show run
+Thu Mar 12 09:23:11 2026   SW12   SW12(config)#int range f0/3-7
+Thu Mar 12 09:23:12 2026   SW12   SW12(config-if-range)#shut
+Thu Mar 12 09:23:25 2026   SW12   SW12(config-if-range)#no shut
+Thu Mar 12 09:23:27 2026   SW12   SW12(config-if-range)#exit
+Thu Mar 12 09:25:30 2026   SW11   SW11>enable
+Thu Mar 12 09:25:30 2026   SW11   SW11#configure terminal
+Thu Mar 12 09:25:30 2026   SW11   SW11(config)#interface FastEthernet0/1
+Thu Mar 12 09:25:34 2026   SW11   SW11(config-if)#exit
+Thu Mar 12 09:29:48 2026   SW11   SW11(config)#access-list 1 deny 10.0.1.229
+Thu Mar 12 09:30:11 2026   SW11   SW11(config)#no access-list 1 deny 10.0.1.229
+Thu Mar 12 09:30:18 2026   SW11   SW11(config)#access-list 1 deny 10.0.1.229 0.0.0.15
+Thu Mar 12 09:30:25 2026   SW11   SW11(config)#access-list 1 permit any
+Thu Mar 12 09:30:31 2026   SW11   SW11(config)#int f0/1
+Thu Mar 12 09:30:46 2026   SW11   SW11(config-if)#ip access-group 1 in
+Thu Mar 12 09:30:54 2026   SW11   SW11(config-if)#exit
+Thu Mar 12 09:30:55 2026   SW11   SW11(config)#do show run
+Thu Mar 12 09:33:05 2026   SW5   SW5>en
+Thu Mar 12 09:33:06 2026   SW5   SW5#conf t
+Thu Mar 12 09:33:08 2026   SW5   SW5(config)#do show run
+Thu Mar 12 09:33:21 2026   SW5   SW5(config)#no access-list 10 deny 10.0.1.224 0.0.0.15
+Thu Mar 12 09:37:30 2026   R4   R4>en
+Thu Mar 12 09:37:32 2026   R4   R4#conf t
+Thu Mar 12 09:37:42 2026   R4   R4(config)#access-list standard BLOCK_SERVER
+Thu Mar 12 09:37:48 2026   R4   R4(config)#ip access-list standard BLOCK_SERVER
+Thu Mar 12 09:40:11 2026   R4   R4(config-std-nacl)#deny 10.0.1.225 0.0.0.15
+Thu Mar 12 09:40:14 2026   R4   R4(config-std-nacl)#deny 10.0.1.226 0.0.0.15
+Thu Mar 12 09:40:17 2026   R4   R4(config-std-nacl)#deny 10.0.1.227 0.0.0.15
+Thu Mar 12 09:40:20 2026   R4   R4(config-std-nacl)#deny 10.0.1.228 0.0.0.15
+Thu Mar 12 09:40:23 2026   R4   R4(config-std-nacl)#deny 10.0.1.229 0.0.0.15
+Thu Mar 12 09:40:29 2026   R4   R4(config-std-nacl)#permit any
+Thu Mar 12 09:40:32 2026   R4   R4(config-std-nacl)#exit
+Thu Mar 12 09:40:41 2026   R4   R4(config)#int g0/1.100
+Thu Mar 12 09:40:54 2026   R4   R4(config-subif)#ip access-group BLOCK_SERVER
+Thu Mar 12 09:41:01 2026   R4   R4(config-subif)#ip access-group BLOCK_SERVER out
+Thu Mar 12 09:42:07 2026   R3   R3>en
+Thu Mar 12 09:42:11 2026   R3   R3#conf t
+Thu Mar 12 09:42:32 2026   R3   R3(config)#access-list 1 deny 10.0.1.226 0.0.0.15
+Thu Mar 12 09:42:37 2026   R3   R3(config)#access-list 1 permit any
+Thu Mar 12 09:43:58 2026   R3   R3(config)#int g0/2
+Thu Mar 12 09:44:09 2026   R3   R3(config-if)#ip access-group 1 in
+Thu Mar 12 09:44:10 2026   R3   R3(config-if)#exit
+Thu Mar 12 09:52:30 2026   SW12   SW12>en
+Thu Mar 12 09:52:31 2026   SW12   SW12#conf t
+Thu Mar 12 09:52:34 2026   SW12   SW12(config)#int f0/7
+Thu Mar 12 09:52:37 2026   SW12   SW12(config-if)#switchport access vlan 50
+Thu Mar 12 09:52:39 2026   SW12   SW12(config-if)#exit
+Thu Mar 12 12:57:19 2026   SW12   SW12>en
+Thu Mar 12 12:57:21 2026   SW12   SW12#conf t
+Thu Mar 12 12:57:26 2026   SW12   SW12(config)#int range f0/1-7
+Thu Mar 12 12:57:28 2026   SW12   SW12(config-if-range)#shut
+Thu Mar 12 12:57:46 2026   SW12   SW12(config-if-range)#no shut
+Thu Mar 12 12:58:32 2026   SW12   SW12(config-if-range)#exit
+Thu Mar 12 12:58:34 2026   SW12   SW12(config)#do reload
+Thu Mar 12 13:01:24 2026   SW12   SW12>en
+Thu Mar 12 13:01:25 2026   SW12   SW12#conf t
+Thu Mar 12 13:01:30 2026   SW12   SW12(config)#do show vlan br
+Thu Mar 12 13:02:52 2026   SW12   SW12(config)#int f0/7
+Thu Mar 12 13:02:55 2026   SW12   SW12(config-if)#switchport mode trunk 
+Thu Mar 12 13:03:06 2026   SW12   SW12(config-if)#switchport trunk allowed vlan 10,20,30,40,50,60,70,80,90,100,110
+Thu Mar 12 13:03:07 2026   SW12   SW12(config-if)#exit
+Thu Mar 12 13:03:28 2026   SW12   SW12(config)#int f0/7
+Thu Mar 12 13:03:31 2026   SW12   SW12(config-if)#switchport mode access 
+Thu Mar 12 13:03:36 2026   SW12   SW12(config-if)#switchport access vlan 50
+Thu Mar 12 13:03:36 2026   SW12   SW12(config-if)#exit
+Thu Mar 12 13:09:44 2026   R1   R1>en
+Thu Mar 12 13:09:45 2026   R1   R1#conf t
+Thu Mar 12 13:09:50 2026   R1   R1(config)#int g0/0.50
+Thu Mar 12 13:09:53 2026   R1   R1(config-subif)#encapsulation dot1Q 50
+Thu Mar 12 13:10:23 2026   R1   R1(config-subif)#ip address 10.0.1.244 255.255.255.240
+Thu Mar 12 13:10:32 2026   R1   R1(config-subif)#standby 1 ip 10.0.1.246
+Thu Mar 12 13:10:38 2026   R1   R1(config-subif)#standby 1 priority 105
+Thu Mar 12 13:10:41 2026   R1   R1(config-subif)#standby 1 preempt 
+Thu Mar 12 13:10:45 2026   R1   R1(config-subif)#do show run
+Thu Mar 12 13:11:02 2026   R2   R2>en
+Thu Mar 12 13:11:03 2026   R2   R2#conf t
+Thu Mar 12 13:11:07 2026   R2   R2(config)#int g0/0.50
+Thu Mar 12 13:11:10 2026   R2   R2(config-subif)#encapsulation dot1Q 50
+Thu Mar 12 13:11:22 2026   R2   R2(config-subif)#ip address 10.0.1.245 255.255.255.240
+Thu Mar 12 13:11:34 2026   R2   R2(config-subif)#do show run
+Thu Mar 12 13:11:51 2026   R2   R2(config-subif)#standby 1 ip 10.0.1.246
+Thu Mar 12 13:12:05 2026   R2   R2(config-subif)#standby 1 priority 110
+Thu Mar 12 13:12:10 2026   R2   R2(config-subif)#standby 1 preempt
+Thu Mar 12 13:12:26 2026   R2   R2(config-subif)#do show standby br
+Thu Mar 12 13:12:43 2026   R1   R1(config-subif)#do show standby br
+Thu Mar 12 13:12:57 2026   SW7   SW7>enable
+Thu Mar 12 13:12:57 2026   SW7   SW7#configure terminal
+Thu Mar 12 13:12:57 2026   SW7   SW7(config)#interface FastEthernet0/1
+Thu Mar 12 13:12:59 2026   SW7   SW7(config-if)#exit
+Thu Mar 12 13:12:59 2026   SW7   SW7(config)#interface FastEthernet0/2
+Thu Mar 12 13:13:55 2026   R1   R1(config-subif)#ip address 10.0.1.244 255.255.255.248
+Thu Mar 12 13:14:06 2026   R2   R2(config-subif)#ip address 10.0.1.245 255.255.255.248
+Thu Mar 12 13:14:55 2026   R2   R2(config-subif)#do show standby br
+Thu Mar 12 13:19:51 2026   SW12   SW12>en
+Thu Mar 12 13:19:52 2026   SW12   SW12#conf t
+Thu Mar 12 13:19:55 2026   SW12   SW12(config)#int f0/8
+Thu Mar 12 13:19:59 2026   SW12   SW12(config-if)#switchport access vlan 50
+Thu Mar 12 13:20:02 2026   SW12   SW12(config-if)#do show vlan br
+Thu Mar 12 13:28:55 2026   SW8   SW8>en
+Thu Mar 12 13:28:57 2026   SW8   SW8#conf t
+Thu Mar 12 13:28:59 2026   SW8   SW8(config)#do show vlan br
+Thu Mar 12 13:29:04 2026   SW8   SW8(config)#do show ip int br
+Thu Mar 12 13:29:15 2026   SW8   SW8(config)#int f0/5
+Thu Mar 12 13:29:21 2026   SW8   SW8(config-if)#switchport access vlan 50
+Thu Mar 12 13:29:29 2026   SW8   SW8(config-if)#int f0/6
+Thu Mar 12 13:29:31 2026   SW8   SW8(config-if)#switchport access vlan 50
+Thu Mar 12 13:30:14 2026   SW12   SW12(config-if)#int range f0/7-8
+Thu Mar 12 13:30:21 2026   SW12   SW12(config-if-range)#switchport access vlan 1
+Thu Mar 12 13:30:22 2026   SW12   SW12(config-if-range)#exit
+Thu Mar 12 19:20:11 2026   SW12   SW12>en
+Thu Mar 12 19:20:13 2026   SW12   SW12#show vlan br
+Thu Mar 12 19:20:20 2026   SW12   SW12#int range f0/7-8
+Thu Mar 12 19:20:23 2026   SW12   SW12#conf to
+Thu Mar 12 19:20:25 2026   SW12   SW12#conf t
+Thu Mar 12 19:20:32 2026   SW12   SW12(config)#int range f0/7-8
+Thu Mar 12 19:20:37 2026   SW12   SW12(config-if-range)#switchport access vlan 50
+Thu Mar 12 19:20:38 2026   SW12   SW12(config-if-range)#exit
+Thu Mar 12 19:21:57 2026   DHCP   C:\>10.0.1.225
+Thu Mar 12 19:22:56 2026   R1   R1>en
+Thu Mar 12 19:22:57 2026   R1   R1#conf t
+Thu Mar 12 19:23:00 2026   R1   R1(config)#do show run
+Thu Mar 12 19:27:48 2026   R2   R2>en
+Thu Mar 12 19:27:50 2026   R2   R2#conf t
+Thu Mar 12 19:27:52 2026   R2   R2(config)#do show run
+Thu Mar 12 19:28:06 2026   R2   R2(config)#int g0/0.50
+Thu Mar 12 19:28:18 2026   R2   R2(config-subif)#ip address 10.0.1.246 255.255.255.248
+Thu Mar 12 19:28:26 2026   R2   R2(config-subif)#no standby 1 ip 10.0.1.246
+Thu Mar 12 19:28:37 2026   R2   R2(config-subif)#exit
+Thu Mar 12 19:28:42 2026   R2   R2(config)#do show run
+Thu Mar 12 19:28:54 2026   R1   R1(config)#no int g0/0.50
+Thu Mar 12 19:29:03 2026   R2   R2(config)#do show run
+Thu Mar 12 19:56:28 2026   SW9   SW9>en
+Thu Mar 12 19:56:30 2026   SW9   SW9#conf t
+Thu Mar 12 19:56:33 2026   SW9   SW9(config)#do show vlan br
+Sun Mar 15 12:44:58 2026   SW11   SW11>enable
+Sun Mar 15 12:44:58 2026   SW11   SW11#configure terminal
+Sun Mar 15 12:44:58 2026   SW11   SW11(config)#interface FastEthernet0/4
+Sun Mar 15 12:45:02 2026   SW11   SW11(config-if)#shutdown
+Sun Mar 15 12:45:04 2026   SW11   SW11(config-if)#no shutdown
+Sun Mar 15 12:45:13 2026   SW10   SW10>enable
+Sun Mar 15 12:45:13 2026   SW10   SW10#configure terminal
+Sun Mar 15 12:45:13 2026   SW10   SW10(config)#interface FastEthernet0/4
+Sun Mar 15 12:45:14 2026   SW10   SW10(config-if)#shutdown
+Sun Mar 15 12:45:15 2026   SW10   SW10(config-if)#no shutdown
+Sun Mar 15 12:54:35 2026   R2   R2>en
+Sun Mar 15 12:54:37 2026   R2   R2#conf t
+Sun Mar 15 12:54:40 2026   R2   R2(config)#aaa new-model
+Sun Mar 15 12:55:11 2026   R2   R2(config)#radius-server host 10.0.1.228 auth-port 1812 acct-port 1813 key Password123
+Sun Mar 15 12:55:39 2026   R2   R2(config)#radius-server host 10.0.1.228 auth-port 1645 acct-port 1813 key Password123
+Sun Mar 15 12:55:48 2026   R2   R2(config)#radius-server host 10.0.1.228 auth-port 1645 acct-port 1646 key Password123
+Sun Mar 15 12:58:40 2026   R2   R2(config)#radius-server host 10.0.1.228 auth-port 1645 acct-port 1646 key Password123
+Sun Mar 15 12:58:57 2026   R2   R2(config)#username ITDemo secret IT
+Sun Mar 15 12:59:12 2026   R2   R2(config)#aaa authentication login default group radius local
+Sun Mar 15 12:59:17 2026   R2   R2(config)#aaa authentication login enable default group radius local
+Sun Mar 15 12:59:36 2026   R2   R2(config)#aaa authentication enable default group radius local
+Sun Mar 15 12:59:52 2026   R2   R2(config)#radius-server host 10.0.1.228
+Sun Mar 15 13:00:42 2026   PC13   C:\>-ssh 10.0.1.228
+Sun Mar 15 13:01:10 2026   PC13   C:\>-ssh 10.0.1.238
+Sun Mar 15 13:01:26 2026   PC13   C:\>ssh 10.0.1.238
+Sun Mar 15 13:01:39 2026   PC13   C:\>ssh -1 backup -v 2 10.0.1.238
+Sun Mar 15 13:02:46 2026   R2   R2(config)#radius-server host 10.0.1.228 key Password123
+Sun Mar 15 13:03:12 2026   R2   R2(config)#ssh version 2
+Sun Mar 15 13:03:16 2026   R2   R2(config)#ip ssh version 2
+Sun Mar 15 13:03:25 2026   R2   R2(config)#crypto key generate rsa
+Sun Mar 15 13:03:34 2026   R2   R2(config)#ip domain-name cisco.com
+Sun Mar 15 13:03:37 2026   R2   R2(config)#crypto key generate rsa
+Sun Mar 15 13:03:54 2026   R2   R2(config)#line vty 0 4
+Sun Mar 15 13:04:03 2026   R2   R2(config-line)#]transport input ssh
+Sun Mar 15 13:04:20 2026   R2   R2(config-line)#]transport input ssh
+Sun Mar 15 13:04:27 2026   R2   R2(config-line)#transport input ssh
+Sun Mar 15 13:04:40 2026   R2   R2(config-line)#login authentication defaukt
+Sun Mar 15 13:04:43 2026   R2   R2(config-line)#login authentication default
+Sun Mar 15 13:05:03 2026   PC13   C:\>ssh -1 ITDemo -v 2 10.0.1.238
+Sun Mar 15 13:21:42 2026   R2   R1>enable
+Sun Mar 15 13:21:42 2026   R2   R1#configure terminal
+Sun Mar 15 13:21:42 2026   R2   R1(config)#hostname R2
+Sun Mar 15 13:21:46 2026   R2   R2(config)#do show run
+Sun Mar 15 13:22:00 2026   R2   R2(config)#do show run
+Sun Mar 15 13:22:31 2026   R2   R2(config)#router ospf 1
+Sun Mar 15 13:22:36 2026   R2   R2(config-router)#no network 198.51.100.12 0.0.0.3 area 0
+Sun Mar 15 13:22:43 2026   R2   R2(config-router)#network 198.51.100.8 0.0.0.3 area 0
+Sun Mar 15 13:22:45 2026   R2   R2(config-router)#exit
+Sun Mar 15 13:22:49 2026   R2   R2(config)#int g0/0.20
+Sun Mar 15 13:23:01 2026   R2   R2(config-subif)#ip address 10.0.0.253 255.255.255.192
+Sun Mar 15 13:23:08 2026   R2   R2(config-subif)#ip address 10.0.0.254 255.255.255.192
+Sun Mar 15 13:23:15 2026   R2   R2(config-subif)#standby 1 priority 110
+Sun Mar 15 13:23:16 2026   R2   R2(config-subif)#exit
+Sun Mar 15 13:23:35 2026   R2   R2(config)#int g0/0.30
+Sun Mar 15 13:24:09 2026   R2   R2(config-subif)#ip address 10.0.1.93 255.255.255.224
+Sun Mar 15 13:24:12 2026   R2   R2(config-subif)#ip address 10.0.1.94 255.255.255.224
+Sun Mar 15 13:26:28 2026   R2   Router>enable
+Sun Mar 15 13:26:28 2026   R2   Router#configure terminal
+Sun Mar 15 13:26:28 2026   R2   Router(config)#hostname R2
+Sun Mar 15 13:26:33 2026   R2   R2(config)#int g0/0.10
+Sun Mar 15 13:27:09 2026   R2   Router>en
+Sun Mar 15 13:27:10 2026   R2   Router#conf t
+Sun Mar 15 13:27:16 2026   R2   Router(config)#hostname R2
+Sun Mar 15 13:27:30 2026   R2   R2(config)#int g0/0
+Sun Mar 15 13:27:32 2026   R2   R2(config-if)#no shut
+Sun Mar 15 13:27:33 2026   R2   R2(config-if)#exit
+Sun Mar 15 13:27:36 2026   R2   R2(config)#int g0/0.10
+Sun Mar 15 13:27:44 2026   R1   R1>en
+Sun Mar 15 13:27:45 2026   R1   R1#conf t
+Sun Mar 15 13:27:47 2026   R1   R1(config)#do show run
+Sun Mar 15 13:28:12 2026   R2   R2(config-subif)#encapsulation dot1Q 10
+Sun Mar 15 13:28:22 2026   R2   R2(config-subif)#ip address 10.0.0.126 255.255.255.128
+Sun Mar 15 13:28:47 2026   R2   R2(config-subif)#standby 1 ip 10.0.0.127
+Sun Mar 15 13:28:54 2026   R2   R2(config-subif)#standby 1 priority 110
+Sun Mar 15 13:28:58 2026   R2   R2(config-subif)#standby 1 preempt
+Sun Mar 15 13:29:09 2026   R1   R1(config)#int g0/0.10
+Sun Mar 15 13:29:15 2026   R1   R1(config-subif)#standby 1 ip 10.0.0.127
+Sun Mar 15 13:29:15 2026   R1   R1(config-subif)#exuit
+Sun Mar 15 13:29:18 2026   R1   R1(config-subif)#exit
+Sun Mar 15 13:29:23 2026   R2   R2(config-subif)#exit
+Sun Mar 15 13:29:26 2026   R2   R2(config)#int g0/0.20
+Sun Mar 15 13:29:37 2026   R2   R2(config-subif)#encapsulation dot1Q 20
+Sun Mar 15 13:30:08 2026   R2   R2(config-subif)#ip address 10.0.0.252 255.255.255.192
+Sun Mar 15 13:30:20 2026   R2   R2(config-subif)#ip helper-address 10.0.1.225
+Sun Mar 15 13:30:26 2026   R2   R2(config-subif)#standby 1 ip 10.0.0.254
+Sun Mar 15 13:30:28 2026   R2   R2(config-subif)#standby 1 priority 105
+Sun Mar 15 13:30:32 2026   R2   R2(config-subif)#standby 1 ip 10.0.0.254
+Sun Mar 15 13:30:32 2026   R2   R2(config-subif)#standby 1 priority 105
+Sun Mar 15 13:30:43 2026   R2   R2(config-subif)#standby 1 preempt
+Sun Mar 15 13:30:45 2026   R2   R2(config-subif)#exit
+Sun Mar 15 13:30:48 2026   R2   R2(config)#int g0/0.10
+Sun Mar 15 13:30:57 2026   R2   R2(config-subif)#ip address 10.0.0.124
+Sun Mar 15 13:31:01 2026   R2   R2(config-subif)#ip address 10.0.0.124 255.255.255.128
+Sun Mar 15 13:31:29 2026   R2   R2(config-subif)#standby 1 ip 10.0.0.126
+Sun Mar 15 13:31:33 2026   R1   R1(config)#int g0/0.10
+Sun Mar 15 13:31:36 2026   R1   R1(config-subif)#standby 1 ip 10.0.0.126
+Sun Mar 15 13:31:47 2026   R1   R1(config-subif)#do show standby br
+Sun Mar 15 13:31:55 2026   R1   R1(config-subif)#do show standby br
+Sun Mar 15 13:32:09 2026   R2   R2(config-subif)#int g0/0.30
+Sun Mar 15 13:32:19 2026   R2   R2(config-subif)#encapsulation dot1Q 30
+Sun Mar 15 13:32:32 2026   R2   R2(config-subif)#ip address 10.0.1.92 255.255.255.224
+Sun Mar 15 13:32:40 2026   R2   R2(config-subif)#ip helper-address 10.0.1.225
+Sun Mar 15 13:34:11 2026   R2   R2(config-subif)#standby 1 ip 10.0.1.94
+Sun Mar 15 13:34:11 2026   R2   R2(config-subif)#standby 1 priority 105
+Sun Mar 15 13:34:12 2026   R2   R2(config-subif)#standby 1 preempt
+Sun Mar 15 13:34:17 2026   R2   R2(config-subif)#standby 1 priority 110
+Sun Mar 15 13:34:19 2026   R2   R2(config-subif)#exit
+Sun Mar 15 13:34:22 2026   R2   R2(config)#int g0/0.20
+Sun Mar 15 13:34:30 2026   R2   R2(config-subif)#standby 1 priority 110
+Sun Mar 15 13:34:31 2026   R2   R2(config-subif)#exit
+Sun Mar 15 13:34:37 2026   R1   R1(config-subif)#do show standby br
+Sun Mar 15 13:34:49 2026   R2   R2(config)#int g0/0.40
+Sun Mar 15 13:34:52 2026   R2   R2(config-subif)#encapsulation dot1Q 40
+Sun Mar 15 13:35:09 2026   R2   R2(config-subif)#ip address 10.0.1.237 255.255.255.240
+Sun Mar 15 13:35:09 2026   R2   R2(config-subif)#standby 1 ip 10.0.1.238
+Sun Mar 15 13:35:09 2026   R2   R2(config-subif)#standby 1 priority 105
+Sun Mar 15 13:35:09 2026   R2   R2(config-subif)#standby 1 preempt
+Sun Mar 15 13:35:16 2026   R2   R2(config-subif)#ip address 10.0.1.236 255.255.255.240
+Sun Mar 15 13:35:18 2026   R2   R2(config-subif)#standby 1 priority 110
+Sun Mar 15 13:35:19 2026   R2   R2(config-subif)#exit
+Sun Mar 15 13:35:29 2026   R2   R2(config)#int s0/0/0
+Sun Mar 15 13:35:41 2026   R5   R5>enable
+Sun Mar 15 13:35:41 2026   R5   R5#configure terminal
+Sun Mar 15 13:35:41 2026   R5   R5(config)#interface Serial0/1/1
+Sun Mar 15 13:36:02 2026   R2   R2(config-if)#ip address 198.51.10.9 255.255.255.252
+Sun Mar 15 13:36:12 2026   R1   R1(config-subif)#do show standby br
+Sun Mar 15 13:36:27 2026   R5   R5(config-if)#exit
+Sun Mar 15 13:36:27 2026   R5   R5(config)#interface Serial0/1/1
+Sun Mar 15 13:36:30 2026   R5   R5(config-if)#exit
+Sun Mar 15 13:36:30 2026   R5   R5(config)#interface Serial0/1/0
+Sun Mar 15 13:36:35 2026   R5   R5(config-if)#exit
+Sun Mar 15 13:36:37 2026   R5   R5(config)#do show run
+Sun Mar 15 13:37:00 2026   R2   R2(config-if)#ipv6 address 2001:DB8:ACAD:7::1/64
+Sun Mar 15 13:37:03 2026   R2   R2(config-if)#no shut
+Sun Mar 15 13:37:04 2026   R2   R2(config-if)#exit
+Sun Mar 15 13:37:09 2026   R2   R2(config)#router ospf 1
+Sun Mar 15 13:37:15 2026   R2   R2(config-router)#network 10.0.0.0 0.0.0.127 area 0
+Sun Mar 15 13:37:15 2026   R2   R2(config-router)#network 10.0.0.192 0.0.0.63 area 0
+Sun Mar 15 13:37:15 2026   R2   R2(config-router)#network 10.0.1.64 0.0.0.31 area 0
+Sun Mar 15 13:37:16 2026   R2   R2(config-router)#network 10.0.1.224 0.0.0.15 area 0
+Sun Mar 15 13:37:21 2026   R2   R2(config-router)#exit
+Sun Mar 15 13:37:36 2026   R2   R2(config)#do show ospf neighbor br
+Sun Mar 15 13:37:40 2026   R2   R2(config)#do show ip ospf neighbor br
+Sun Mar 15 13:37:42 2026   R2   R2(config)#do show ip ospf neighbor
+Sun Mar 15 13:37:58 2026   R2   R2(config)#int g0/0.30
+Sun Mar 15 13:38:14 2026   R1   R1(config-subif)#d
+Sun Mar 15 13:38:17 2026   R1   R1(config-subif)#do show run
+Sun Mar 15 13:38:32 2026   R1   R1(config-subif)#int g0/0.30
+Sun Mar 15 13:38:35 2026   R1   R1(config-subif)#no  ipv6 address 2001:DB8:ACAD:3::4/64
+Sun Mar 15 13:38:43 2026   R2   R2(config-subif)#ipv6 address 2001:DB8:ACAD:3::4/64
+Sun Mar 15 13:39:35 2026   R2   R2(config-subif)#ipv6 route 2001:db8:acad:2::/64 2001:db8:acad:7::1
+Sun Mar 15 13:39:37 2026   R2   R2(config)#ipv6 route 2001:db8:acad:2::/64 2001:db8:acad:7::2
+Sun Mar 15 13:39:45 2026   R2   R2(config)#ipv6 route 2001:db8:acad:1::/64 2001:db8:acad:7::2
+Sun Mar 15 13:40:09 2026   R2   R2(config)#do show run
+Sun Mar 15 13:40:36 2026   R2   R2(config)#router ospf 1
+Sun Mar 15 13:40:57 2026   R2   R2(config-router)#network 198.51.100.8 0.0.0.3 area 0
+Sun Mar 15 13:40:58 2026   R2   R2(config-router)#exit
+Sun Mar 15 13:41:07 2026   R2   R2(config)#do show standby vr
+Sun Mar 15 13:41:09 2026   R2   R2(config)#do show standby br
+Sun Mar 15 13:42:12 2026   R2   R2(config)#do show run
+Sun Mar 15 13:42:23 2026   R1   R1(config-subif)#do show run
+Wed Mar 25 12:56:45 2026   R3   R3>en
+Wed Mar 25 12:56:46 2026   R3   R3#show run
+Wed Mar 25 12:59:35 2026   R5   Router>enable
+Wed Mar 25 12:59:35 2026   R5   Router#configure terminal
+Wed Mar 25 12:59:35 2026   R5   Router(config)#interface Serial0/0/0
+Wed Mar 25 12:59:36 2026   R5   Router(config-if)#no shutdown
+Wed Mar 25 12:59:37 2026   R5   Router(config-if)#exit
+Wed Mar 25 12:59:37 2026   R5   Router(config)#interface Serial0/0/1
+Wed Mar 25 12:59:37 2026   R5   Router(config-if)#no shutdown
+Wed Mar 25 12:59:38 2026   R5   Router(config-if)#exit
+Wed Mar 25 12:59:38 2026   R5   Router(config)#interface Serial0/1/0
+Wed Mar 25 12:59:39 2026   R5   Router(config-if)#no shutdown
+Wed Mar 25 12:59:41 2026   R5   Router(config-if)#exit
+Wed Mar 25 12:59:41 2026   R5   Router(config)#interface Serial0/1/1
+Wed Mar 25 12:59:42 2026   R5   Router(config-if)#no shutdown
+Wed Mar 25 12:59:43 2026   R5   Router(config-if)#exit
+Wed Mar 25 12:59:43 2026   R5   Router(config)#interface Serial0/0/0
+Wed Mar 25 12:59:53 2026   R5   Router(config-if)#ip address 198.51.100.6 255.255.255.0
+Wed Mar 25 13:00:05 2026   R5   Router(config-if)#ip address 198.51.100.6 255.255.255.252
+Wed Mar 25 13:00:13 2026   R5   Router(config-if)#exit
+Wed Mar 25 13:00:13 2026   R5   Router(config)#interface Serial0/0/1
+Wed Mar 25 13:00:19 2026   R5   Router(config-if)#ip address 198.51.100.2 255.255.255.252
+Wed Mar 25 13:00:22 2026   R5   Router(config-if)#ip address 198.51.100.2 255.255.255.252
+Wed Mar 25 13:00:22 2026   R5   Router(config-if)#exit
+Wed Mar 25 13:00:22 2026   R5   Router(config)#interface Serial0/1/0
+Wed Mar 25 13:00:31 2026   R5   Router(config-if)#ip address 198.51.100.14 255.255.255.252
+Wed Mar 25 13:00:33 2026   R5   Router(config-if)#ip address 198.51.100.14 255.255.255.252
+Wed Mar 25 13:00:33 2026   R5   Router(config-if)#exit
+Wed Mar 25 13:00:33 2026   R5   Router(config)#interface Serial0/1/1
+Wed Mar 25 13:00:37 2026   R5   Router(config-if)#ip address 198.51.100.10 255.255.255.252
+Wed Mar 25 13:00:40 2026   R5   Router(config-if)#ip address 198.51.100.10 255.255.255.252
+Wed Mar 25 13:00:42 2026   R5   Router(config-if)#exit
+Wed Mar 25 13:00:46 2026   R5   Router(config)#int s0/0/0
+Wed Mar 25 13:01:07 2026   R5   Router(config-if)#ipv6 address 2001:DB8:ACAD:6::2/64
+Wed Mar 25 13:01:09 2026   R5   Router(config-if)#exit
+Wed Mar 25 13:01:12 2026   R5   Router(config)#int s0/0/1
+Wed Mar 25 13:01:21 2026   R5   Router(config-if)#ipv6 address 2001:DB8:ACAD:5::2/64
+Wed Mar 25 13:01:23 2026   R5   Router(config-if)#exit
+Wed Mar 25 13:01:26 2026   R5   Router(config)#int s0/1/0
+Wed Mar 25 13:01:35 2026   R5   Router(config-if)#ipv6 address 2001:DB8:ACAD:8::2/64
+Wed Mar 25 13:01:38 2026   R5   Router(config-if)#exit
+Wed Mar 25 13:01:42 2026   R5   Router(config)#int s0/1/1
+Wed Mar 25 13:01:50 2026   R5   Router(config-if)#ipv6 address 2001:DB8:ACAD:7::2/64
+Wed Mar 25 13:01:52 2026   R5   Router(config-if)#exit
+Wed Mar 25 13:01:55 2026   R5   Router(config)#router ospf 1
+Wed Mar 25 13:02:08 2026   R5   Router(config-router)#network 198.51.100.0 255.255.255.255 area 0
+Wed Mar 25 13:02:09 2026   R5   Router(config-router)#exit
+Wed Mar 25 13:02:21 2026   R5   Router(config)#do show ip ospf neigbor
+Wed Mar 25 13:02:28 2026   R5   Router(config)#do show ip ospf neighbor
+Wed Mar 25 13:02:31 2026   R5   Router(config)#interface Serial0/1/1
+Wed Mar 25 13:02:36 2026   R5   Router(config-if)#end
+Wed Mar 25 13:02:36 2026   R5   Router#configure terminal
+Wed Mar 25 13:02:36 2026   R5   Router(config)#hostname R5
+Wed Mar 25 13:02:44 2026   R5   R5(config)#do show ip ospf neighbor
+Wed Mar 25 13:03:24 2026   R2   R2>en
+Wed Mar 25 13:03:25 2026   R2   R2#show run
+Wed Mar 25 13:03:36 2026   R2   R2#conf t
+Wed Mar 25 13:39:58 2026   R1   R1>en
+Wed Mar 25 13:39:59 2026   R1   R1#sh run
+Wed Mar 25 13:40:17 2026   R2   R2>en
+Wed Mar 25 13:40:18 2026   R2   R2#sh run
+Wed Mar 25 13:41:03 2026   R2   R2#conf t
+Wed Mar 25 13:41:07 2026   R2   R2(config)#int s0/0/0
+Wed Mar 25 13:41:20 2026   R2   R2(config-if)#ip address 198.51.100.9 255.255.255.252
+Wed Mar 25 13:41:22 2026   R2   R2(config-if)#exit
+Wed Mar 25 13:41:35 2026   R1   R1#conf t
+Wed Mar 25 13:41:38 2026   R1   R1(config)#int s0/0/0
+Wed Mar 25 13:41:43 2026   R1   R1(config-if)#ip address 198.51.100.13 255.255.255.252
+Wed Mar 25 13:41:52 2026   R5   R5>en
+Wed Mar 25 13:41:56 2026   R5   R5#show ip ospf neighbor
+Wed Mar 25 20:12:11 2026   R2   R2>en
+Wed Mar 25 20:12:15 2026   R2   R2#show standby br
+Wed Mar 25 20:16:35 2026   R2   R2#conf t
+Wed Mar 25 20:16:41 2026   R2   R2(config)#int g0/0.50
+Wed Mar 25 20:16:44 2026   R2   R2(config-subif)#encapsulation dot1Q 50
+Wed Mar 25 20:17:06 2026   R2   R2(config-subif)#ip address 10.0.1.245 255.255.255.248
+Wed Mar 25 20:17:08 2026   R2   R2(config-subif)#no shut
+Wed Mar 25 20:17:14 2026   R2   R2(config-subif)#standby 1 ip 10.0.1.246
+Wed Mar 25 20:17:19 2026   R2   R2(config-subif)#standby 1 priority 110
+Wed Mar 25 20:17:23 2026   R2   R2(config-subif)#standby 1 preempt
+Wed Mar 25 20:17:24 2026   R2   R2(config-subif)#exit
+Wed Mar 25 20:17:32 2026   R1   R1>en
+Wed Mar 25 20:17:33 2026   R1   R1#conf t
+Wed Mar 25 20:17:38 2026   R1   R1(config)#int g0/0.50
+Wed Mar 25 20:17:42 2026   R1   R1(config-subif)#encapsulation dot1Q 50
+Wed Mar 25 20:17:57 2026   R1   R1(config-subif)#ip address 10.0.1.244 255.255.255.248
+Wed Mar 25 20:18:07 2026   R1   R1(config-subif)#standby 1 ip 10.0.1.246
+Wed Mar 25 20:18:12 2026   R1   R1(config-subif)#standby 1 priority 105
+Wed Mar 25 20:18:15 2026   R1   R1(config-subif)#standby 1 preempt
+Wed Mar 25 20:18:18 2026   R1   R1(config-subif)#exit
+Wed Mar 25 20:18:41 2026   R2   R2(config)#do show standby br
+Wed Mar 25 20:18:51 2026   R2   R2(config)#do show standby br
+Wed Mar 25 20:24:27 2026   SW12   SW12>en
+Wed Mar 25 20:24:31 2026   SW12   SW12#show ip int br
+Wed Mar 25 20:24:38 2026   SW12   SW12#conf t
+Wed Mar 25 20:24:45 2026   SW12   SW12(config)#do show vlan br
+Wed Mar 25 20:25:16 2026   R2   R2(config)#router ospf 1
+Wed Mar 25 20:25:30 2026   R2   R2(config-router)#network 10.0.1.240 0.0.0.7 area 0
+Wed Mar 25 20:25:31 2026   R2   R2(config-router)#exit
+Wed Mar 25 20:25:40 2026   R1   R1(config)#router ospf 1
+Wed Mar 25 20:25:40 2026   R1   R1(config-router)#R2(config-router)#network 10.0.1.240 0.0.0.7 area 0
+Wed Mar 25 20:25:49 2026   R1   R1(config-router)#network 10.0.1.240 0.0.0.7 area 0
+Wed Mar 25 20:25:51 2026   R1   R1(config-router)#exit
+Wed Mar 25 20:26:01 2026   R2   R2(config)#do show ip ospf neighbor
+Wed Mar 25 20:35:18 2026   R4   R4>en
+Wed Mar 25 20:35:20 2026   R4   R4#show run
+Wed Mar 25 20:44:11 2026   R2   R2>en
+Wed Mar 25 20:44:15 2026   R2   R2#show run
+Thu Mar 26 09:36:10 2026   PC14   C:\>10.0.1.72
+Thu Mar 26 09:46:24 2026   R2   R2>en
+Thu Mar 26 09:46:26 2026   R2   R2#show run
+Thu Mar 26 09:46:55 2026   R2   R2#conf t
+Thu Mar 26 09:47:00 2026   R2   R2(config)#int g0/0.40
+Thu Mar 26 09:47:05 2026   R2   R2(config-subif)#ipv6 address 2001:DB8:ACAD:4::7/64
+Thu Mar 26 09:47:08 2026   R2   R2(config-subif)#exit
+Thu Mar 26 09:49:15 2026   R2   R2(config)#do showr un
+Thu Mar 26 09:49:20 2026   R2   R2(config)#do show run
+Thu Mar 26 09:50:16 2026   R1   R1>en
+Thu Mar 26 09:50:18 2026   R1   R1#conf t
+Thu Mar 26 09:50:20 2026   R1   R1(config)#do show run
+Thu Mar 26 09:50:33 2026   R1   R1(config)#int g0/0.50
+Thu Mar 26 09:50:42 2026   R1   R1(config-subif)#ipv6 address 2001:DB8:ACAD:4::6
+Thu Mar 26 09:50:44 2026   R1   R1(config-subif)#ipv6 address 2001:DB8:ACAD:4::6/64
+Thu Mar 26 09:50:45 2026   R1   R1(config-subif)#exugt
+Thu Mar 26 09:50:47 2026   R1   R1(config-subif)#exit
+Thu Mar 26 09:51:04 2026   R1   R1(config)#int g0/0.50
+Thu Mar 26 09:51:12 2026   R1   R1(config-subif)#standby 2 ip 2001:DB8:ACAD:4::8
+Thu Mar 26 09:51:16 2026   R1   R1(config-subif)#standby 2 ipv6 2001:DB8:ACAD:4::8
+Thu Mar 26 09:51:27 2026   R1   R1(config-subif)#standby 2 ?
+Thu Mar 26 09:51:31 2026   R1   R1(config-subif)#standby 2 ipv6 ?
+Thu Mar 26 09:51:36 2026   R1   R1(config-subif)#standby 2 ipv6
+Thu Mar 26 09:51:38 2026   R1   R1(config-subif)#standby 2 ipv6 ?
+Thu Mar 26 09:57:41 2026   R2   R2(config)#do show run
+Thu Mar 26 15:50:46 2026   R2   R2>en
+Thu Mar 26 15:50:47 2026   R2   R2#conf t
+Thu Mar 26 15:50:50 2026   R2   R2(config)#do show run
+Thu Mar 26 15:51:03 2026   R5   R5>en
+Thu Mar 26 15:51:05 2026   R5   R5#show run
+Thu Mar 26 15:51:18 2026   R5   R5#conf t
+Thu Mar 26 15:52:02 2026   R5   R5(config)#do show ip route
+Thu Mar 26 15:52:35 2026   R5   R5(config)#ipv6 route 2001:db8:acad:2::/64 2001:db8:acad:5::1
+Thu Mar 26 15:52:55 2026   R5   R5(config)#ipv6 route 2001:db8:acad:1::/64 2001:db8:acad:6::1
+Thu Mar 26 15:53:20 2026   R5   R5(config)#ipv6 route 2001:db8:acad:3::/64 2001:db8:acad:8::1
+Thu Mar 26 15:53:23 2026   R5   R5(config)#ipv6 route 2001:db8:acad:3::/64 2001:db8:acad:7::1
+Thu Mar 26 15:53:30 2026   R5   R5(config)#ipv6 route 2001:db8:acad:4::/64 2001:db8:acad:8::1
+Thu Mar 26 15:53:35 2026   R5   R5(config)#ipv6 route 2001:db8:acad:4::/64 2001:db8:acad:7::1
+Thu Mar 26 15:53:41 2026   R5   R5(config)#do show run
+Thu Mar 26 15:57:14 2026   R5   R5(config)#no ipv6 route 2001:DB8:ACAD:4::/64 2001:DB8:ACAD:7::1
+Thu Mar 26 15:57:29 2026   R5   R5(config)#no ipv6 route 2001:DB8:ACAD:3::/64 2001:DB8:ACAD:7::1
+Thu Mar 26 15:58:09 2026   R4   R4>en
+Thu Mar 26 15:58:10 2026   R4   R4#conf t
+Thu Mar 26 15:58:12 2026   R4   R4(config)#do show run
+Thu Mar 26 15:59:23 2026   R5   R5(config)#do show run
+Thu Mar 26 16:03:44 2026   R5   R5(config)#ipv6 unicast-routing
+Thu Mar 26 16:03:53 2026   R4   R4(config)#ipv6 unicast-routing
+Thu Mar 26 16:04:00 2026   R3   R3>en
+Thu Mar 26 16:04:02 2026   R3   R3#conf t
+Thu Mar 26 16:04:03 2026   R3   R3(config)#ipv6 unicast-routing
+Thu Mar 26 16:04:08 2026   R2   R2>en
+Thu Mar 26 16:04:09 2026   R2   R2#conf t
+Thu Mar 26 16:04:11 2026   R2   R2(config)#ipv6 unicast-routing
+Thu Mar 26 16:04:16 2026   R1   R1>en
+Thu Mar 26 16:04:17 2026   R1   R1#conf t
+Thu Mar 26 16:04:19 2026   R1   R1(config)#ipv6 unicast-routing
+Thu Mar 26 16:04:22 2026   R1   R1(config)#do show standby br
+Thu Mar 26 16:09:31 2026   R2   R2(config)#DO SHOW RUN
+Thu Mar 26 16:13:47 2026   R5   R5(config)#ipv6 route 2001:DB8:ACAD:4::/64 2001:DB8:ACAD:7::1
+Thu Mar 26 16:13:54 2026   R5   R5(config)#no ipv6 route 2001:DB8:ACAD:4::/64 2001:DB8:ACAD:8::1
+Thu Mar 26 16:14:05 2026   R5   R5(config)#ipv6 route 2001:DB8:ACAD:3::/64 2001:DB8:ACAD:7::1
+Thu Mar 26 16:14:09 2026   R5   R5(config)#no ipv6 route 2001:DB8:ACAD:3::/64 2001:DB8:ACAD:8::1
+Thu Mar 26 16:19:17 2026   R3   R3>en
+Thu Mar 26 16:19:19 2026   R3   R3#show run
+Thu Mar 26 16:19:33 2026   R5   R5(config)#do show run
+Thu Mar 26 16:28:11 2026   R1   R1>en
+Thu Mar 26 16:28:16 2026   R1   R1#show ip ospf neighbor
+Thu Mar 26 16:28:31 2026   R1   R1#show ip route
+Thu Mar 26 16:28:37 2026   R1   R1#show run
+Thu Mar 26 16:28:56 2026   R2   R2>en
+Thu Mar 26 16:29:00 2026   R2   R2#show ip ospf neighbor
+Thu Mar 26 16:29:03 2026   R2   R2#show ip route
+Thu Mar 26 16:29:22 2026   R5   R5(config)#do show ip ospf neighbor
+Thu Mar 26 16:29:27 2026   R5   R5(config)#do show ip route
+Thu Mar 26 16:29:49 2026   R3   R3#show ip ospf neighbor
+Thu Mar 26 16:29:59 2026   R3   R3#conf t
+Thu Mar 26 16:30:02 2026   R3   R3(config)#do show run
+Thu Mar 26 16:30:12 2026   R4   R4>en
+Thu Mar 26 16:30:14 2026   R4   R4#show runm
+Thu Mar 26 16:30:16 2026   R4   R4#show run
+Thu Mar 26 16:30:29 2026   R4   R4#conf t
+Thu Mar 26 16:30:32 2026   R4   R4(config)#router ospf 1
+Thu Mar 26 16:30:55 2026   R4   R4(config-router)#network 10.0.1.192 0.0.0.31 area 0
+Thu Mar 26 16:31:04 2026   R4   R4(config-router)#no network 0.0.0.0 255.255.255.255 area 0
+Thu Mar 26 16:31:07 2026   R4   R4(config-router)#exit
+Thu Mar 26 16:31:12 2026   R4   R4(config)#do show ip ospf neighbor
+Thu Mar 26 16:31:33 2026   R4   R4(config)#router ospf 1
+Thu Mar 26 16:31:38 2026   R4   R4(config-router)#network 0.0.0.0 255.255.255.255 area 0
+Thu Mar 26 16:31:40 2026   R4   R4(config-router)#exit
+Thu Mar 26 16:31:46 2026   R4   R4(config)#do show ip ospf neighbor
+Thu Mar 26 16:34:26 2026   HQ Router 1   R1#configure terminal
+Thu Mar 26 16:34:26 2026   HQ Router 1   R1(config)#interface Serial0/0/0
+Thu Mar 26 16:34:27 2026   HQ Router 1   R1(config-if)#shutdown
+Thu Mar 26 16:34:28 2026   HQ Router 1   R1(config-if)#exit
+Thu Mar 26 16:34:28 2026   HQ Router 1   R1(config)#interface GigabitEthernet0/0
+Thu Mar 26 16:34:30 2026   HQ Router 1   R1(config-if)#exit
+Thu Mar 26 16:34:30 2026   HQ Router 1   R1(config)#interface Serial0/0/0
+Thu Mar 26 16:34:31 2026   HQ Router 1   R1(config-if)#no shutdown
+Thu Mar 26 16:34:38 2026   HQ Router 2   R2#configure terminal
+Thu Mar 26 16:34:38 2026   HQ Router 2   R2(config)#interface GigabitEthernet0/0
+Thu Mar 26 16:34:39 2026   HQ Router 2   R2(config-if)#shutdown
+Thu Mar 26 16:34:40 2026   HQ Router 2   R2(config-if)#exit
+Thu Mar 26 16:34:40 2026   HQ Router 2   R2(config)#interface Serial0/0/0
+Thu Mar 26 16:34:41 2026   HQ Router 2   R2(config-if)#shutdown
+Thu Mar 26 16:34:46 2026   HQ Router 2   R2(config-if)#exit
+Thu Mar 26 16:34:46 2026   HQ Router 2   R2(config)#interface Serial0/0/0
+Thu Mar 26 16:34:49 2026   HQ Router 2   R2(config-if)#no shutdown
+Thu Mar 26 16:37:10 2026   PC14   C:\>10.0.1.133
+Thu Mar 26 16:37:46 2026   HQ Router 2   R2(config-if)#do show standby br
+Thu Mar 26 16:37:56 2026   HQ Router 2   R2(config-if)#exit
+Thu Mar 26 16:37:56 2026   HQ Router 2   R2(config)#interface GigabitEthernet0/0
+Thu Mar 26 16:37:57 2026   HQ Router 2   R2(config-if)#no shutdown
+Thu Mar 26 16:38:06 2026   HQ Router 2   R2(config-if)#do show standby br
+Thu Mar 26 16:38:09 2026   HQ Router 2   R2(config-if)#do show standby br
+Thu Mar 26 16:38:28 2026   HQ Router 2   R2(config-if)#do show standby br
+Thu Mar 26 16:38:59 2026   HQ Router 1   R1(config-if)#do show standby br
+Sun Mar 29 19:17:11 2026   SW1   SW1>en
+Sun Mar 29 19:17:12 2026   SW1   SW1#conf t
+Sun Mar 29 19:17:19 2026   SW1   SW1(config)#do show running-config
+Sun Mar 29 19:17:36 2026   SW1   SW1(config)#vlan 10
+Sun Mar 29 19:19:03 2026   SW1   SW1(config-vlan)#do show vlan br
+Sun Mar 29 19:27:47 2026   SW1   SW1(config-vlan)#end
+Sun Mar 29 19:27:47 2026   SW1   SW1#configure terminal
+Sun Mar 29 19:31:13 2026   HQ Router 1   R1>en
+Sun Mar 29 19:31:15 2026   HQ Router 1   R1#show run
+Sun Mar 29 19:45:55 2026   HQ Router 2   R2>EN
+Sun Mar 29 19:45:58 2026   HQ Router 2   R2#SHOW RUN
+Sun Mar 29 19:46:10 2026   HQ Router 1   R1>EBN
+Sun Mar 29 19:46:11 2026   HQ Router 1   R1>EN
+Sun Mar 29 19:46:12 2026   HQ Router 1   R1#CONF T
+Sun Mar 29 19:46:17 2026   HQ Router 1   R1(config)#int g0/0.50
+Sun Mar 29 19:46:20 2026   HQ Router 1   R1(config-subif)#no ipv6 address
+Sun Mar 29 19:46:30 2026   HQ Router 1   R1(config-subif)#exit
+Sun Mar 29 19:46:32 2026   HQ Router 1   R1(config)#int g0/0.40
+Sun Mar 29 19:46:35 2026   HQ Router 1   R1(config-subif)#ipv6 address 2001:DB8:ACAD:4::6/64
+Sun Mar 29 19:46:36 2026   HQ Router 1   R1(config-subif)#exit
+Sun Mar 29 19:46:39 2026   HQ Router 1   R1(config)#do show run
+Sun Mar 29 20:29:17 2026   R3   R3>en
+Sun Mar 29 20:29:19 2026   R3   R3#show run
+Sun Mar 29 20:34:26 2026   R3   R3#do show access-list
+Sun Mar 29 20:34:28 2026   R3   R3#do show access-lists
+Sun Mar 29 20:34:33 2026   R3   R3#do show ip access-lists
+Sun Mar 29 20:34:39 2026   R3   R3#show access-lists
+Sun Mar 29 20:34:53 2026   R4   R4>en
+Sun Mar 29 20:34:54 2026   R4   R4#conf t
+Sun Mar 29 20:34:56 2026   R4   R4(config)#do show run
+Sun Mar 29 20:35:21 2026   R3   R3#conf t
+Sun Mar 29 20:35:25 2026   R3   R3(config)#int g0/2.80
+Sun Mar 29 20:35:27 2026   R3   R3(config-subif)#ip access-group 1 in
+Sun Mar 29 20:35:28 2026   R3   R3(config-subif)#exit
+Sun Mar 29 20:35:59 2026   R3   R3(config)#int g0/2
+Sun Mar 29 20:36:04 2026   R3   R3(config-if)#no ip access-group 1
+Sun Mar 29 20:36:06 2026   R3   R3(config-if)#no ip access-group 1 in
+Sun Mar 29 20:36:07 2026   R3   R3(config-if)#exit
+Sun Mar 29 20:40:41 2026   R5   R5>en
+Sun Mar 29 20:40:43 2026   R5   R5#show run
+Sun Mar 29 20:40:49 2026   R5   R5#conf t
+Sun Mar 29 20:40:52 2026   R5   R5(config)#router ospf 1
+Sun Mar 29 20:41:05 2026   R5   R5(config-router)#network 198.51.100.0 0.0.0.3 area 0
+Sun Mar 29 20:41:08 2026   R5   R5(config-router)#network 198.51.100.4 0.0.0.3 area 0
+Sun Mar 29 20:41:15 2026   R5   R5(config-router)#network 198.51.100.8 0.0.0.3 area 0
+Sun Mar 29 20:41:18 2026   R5   R5(config-router)#network 198.51.100.12 0.0.0.3 area 0
+Sun Mar 29 20:41:19 2026   R5   R5(config-router)#exit
+Sun Mar 29 20:41:24 2026   R5   R5(config)#router ospf 1
+Sun Mar 29 20:41:41 2026   R5   R5(config-router)#no network 0.0.0.0 255.255.255.255 area 0
+Sun Mar 29 20:41:43 2026   R5   R5(config-router)#exit
+Sun Mar 29 20:41:50 2026   R4   R4(config)#router ospf 1
+Sun Mar 29 20:42:01 2026   R4   R4(config-router)#no network 0.0.0.0 255.255.255.255 area 0
+Sun Mar 29 20:42:02 2026   R4   R4(config-router)#exit
+Sun Mar 29 20:42:14 2026   R4   R4(config)#do show ip ospf neighbor
+Sun Mar 29 20:42:23 2026   R5   R5(config)#do show ip ospf neighbor
+Sun Mar 29 20:42:26 2026   R5   R5(config)#router ospf 1
+Sun Mar 29 20:42:31 2026   R5   R5(config-router)#network 0.0.0.0 255.255.255.255 area 0
+Sun Mar 29 20:42:35 2026   R4   R4(config)#router ospf 1
+Sun Mar 29 20:42:39 2026   R4   R4(config-router)#network 0.0.0.0 255.255.255.255 area 0
+Sun Mar 29 20:42:40 2026   R4   R4(config-router)#exit
+Sun Mar 29 20:42:53 2026   R4   R4(config)#do show run
+Sun Mar 29 20:44:06 2026   R4   R4(config)#ip access-list standard BLOCK_SERVER
+Sun Mar 29 20:44:14 2026   R4   R4(config-std-nacl)#exit
+Sun Mar 29 20:48:00 2026   R4   R4(config)#do show run
+Sun Mar 29 20:50:41 2026   R5   R5(config-router)#exit
+Sun Mar 29 20:50:42 2026   R5   R5(config)#do show run
+Mon Mar 30 13:03:21 2026   R3   R3>en
+Mon Mar 30 13:03:22 2026   R3   R3#conf t
+Mon Mar 30 13:04:03 2026   R3   R3(config)#int g0/0
+Mon Mar 30 13:04:05 2026   R3   R3(config-if)#no shut
+Mon Mar 30 13:04:07 2026   R3   R3(config-if)#exit
+Mon Mar 30 13:04:09 2026   R3   R3(config)#int g0/0
+Mon Mar 30 13:04:10 2026   R3   R3(config-if)#shut
+Mon Mar 30 13:04:11 2026   R3   R3(config-if)#exit
+Mon Mar 30 13:04:13 2026   R3   R3(config)#int g0/0
+Mon Mar 30 13:04:16 2026   R3   R3(config-if)#no shut
+Mon Mar 30 13:04:17 2026   R3   R3(config-if)#exit
+Mon Mar 30 13:08:50 2026   SW1   SW1>en
+Mon Mar 30 13:08:52 2026   SW1   SW1#show run
+Mon Mar 30 13:09:00 2026   SW1   SW1#show vlan br
+Mon Mar 30 13:09:20 2026   SW1   SW1#conf t
+Mon Mar 30 13:09:21 2026   SW1   SW1(config)#vlan 10
+Mon Mar 30 13:09:47 2026   SW1   SW1(config-vlan)#name IT-Department
+Mon Mar 30 13:09:50 2026   SW1   SW1(config-vlan)#exit
+Mon Mar 30 13:09:51 2026   SW1   SW1(config)#vlan 20
+Mon Mar 30 13:09:58 2026   SW1   SW1(config-vlan)#name Finance-Department
+Mon Mar 30 13:09:59 2026   SW1   SW1(config-vlan)#exit
+Mon Mar 30 13:10:02 2026   SW1   SW1(config)#vlan 30
+Mon Mar 30 13:10:09 2026   SW1   SW1(config-vlan)#name HR-Department
+Mon Mar 30 13:10:11 2026   SW1   SW1(config-vlan)#exit
+Mon Mar 30 13:10:14 2026   SW1   SW1(config)#vlan 40
+Mon Mar 30 13:10:22 2026   SW1   SW1(config-vlan)#name Server-VLAN
+Mon Mar 30 13:10:23 2026   SW1   SW1(config-vlan)#exit
+Mon Mar 30 13:10:25 2026   SW1   SW1(config)#vlan 50
+Mon Mar 30 13:10:37 2026   SW1   SW1(config-vlan)#name HQ-Management-VLAN
+Mon Mar 30 13:10:39 2026   SW1   SW1(config-vlan)#exit
+Mon Mar 30 13:10:46 2026   SW1   SW1(config)#vlan 60
+Mon Mar 30 13:10:53 2026   SW1   SW1(config-vlan)#name Sales-Department
+Mon Mar 30 13:10:54 2026   SW1   SW1(config-vlan)#exit
+Mon Mar 30 13:10:57 2026   SW1   SW1(config)#vlan 70
+Mon Mar 30 13:11:04 2026   SW1   SW1(config-vlan)#name Support-Department
+Mon Mar 30 13:11:06 2026   SW1   SW1(config-vlan)#exit
+Mon Mar 30 13:11:26 2026   SW1   SW1(config)#vlan 80
+Mon Mar 30 13:12:01 2026   SW1   SW1(config-vlan)#name Logistics-Department
+Mon Mar 30 13:12:02 2026   SW1   SW1(config-vlan)#exit
+Mon Mar 30 13:12:04 2026   SW1   SW1(config)#vlan 90
+Mon Mar 30 13:12:10 2026   SW1   SW1(config-vlan)#name Research-Department
+Mon Mar 30 13:12:22 2026   SW1   SW1(config-vlan)#name Marketing-Department
+Mon Mar 30 13:12:25 2026   SW1   SW1(config-vlan)#exit
+Mon Mar 30 13:12:28 2026   SW1   SW1(config)#vlan 100
+Mon Mar 30 13:12:29 2026   SW1   SW1(config-vlan)#name Research-Department
+Mon Mar 30 13:12:31 2026   SW1   SW1(config-vlan)#exit
+Mon Mar 30 13:12:33 2026   SW1   SW1(config)#vlan 110
+Mon Mar 30 13:12:41 2026   SW1   SW1(config-vlan)#name Customer-Service-Department
+Mon Mar 30 13:12:43 2026   SW1   SW1(config-vlan)#exit
+Wed Apr 1 13:09:38 2026   HQ Router 2   R2>en
+Wed Apr 1 13:09:42 2026   HQ Router 2   R2#show access-lists
+Wed Apr 1 13:09:49 2026   HQ Router 1   R1>en
+Wed Apr 1 13:09:52 2026   HQ Router 1   R1#show access-lists
+Wed Apr 1 13:09:56 2026   SW11   SW11>en
+Wed Apr 1 13:10:00 2026   SW11   SW11#show access-lists
+Wed Apr 1 13:10:12 2026   SW11   SW11#conf t
+Wed Apr 1 13:10:16 2026   SW11   SW11(config)#no access-list 10
+Wed Apr 1 13:10:18 2026   SW11   SW11(config)#no access-list 1
+Wed Apr 1 13:10:24 2026   HQ Router 2   R2#conf t
+Wed Apr 1 13:10:37 2026   HQ Router 2   R2(config)#ip access-list extended HR-ACL
+Wed Apr 1 13:10:41 2026   HQ Router 2   R2(config-ext-nacl)#10 permit ?
+Wed Apr 1 13:11:13 2026   HQ Router 2   R2(config-ext-nacl)#10 deny tcp 10.0.1.64 0.0.0.31 10.0.1.226 0.0.0.0 ?
+Wed Apr 1 13:11:23 2026   HQ Router 2   R2(config-ext-nacl)#10 deny tcp 10.0.1.64 0.0.0.31 10.0.1.226 0.0.0.0 eq 80
+Wed Apr 1 13:11:37 2026   HQ Router 2   R2(config-ext-nacl)#no 10 deny tcp 10.0.1.64 0.0.0.31 10.0.1.226 0.0.0.0 eq 80
+Wed Apr 1 13:11:54 2026   HQ Router 2   R2(config-ext-nacl)#10 deny tcp 10.0.1.64 0.0.0.31 10.0.1.229 0.0.0.0 eq 80
+Wed Apr 1 13:12:03 2026   HQ Router 2   R2(config-ext-nacl)#15 deny tcp 10.0.1.64 0.0.0.31 10.0.1.229 0.0.0.0 eq 443
+Wed Apr 1 13:12:10 2026   HQ Router 2   R2(config-ext-nacl)#20 permit ip any any
+Wed Apr 1 13:12:12 2026   HQ Router 2   R2(config-ext-nacl)#exit
+Wed Apr 1 13:12:17 2026   HQ Router 2   R2(config)#do show access-list
+Wed Apr 1 13:12:23 2026   HQ Router 2   R2(config)#int g0/0.30
+Wed Apr 1 13:12:31 2026   HQ Router 2   R2(config-subif)#ip access-group HR-ACL in
+Wed Apr 1 13:13:43 2026   HQ Router 1   R1#conf t
+Wed Apr 1 13:13:52 2026   HQ Router 1   R1(config)#ip access-list extended HR-ACL
+Wed Apr 1 13:14:11 2026   HQ Router 1   R1(config-ext-nacl)#10 deny tcp 10.0.1.64 0.0.0.31 10.0.1.229 0.0.0 eq 80
+Wed Apr 1 13:14:15 2026   HQ Router 1   R1(config-ext-nacl)#10 deny tcp 10.0.1.64 0.0.0.31 10.0.1.229 0.0.0.0 eq 80
+Wed Apr 1 13:14:23 2026   HQ Router 1   R1(config-ext-nacl)#15 deny tcp 10.0.1.64 0.0.0.31 10.0.1.229 0.0.0.0 eq 443
+Wed Apr 1 13:14:27 2026   HQ Router 1   R1(config-ext-nacl)#20 permit ip any any
+Wed Apr 1 13:14:28 2026   HQ Router 1   R1(config-ext-nacl)#exit
+Wed Apr 1 13:14:32 2026   HQ Router 1   R1(config)#int g0/0.30
+Wed Apr 1 13:14:40 2026   HQ Router 1   R1(config-subif)#ip access-group HR-ACL in
+Wed Apr 1 13:16:02 2026   SW5   SW5>en
+Wed Apr 1 13:16:09 2026   SW5   SW5#show access-list
+Wed Apr 1 13:16:15 2026   R4   R4>en
+Wed Apr 1 13:16:17 2026   R4   R4#show access-list
+Wed Apr 1 13:16:25 2026   R4   R4#show run
+Wed Apr 1 13:16:46 2026   R3   R3>en
+Wed Apr 1 13:16:48 2026   R3   R3#show access-list
+Wed Apr 1 13:16:53 2026   R3   R3#conf t
+Wed Apr 1 13:16:57 2026   R3   R3(config)#no access-list 1
+Wed Apr 1 13:17:09 2026   R3   R3(config)#ip access-list extended LOG-ACL
+Wed Apr 1 13:17:38 2026   R3   R3(config-ext-nacl)#10 deny tcp 10.0.1.160 0.0.0.31 10.0.1.226 0.0.0.0 eq 53
+Wed Apr 1 13:17:43 2026   R3   R3(config-ext-nacl)#20 permit ip any any
+Wed Apr 1 13:17:45 2026   R3   R3(config-ext-nacl)#exit
+Wed Apr 1 13:17:50 2026   R3   R3(config)#int g0/2.80
+Wed Apr 1 13:17:58 2026   R3   R3(config-subif)#ip access-group LOG-ACL in
+Wed Apr 1 13:18:51 2026   R3   R3(config-subif)#no ip access-group LOG-ACL in
+Wed Apr 1 13:18:53 2026   R3   R3(config-subif)#ip access-group LOG-ACL out
+Wed Apr 1 13:19:43 2026   R3   R3(config-subif)#do show acces-list
+Wed Apr 1 13:19:45 2026   R3   R3(config-subif)#do show access-list
+Wed Apr 1 13:20:28 2026   R3   R3(config-subif)#exit
+Wed Apr 1 13:20:37 2026   R3   R3(config)#ip access-list extended LOG-ACL
+Wed Apr 1 13:20:43 2026   R3   R3(config-ext-nacl)#do show access-list
+Wed Apr 1 13:21:01 2026   R3   R3(config-ext-nacl)#15 deny udp 10.0.1.160 0.0.0.31 10.0.1.226 0.0.0.0 eq 53
+Wed Apr 1 13:21:01 2026   R3   R3(config-ext-nacl)#exit
+Wed Apr 1 13:21:49 2026   R3   R3(config)#int g0/2.80
+Wed Apr 1 13:21:58 2026   R3   R3(config-subif)#no ip access-group LOG-ACL
+Wed Apr 1 13:21:59 2026   R3   R3(config-subif)#no ip access-group LOG-ACL in
+Wed Apr 1 13:22:02 2026   R3   R3(config-subif)#no ip access-group LOG-ACL out
+Wed Apr 1 13:22:05 2026   R3   R3(config-subif)#ip access-group LOG-ACL in
+Wed Apr 1 13:22:50 2026   R4   R4#show access-list
+Wed Apr 1 13:23:07 2026   R4   R4#conf t
+Wed Apr 1 13:23:28 2026   R4   R4(config)#no ip access-list BLOCK_SERVER
+Wed Apr 1 13:23:37 2026   R4   R4(config)#do show run
+Wed Apr 1 13:23:55 2026   R4   R4(config)#no ip access-list standard BLOCK_SERVER
+Wed Apr 1 13:24:03 2026   R4   R4(config)#ip access-list extended BLOCK_SERVER
+Wed Apr 1 13:24:32 2026   R4   R4(config-ext-nacl)#10 deny icmp 10.0.1.192 0.0.0.31 10.0.1.225 0.0.0.15 echo
+Wed Apr 1 13:24:37 2026   R4   R4(config-ext-nacl)#20 permit ip any any
+Wed Apr 1 13:24:38 2026   R4   R4(config-ext-nacl)#exit
+Wed Apr 1 13:24:43 2026   R4   R4(config)#int g0/1.100
+Wed Apr 1 13:24:54 2026   R4   R4(config-subif)#ip access-group BLOCK_SERVER in
