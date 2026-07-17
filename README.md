@@ -7,14 +7,14 @@ An advanced network that was created for "GlobalCorp Ltd". I made in Cisco Packe
 
 ## Features
 What the network includes is
-* Subnetting and IP addressing (IPv4 and IPv6): Had to subnet certain areas to allow or limit scalability
-* VLAN configuration and trunking: Created VLANS and trunking for each department for security
-* DHCP server setup for IPv4: Set up a DHCP Server to automatically give IP addresses to specific VLANs
-* Routing protocols (OSPF) and static routing: Set up OSPF in routers to automatically create routing tables. As well as made static IPv6 routes for departments with IPv6 addresses
-* Access Control Lists (ACLs) implementation: Set up ACLs for specific departments so that certain departments have more restrictions than others
-* First Hop Redundancy Protocols (HSRP): Set up HSRP on two routers so that one can be for backup incase the other fails.
-* DNS, HTTP/HTTPS, and FTP server configuration: Created DNS, HTTP/HTTPS, and FTP servers that all departments can access
-* Wireless networking with WLC: Set up Access Points that allow devices in specific VLANs to connect wirelessly
+* **Subnetting and IP addressing (IPv4 and IPv6)**: Had to subnet certain areas to allow or limit scalability
+* **VLAN configuration and trunking**: Created VLANS and trunking for each department for security
+* **DHCP server setup for IPv4**: Set up a DHCP Server to automatically give IP addresses to specific VLANs
+* **Routing protocols (OSPF) and static routing**: Set up OSPF in routers to automatically create routing tables. As well as made static IPv6 routes for departments with IPv6 addresses
+* **Access Control Lists (ACLs) implementation**: Set up ACLs for specific departments so that certain departments have more restrictions than others
+* **First Hop Redundancy Protocols (HSRP)**: Set up HSRP on two routers so that one can be for backup incase the other fails.
+* **DNS, HTTP/HTTPS, and FTP server configuration**: Created DNS, HTTP/HTTPS, and FTP servers that all departments can access
+* **Wireless networking with WLC**: Set up Access Points that allow devices in specific VLANs to connect wirelessly
 
 ## The Process
 To view my whole process throughout the whole project. View the PDF that has images and explanations for everything done.
